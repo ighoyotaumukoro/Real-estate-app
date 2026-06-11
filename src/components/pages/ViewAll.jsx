@@ -25,11 +25,60 @@ function ViewAll() {
     <>
       <div style={heroWrapperStyle}>
         <img
-          src="public/images/BOC logo.png"
+          src="/images/BOC logo.png"
           className="img-fluid position-absolute top-0 ms-3 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
-        <MyNavbar />
+        <Navbar expand="lg" variant="dark" className="mt-4 py-1 ">
+          <Container fluid>
+            <Navbar.Toggle
+              aria-controls="navbarScroll"
+              className="ms-auto justify-content-center align-content-center"
+            />
+            <Navbar.Collapse id="navbarScroll">
+              <Nav
+                className="mx-auto g-3 bg-white  flex-column align-items-center flex-lg-row rounded-5"
+                navbarScroll
+              >
+                <Nav.Link
+                  as={Link}
+                  to="/"
+                  className="px-3 text-dark"
+                  style={{ color: "#2A478D" }}
+                >
+                  Home
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/properties"
+                  className="px-3"
+                  href="#action2"
+                  style={{ color: "#2A478D" }}
+                >
+                  Properties
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/about"
+                  className="px-3 text-dark"
+                  href="#action3"
+                  style={{ color: "#2A478D" }}
+                >
+                  About Us
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/contact"
+                  className="px-3 text-dark"
+                  href="#action4"
+                  style={{ color: "#2A478D" }}
+                >
+                  Contact
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
         <div className="flex-grow-1 align-items-center justify-content-center">
           <div className="text-center text-white">
             <h1
@@ -79,10 +128,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -126,10 +172,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -177,10 +220,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -224,10 +264,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -271,10 +308,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -322,10 +356,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -369,10 +400,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -416,10 +444,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -463,10 +488,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -514,10 +536,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -561,10 +580,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -608,10 +624,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -659,10 +672,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -706,10 +716,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -753,10 +760,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -800,10 +804,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -851,10 +852,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -898,10 +896,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -945,10 +940,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -996,10 +988,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1043,10 +1032,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1090,10 +1076,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1137,10 +1120,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1188,10 +1168,7 @@ function ViewAll() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="public/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "

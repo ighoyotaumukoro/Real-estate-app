@@ -23,7 +23,7 @@ function FeaturesBuy3() {
     <>
       <div className="container-fluid mx-auto" style={headWrapperStyle}>
         <img
-          src="public/images/BOC logo.png"
+          src="/images/BOC logo.png"
           className="img-fluid position-absolute ms-5 top-0 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
@@ -174,7 +174,7 @@ function FeaturesBuy3() {
             1/4
           </span>
           <img
-            src="public/images/Hotel-3.jpg"
+            src="/images/Hotel-3.jpg"
             className="thumb w-100 rounded-4"
             style={{ objectFit: "cover", height: "600px", display: "block" }}
           ></img>
@@ -636,7 +636,7 @@ function FeaturesBuy3() {
 
               <div className="d-flex align-items-center mb-3">
                 <img
-                  src="public/images/myphoto.JPG"
+                  src="/images/myphoto.JPG"
                   className="rounded-circle me-2"
                   width="45"
                   height="45"
@@ -670,7 +670,7 @@ function FeaturesBuy3() {
           <div className="col-12 col-md-4 col-lg-4 col-xl-4">
             <div className="card">
               <img
-                src="public/images/Hotel-2.jpg"
+                src="/images/Hotel-2.jpg"
                 className="card-img-top"
                 style={{ objectFit: "cover" }}
               ></img>
@@ -696,7 +696,7 @@ function FeaturesBuy3() {
           <div className="col-12 col-md-4 col-lg-4 col-xl-4">
             <div className="card">
               <img
-                src="public/images/Hotel-3.jpg"
+                src="/images/Hotel-3.jpg"
                 className="card-img-top"
                 style={{ objectFit: "cover" }}
               ></img>
@@ -722,7 +722,7 @@ function FeaturesBuy3() {
           <div className="col-12 col-md-4 col-lg-4 col-xl-4">
             <div className="card">
               <img
-                src="public/images/Hotel-one.jpg"
+                src="/images/Hotel-one.jpg"
                 className="card-img-top"
                 style={{ objectFit: "cover" }}
               ></img>

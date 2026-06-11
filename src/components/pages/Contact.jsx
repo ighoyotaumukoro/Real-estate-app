@@ -27,7 +27,7 @@ function Contact() {
     <>
       <div className="rounded-4" style={heroWrapperStyle}>
         <img
-          src="public/images/BOC logo.png"
+          src="/images/BOC logo.png"
           className="img-fluid position-absolute top-0 ms-5 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>

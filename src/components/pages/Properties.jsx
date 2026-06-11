@@ -25,7 +25,7 @@ function Properties() {
     <>
       <div style={heroWrapperStyle}>
         <img
-          src="public/images/BOC logo.png"
+          src="/images/BOC logo.png"
           className="img-fluid position-absolute top-0 ms-3 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
@@ -129,7 +129,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -176,7 +176,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -227,7 +227,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-2.jpg"
+                  src="/images/Hotel-2.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -274,7 +274,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -321,7 +321,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-3.jpg"
+                  src="/images/Hotel-3.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -372,7 +372,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-2.jpg"
+                  src="/images/Hotel-2.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -419,7 +419,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-3.jpg"
+                  src="/images/Hotel-3.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -466,7 +466,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -513,7 +513,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -564,7 +564,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-2.jpg"
+                  src="/images/Hotel-2.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -611,7 +611,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -658,7 +658,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-3.jpg"
+                  src="/images/Hotel-3.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -709,7 +709,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-2.jpg"
+                  src="/images/Hotel-2.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -756,7 +756,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-3.jpg"
+                  src="/images/Hotel-3.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -803,7 +803,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -850,7 +850,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -901,7 +901,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-2.jpg"
+                  src="/images/Hotel-2.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -948,7 +948,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -995,7 +995,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-3.jpg"
+                  src="/images/Hotel-3.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -1046,7 +1046,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-2.jpg"
+                  src="/images/Hotel-2.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -1093,7 +1093,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-3.jpg"
+                  src="/images/Hotel-3.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -1140,7 +1140,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -1187,7 +1187,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-one.jpg"
+                  src="/images/Hotel-one.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
@@ -1238,7 +1238,7 @@ function Properties() {
             <div className="card shadow border-0">
               <div className="position-relative">
                 <img
-                  src="public/images/Hotel-2.jpg"
+                  src="/images/Hotel-2.jpg"
                   className="card-img-top"
                 ></img>
                 <div className="card-body text-start">
