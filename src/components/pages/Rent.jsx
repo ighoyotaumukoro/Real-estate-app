@@ -27,7 +27,7 @@ function Rent() {
     <>
       <div className="rounded-4" style={heroWrapperStyle}>
         <img
-          src="assets/BOC logo.png"
+          src="public/images/BOC logo.png"
           className="img-fluid position-absolute top-0 ms-5 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
@@ -324,7 +324,7 @@ function Rent() {
               <div className="col-12 col-md-6 col-lg-6 col-xl-6 ">
                 <div className="card shadow border-0 mt-4 mb-3">
                   <img
-                    src="assets/Hotel-one.jpg"
+                    src="public/images/Hotel-one.jpg"
                     className="card-img-top"
                   ></img>
                   <div className="card-body text-start">
@@ -366,7 +366,7 @@ function Rent() {
                 </div>
 
                 <div className="card shadow border-0 mb-3">
-                  <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                  <img src="public/images/Hotel-2.jpg" className="card-img-top"></img>
                   <div className="card-body text-start">
                     <span
                       className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -406,7 +406,7 @@ function Rent() {
                 </div>
 
                 <div className="card shadow border-0 mb-3">
-                  <img src="assets/Hotel-3.jpg" className="card-img-top"></img>
+                  <img src="public/images/Hotel-3.jpg" className="card-img-top"></img>
                   <div className="card-body text-start">
                     <span
                       className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -446,7 +446,7 @@ function Rent() {
                 </div>
 
                 <div className="card shadow border-0">
-                  <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                  <img src="public/images/Hotel-2.jpg" className="card-img-top"></img>
                   <div className="card-body text-start">
                     <span
                       className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -488,7 +488,7 @@ function Rent() {
 
               <div className="col-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="card shadow border-0 mt-4 mb-3">
-                  <img src="assets/Hotel-3.jpg" className="card-img-top"></img>
+                  <img src="public/images/Hotel-3.jpg" className="card-img-top"></img>
                   <div className="card-body text-start">
                     <span
                       className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -529,7 +529,7 @@ function Rent() {
 
                 <div className="card shadow border-0 mb-3">
                   <img
-                    src="assets/Hotel-one.jpg"
+                    src="public/images/Hotel-one.jpg"
                     className="card-img-top"
                   ></img>
                   <div className="card-body text-start">
@@ -571,7 +571,7 @@ function Rent() {
                 </div>
 
                 <div className="card shadow border-0 mb-3">
-                  <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                  <img src="public/images/Hotel-2.jpg" className="card-img-top"></img>
                   <div className="card-body text-start">
                     <span
                       className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -611,7 +611,7 @@ function Rent() {
                 </div>
 
                 <div className="card shadow border-0">
-                  <img src="assets/Hotel-3.jpg" className="card-img-top"></img>
+                  <img src="public/images/Hotel-3.jpg" className="card-img-top"></img>
                   <div className="card-body text-start">
                     <span
                       className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "

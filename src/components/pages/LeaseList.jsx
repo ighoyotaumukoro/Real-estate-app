@@ -27,7 +27,7 @@ function LeaseList() {
     <>
       <div className="rounded-4" style={heroWrapperStyle}>
         <img
-          src="assets/BOC logo.png"
+          src="public/images/BOC logo.png"
           className="img-fluid position-absolute top-0 ms-5 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
@@ -336,7 +336,7 @@ function LeaseList() {
                 <div className="row align items-center">
                   <div className="col-5">
                     <img
-                      src="assets/Hotel-one.jpg "
+                      src="public/images/Hotel-one.jpg "
                       className="img-fluid h-100  rounded"
                       alt="Property"
                     ></img>
@@ -559,7 +559,7 @@ function LeaseList() {
                 <div className="row align items-center">
                   <div className="col-5">
                     <img
-                      src="assets/Hotel-3.jpg "
+                      src="public/images/Hotel-3.jpg "
                       className="img-fluid h-100  rounded"
                       alt="Property"
                     ></img>
@@ -782,7 +782,7 @@ function LeaseList() {
                 <div className="row align items-center">
                   <div className="col-5">
                     <img
-                      src="assets/Hotel-2.jpg "
+                      src="public/images/Hotel-2.jpg"
                       className="img-fluid h-100  rounded"
                       alt="Property"
                     ></img>
@@ -1005,7 +1005,7 @@ function LeaseList() {
                 <div className="row align items-center">
                   <div className="col-5">
                     <img
-                      src="assets/Hotel-one.jpg "
+                      src="public/images/Hotel-one.jpg"
                       className="img-fluid h-100  rounded"
                       alt="Property"
                     ></img>
@@ -1228,7 +1228,7 @@ function LeaseList() {
                 <div className="row align items-center">
                   <div className="col-5">
                     <img
-                      src="assets/Hotel-3.jpg "
+                      src="public/images/Hotel-3.jpg"
                       className="img-fluid h-100  rounded"
                       alt="Property"
                     ></img>
@@ -1451,7 +1451,7 @@ function LeaseList() {
                 <div className="row align items-center">
                   <div className="col-5">
                     <img
-                      src="assets/Hotel-one.jpg "
+                      src="public/images/Hotel-one.jpg "
                       className="img-fluid h-100  rounded"
                       alt="Property"
                     ></img>
@@ -1674,7 +1674,7 @@ function LeaseList() {
                 <div className="row align items-center">
                   <div className="col-5">
                     <img
-                      src="assets/Hotel-2.jpg "
+                      src="public/images/Hotel-2.jpg "
                       className="img-fluid h-100  rounded"
                       alt="Property"
                     ></img>

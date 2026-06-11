@@ -25,7 +25,7 @@ function Properties() {
     <>
       <div style={heroWrapperStyle}>
         <img
-          src="assets/BOC logo.png"
+          src="public/images/BOC logo.png"
           className="img-fluid position-absolute top-0 ms-3 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
@@ -128,7 +128,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -172,7 +175,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -220,7 +226,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-2.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -264,7 +273,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -308,7 +320,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-3.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-3.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -356,7 +371,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-2.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -400,7 +418,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-3.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-3.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -444,7 +465,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -488,7 +512,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -536,7 +563,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-2.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -580,7 +610,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -624,7 +657,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-3.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-3.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -672,7 +708,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-2.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -716,7 +755,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-3.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-3.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -760,7 +802,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -804,7 +849,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -852,7 +900,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-2.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -896,7 +947,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -940,7 +994,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-3.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-3.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -988,7 +1045,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-2.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1032,7 +1092,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-3.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-3.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1076,7 +1139,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1120,7 +1186,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-one.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-one.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1168,7 +1237,10 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="assets/Hotel-2.jpg" className="card-img-top"></img>
+                <img
+                  src="public/images/Hotel-2.jpg"
+                  className="card-img-top"
+                ></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "

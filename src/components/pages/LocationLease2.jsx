@@ -23,7 +23,7 @@ function LocationLease2() {
     <>
       <div className="container-fluid mx-auto" style={headWrapperStyle}>
         <img
-          src="assets/BOC logo.png"
+          src="public/images/BOC logo.png"
           className="img-fluid position-absolute ms-5 top-0 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
@@ -174,7 +174,7 @@ function LocationLease2() {
             1/4
           </span>
           <img
-            src="assets/Hotel-2.jpg"
+            src="public/images/Hotel-2.jpg"
             className="w-100 rounded-4"
             style={{ objectFit: "cover", height: "600px", display: "block" }}
           ></img>
@@ -476,7 +476,7 @@ function LocationLease2() {
 
               <div className="d-flex align-items-center mb-3">
                 <img
-                  src="assets/Hotel-2.jpg"
+                  src="public/images/IMG_E1863.JPG"
                   className="rounded-circle me-2"
                   width="45"
                   height="45"
@@ -510,7 +510,7 @@ function LocationLease2() {
           <div className="col-12 col-md-4 col-lg-4 col-xl-4">
             <div className="card">
               <img
-                src="assets/Hotel-2.jpg"
+                src="public/images/Hotel-2.jpg"
                 className="card-img-top"
                 style={{ objectFit: "cover" }}
               ></img>
@@ -529,14 +529,14 @@ function LocationLease2() {
                   color: "#2a478d",
                 }}
               >
-                ₦250.0M
+                ₦205.0M
               </p>
             </div>
           </div>
           <div className="col-12 col-md-4 col-lg-4 col-xl-4">
             <div className="card">
               <img
-                src="assets/Hotel-3.jpg"
+                src="public/images/Hotel-3.jpg"
                 className="card-img-top"
                 style={{ objectFit: "cover" }}
               ></img>
@@ -544,7 +544,7 @@ function LocationLease2() {
                 className="fw-semibold mt-3 mb-2 ps-3"
                 style={{ fontFamily: "Georgia", fontSize: "20px" }}
               >
-                Executive 5-Bedroom Mansion with Pool
+                Executive 3-Bedroom Mansion with Pool
               </p>
               <p className="ps-3">Banana Island</p>
               <p
@@ -555,14 +555,14 @@ function LocationLease2() {
                   color: "#2a478d",
                 }}
               >
-                ₦250.0M
+                ₦90.0M
               </p>
             </div>
           </div>
           <div className="col-12 col-md-4 col-lg-4 col-xl-4">
             <div className="card">
               <img
-                src="assets/Hotel-one.jpg"
+                src="public/images/Hotel-one.jpg"
                 className="card-img-top"
                 style={{ objectFit: "cover" }}
               ></img>
@@ -570,7 +570,7 @@ function LocationLease2() {
                 className="fw-semibold mt-3 mb-2 ps-3"
                 style={{ fontFamily: "Georgia", fontSize: "20px" }}
               >
-                Executive 5-Bedroom Mansion with Pool
+                Executive 4-Bedroom Mansion with Pool
               </p>
               <p className="ps-3">Banana Island</p>
               <p
@@ -581,7 +581,7 @@ function LocationLease2() {
                   color: "#2a478d",
                 }}
               >
-                ₦250.0M
+                ₦100.0M
               </p>
             </div>
           </div>
