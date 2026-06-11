@@ -27,7 +27,7 @@ function LocationBuy3() {
           className="img-fluid position-absolute ms-5 top-0 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
-        <Navbar expand="lg" variant="dark" className="mt-4 py-1">
+        <Navbar expand="lg" variant="light" className="mt-4 py-1">
           <Container fluid>
             <Navbar.Toggle
               aria-controls="navbarScroll"
@@ -35,13 +35,13 @@ function LocationBuy3() {
             />
             <Navbar.Collapse id="navbarScroll">
               <Nav
-                className="me-auto my-2 my-lg-0 ms-auto bg-white rounded-5 px-5"
+                className="mx-auto g-3 bg-white  flex-column align-items-center flex-lg-row rounded-5"
                 navbarScroll
               >
                 <Nav.Link
                   as={Link}
                   to="/"
-                  className="ps-5 pe-3"
+                  className="px-3"
                   style={{ color: "#2A478D" }}
                 >
                   Home
@@ -49,7 +49,7 @@ function LocationBuy3() {
                 <Nav.Link
                   as={Link}
                   to="/properties"
-                  className="px-4 text-dark"
+                  className="px-3 text-dark"
                   href="#action2"
                 >
                   Properties
@@ -57,7 +57,7 @@ function LocationBuy3() {
                 <Nav.Link
                   as={Link}
                   to="/about"
-                  className="ps-4 text-dark"
+                  className="px-3 text-dark"
                   href="#action3"
                 >
                   About Us
@@ -65,19 +65,22 @@ function LocationBuy3() {
                 <Nav.Link
                   as={Link}
                   to="/contact"
-                  className="ps-4 pe-5 text-dark"
+                  className="px-3 text-dark"
                   href="#action4"
                 >
                   Contact
                 </Nav.Link>
               </Nav>
 
-              <Button
-                variant="btn me-5"
-                style={{ background: "#2A478D", color: "white" }}
-              >
-                Browse Properties
-              </Button>
+              <Link to="/properties" className="text-dark">
+                <Button
+                  to="/properties"
+                  variant="btn px-3"
+                  style={{ background: "#2A478D", color: "white" }}
+                >
+                  Browse Properties
+                </Button>
+              </Link>
             </Navbar.Collapse>
           </Container>
         </Navbar>
@@ -440,8 +443,6 @@ function LocationBuy3() {
                 Location
               </span>
             </div>
-
-            
 
             <div className="container-fluid border-bottom mb-2 col-12 ">
               <div className="row">

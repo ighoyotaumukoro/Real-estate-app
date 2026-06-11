@@ -497,7 +497,7 @@ function Home() {
                   <div className="card-subtitle">
                     <p className="mt-4">
                       Our experienced agents provide personalized advice
-                      tailored to your unique reach and preferences
+                      tailored to your unique reach
                     </p>
                   </div>
                 </div>
@@ -1104,8 +1104,12 @@ function Home() {
             </div>
             <div className="row align-content-between justify-content-center">
               <div className="col-12 col-lg-6 col-xl-6">
+                <Link to="/properties" className="text-dark">
                 <p className="btn btn-dark">Browse Properties</p>
+                </Link>
+                <Link to="/contact" className="text-dark">
                 <p className="btn bg-white ms-3">Contact Us</p>
+                </Link>
               </div>
             </div>
           </div>

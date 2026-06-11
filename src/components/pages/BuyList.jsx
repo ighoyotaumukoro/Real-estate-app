@@ -31,7 +31,7 @@ function BuyList() {
           className="img-fluid position-absolute top-0 ms-5 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
-        <Navbar expand="lg" variant="dark" className="mt-4 py-1">
+        <Navbar expand="lg" variant="light" className="mt-4 py-1">
           <Container fluid>
             <Navbar.Toggle
               aria-controls="navbarScroll"
@@ -39,13 +39,13 @@ function BuyList() {
             />
             <Navbar.Collapse id="navbarScroll">
               <Nav
-                className="me-auto my-2 my-lg-0 ms-auto bg-white rounded-5 px-5"
+                className="mx-auto g-3 bg-white  flex-column align-items-center flex-lg-row rounded-5"
                 navbarScroll
               >
                 <Nav.Link
                   as={Link}
                   to="/"
-                  className="ps-5 pe-3"
+                  className="px-3"
                   style={{ color: "#2A478D" }}
                 >
                   Home
@@ -53,7 +53,7 @@ function BuyList() {
                 <Nav.Link
                   as={Link}
                   to="/properties"
-                  className="px-4 text-dark"
+                  className="px-3 text-dark"
                   href="#action2"
                 >
                   Properties
@@ -61,7 +61,7 @@ function BuyList() {
                 <Nav.Link
                   as={Link}
                   to="/about"
-                  className="ps-4 text-dark"
+                  className="px-3 text-dark"
                   href="#action3"
                 >
                   About Us
@@ -69,12 +69,22 @@ function BuyList() {
                 <Nav.Link
                   as={Link}
                   to="/contact"
-                  className="ps-4 pe-5 text-dark"
+                  className="px-3 text-dark"
                   href="#action4"
                 >
                   Contact
                 </Nav.Link>
               </Nav>
+
+              <Link to="/properties" className="text-dark">
+                <Button
+                  to="/properties"
+                  variant="btn px-3"
+                  style={{ background: "#2A478D", color: "white" }}
+                >
+                  Browse Properties
+                </Button>
+              </Link>
             </Navbar.Collapse>
           </Container>
         </Navbar>

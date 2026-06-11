@@ -10,15 +10,16 @@ import {
 } from "react-bootstrap";
 function MyNavbar() {
   return (
-    <Navbar expand="lg" variant="dark" className="mt-4 py-1">
+    <Navbar expand="lg" variant="light" className="mt-4 py-1">
       <Container fluid>
         <Navbar.Toggle
           aria-controls="navbarScroll"
           className="ms-auto justify-content-center align-content-center"
+          
         />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="mx-auto g-3 flex-column align-items-center flex-lg-row rounded-5 "
+            className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
             navbarScroll
           >
             <Nav.Link
