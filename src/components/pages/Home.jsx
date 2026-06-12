@@ -205,7 +205,7 @@ function Home() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img src="public/images/Hotel-one.jpg" className="card-img-top"></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
