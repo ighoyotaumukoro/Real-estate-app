@@ -331,24 +331,25 @@ function BuyList() {
                 </svg>
               </div>
             </div>
-            <div className="card col shadow rounded-4 border-0 text-start mb-3">
+            <div className="card col shadow rounded-4 border-0 text-start mb-3 ">
               <div className="">
                 <div className="row align items-center">
                   <div className="col-5">
                     <img
                       src="/images/Hotel-one.jpg "
-                      className="img-fluid h-100  rounded"
+                      className="img-fluid h-100 rounded"
                       alt="Property"
+                      
                     ></img>
                   </div>
-                  <div className="col-7">
+                  <div className="buylist col-7">
                     <span
                       className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
                     </span>
-                    <h5 className="mt-1">Luxury 4-bedroom in Lekki Phase 1</h5>
+                    <h5 className="name mt-1">Luxury 4-bedroom in Lekki Phase 1</h5>
                     <p className="text-muted">
                       <svg
                         className="me-1"
@@ -532,14 +533,14 @@ function BuyList() {
                       450 SQM
                     </p>
                     <h4
-                      className="fw-bold"
+                      className="name fw-bold"
                       style={{ color: " #2A478D", fontFamily: "Georgia" }}
                     >
                       ₦125.0M
                     </h4>
                     <Link to="/buy1" className="text-dark">
                       <button
-                        className="btn btn-sm "
+                        className="details-btn btn btn-sm "
                         style={{
                           border: "1px solid #2A478D",
                           fontFamily: "Arial",
@@ -564,14 +565,14 @@ function BuyList() {
                       alt="Property"
                     ></img>
                   </div>
-                  <div className="col-7">
+                  <div className="buylist col-7">
                     <span
                       className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
                     </span>
-                    <h5 className="mt-1">Luxury 3-bedroom in Lekki Phase 1</h5>
+                    <h5 className="name mt-1">Luxury 3-bedroom in Lekki Phase 1</h5>
                     <p className="text-muted">
                       <svg
                         className="me-1"
@@ -762,7 +763,7 @@ function BuyList() {
                     </h4>
                     <Link to="/buy3" className="text-dark">
                       <button
-                        className="btn btn-sm "
+                        className="details-btn btn btn-sm "
                         style={{
                           border: "1px solid #2A478D",
                           fontFamily: "Arial",
@@ -787,14 +788,14 @@ function BuyList() {
                       alt="Property"
                     ></img>
                   </div>
-                  <div className="col-7">
+                  <div className="buylist col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className=" badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
                     </span>
-                    <h5 className="mt-1">Luxury 5-bedroom in Lekki Phase 1</h5>
+                    <h5 className="name mt-1">Luxury 5-bedroom in Lekki Phase 1</h5>
                     <p className="text-muted">
                       <svg
                         className="me-1"
@@ -985,7 +986,7 @@ function BuyList() {
                     </h4>
                     <Link to="/buy2" className="text-dark">
                       <button
-                        className="btn btn-sm "
+                        className="details-btn btn btn-sm "
                         style={{
                           border: "1px solid #2A478D",
                           fontFamily: "Arial",
@@ -1010,14 +1011,14 @@ function BuyList() {
                       alt="Property"
                     ></img>
                   </div>
-                  <div className="col-7">
+                  <div className="buylist col-7">
                     <span
                       className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
                     </span>
-                    <h5 className="mt-1">Luxury 4-bedroom in Lekki Phase 1</h5>
+                    <h5 className="name mt-1">Luxury 4-bedroom in Lekki Phase 1</h5>
                     <p className="text-muted">
                       <svg
                         className="me-1"
@@ -1208,7 +1209,7 @@ function BuyList() {
                     </h4>
                     <Link to="/buy1" className="text-dark">
                       <button
-                        className="btn btn-sm "
+                        className="details-btn btn btn-sm "
                         style={{
                           border: "1px solid #2A478D",
                           fontFamily: "Arial",
@@ -1233,14 +1234,14 @@ function BuyList() {
                       alt="Property"
                     ></img>
                   </div>
-                  <div className="col-7">
+                  <div className="buylist col-7">
                     <span
                       className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
                     </span>
-                    <h5 className="mt-1">Luxury 3-bedroom in Lekki Phase 1</h5>
+                    <h5 className="name mt-1">Luxury 3-bedroom in Lekki Phase 1</h5>
                     <p className="text-muted">
                       <svg
                         className="me-1"
@@ -1431,7 +1432,7 @@ function BuyList() {
                     </h4>
                     <Link to="/buy3" className="text-dark">
                       <button
-                        className="btn btn-sm "
+                        className="details-btn btn btn-sm "
                         style={{
                           border: "1px solid #2A478D",
                           fontFamily: "Arial",
@@ -1456,14 +1457,14 @@ function BuyList() {
                       alt="Property"
                     ></img>
                   </div>
-                  <div className="col-7">
+                  <div className="buylist col-7">
                     <span
                       className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
                     </span>
-                    <h5 className="mt-1">Luxury 4-bedroom in Lekki Phase 1</h5>
+                    <h5 className="name mt-1">Luxury 4-bedroom in Lekki Phase 1</h5>
                     <p className="text-muted">
                       <svg
                         className="me-1"
@@ -1654,7 +1655,7 @@ function BuyList() {
                     </h4>
                     <Link to="/buy1" className="text-dark">
                       <button
-                        className="btn btn-sm "
+                        className="details-btn btn btn-sm "
                         style={{
                           border: "1px solid #2A478D",
                           fontFamily: "Arial",
@@ -1679,14 +1680,14 @@ function BuyList() {
                       alt="Property"
                     ></img>
                   </div>
-                  <div className="col-7">
+                  <div className="buylist col-7">
                     <span
                       className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
                     </span>
-                    <h5 className="mt-1">Luxury 5-bedroom in Lekki Phase 1</h5>
+                    <h5 className="name mt-1">Luxury 5-bedroom in Lekki Phase 1</h5>
                     <p className="text-muted">
                       <svg
                         className="me-1"
@@ -1877,7 +1878,7 @@ function BuyList() {
                     </h4>
                     <Link to="/buy2" className="text-dark">
                       <button
-                        className="btn btn-sm "
+                        className="details-btn btn btn-sm "
                         style={{
                           border: "1px solid #2A478D",
                           fontFamily: "Arial",

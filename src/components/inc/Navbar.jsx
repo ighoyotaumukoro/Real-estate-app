@@ -25,7 +25,7 @@ function MyNavbar() {
             <Nav.Link
               as={Link}
               to="/"
-              className="px-3"
+              className="px-5"
               style={{ color: "#2A478D" }}
             >
               Home
@@ -33,7 +33,7 @@ function MyNavbar() {
             <Nav.Link
               as={Link}
               to="/properties"
-              className="px-3 text-dark"
+              className="px-5 text-dark"
               href="#action2"
             >
               Properties
@@ -41,7 +41,7 @@ function MyNavbar() {
             <Nav.Link
               as={Link}
               to="/about"
-              className="px-3 text-dark"
+              className="px-5 text-dark"
               href="#action3"
             >
               About Us
@@ -49,7 +49,7 @@ function MyNavbar() {
             <Nav.Link
               as={Link}
               to="/contact"
-              className="px-3 text-dark"
+              className="px-5 text-dark"
               href="#action4"
             >
               Contact
@@ -58,7 +58,7 @@ function MyNavbar() {
           <Link to ="/properties" className="text-dark">
           <Button
               to="/properties"
-            variant="btn px-3"
+            variant="btn px-5"
             style={{ background: "#2A478D", color: "white" }}
             
           >
