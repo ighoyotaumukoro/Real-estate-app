@@ -1012,7 +1012,7 @@ function LeaseList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       LEASE
@@ -1235,7 +1235,7 @@ function LeaseList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       LEASE
@@ -1458,7 +1458,7 @@ function LeaseList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2  px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       LEASE
@@ -1681,7 +1681,7 @@ function LeaseList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2  px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       LEASE

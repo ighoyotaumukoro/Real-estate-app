@@ -88,7 +88,7 @@ function BuyList() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <div className="flex-grow-1 d-flex align-items-start justify-content-start">
+        <div className="grow d-flex align-items-start justify-content-start">
           <div className="container text-start text-white ps-5">
             <h1
               className="display-3 mt-5 fw-light"
@@ -112,7 +112,7 @@ function BuyList() {
                 >
                   Filter
                   <label
-                    className="mt-1 fw-bold flex position-absolute end-0 pe-2"
+                    className="mt-1 fw-bold flex position-absolute inset-e-0 pe-2"
                     style={{
                       color: "#2A478D",
                       fontFamily: "Arial",
@@ -205,12 +205,12 @@ function BuyList() {
           <div className="col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <div className="row mt-3">
               <div className="col-8">
-                <select className="bg-white text-dark d-flex mt-1 p-2 pe-3 border-1  mb-3 rounded-2 fw-bold">
+                <select className="bg-white text-dark d-flex mt-1 p-2 pe-3 border  mb-3 rounded-2 fw-bold">
                   <option value="">New Listing</option>
                   <option>Oldest Listing</option>
                 </select>
               </div>
-              <div className="col-4 position-absolute end-0">
+              <div className="col-4 position-absolute inset-e-0">
                 <Link to="/buy" className="px-2 text-dark">
                   <svg
                     width="36"
@@ -343,7 +343,7 @@ function BuyList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2 ms-0 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
@@ -566,7 +566,7 @@ function BuyList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2  px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
@@ -789,7 +789,7 @@ function BuyList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2  px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
@@ -1012,7 +1012,7 @@ function BuyList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2  px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
@@ -1235,7 +1235,7 @@ function BuyList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2  px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
@@ -1458,7 +1458,7 @@ function BuyList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2 px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY
@@ -1681,7 +1681,7 @@ function BuyList() {
                   </div>
                   <div className="col-7">
                     <span
-                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 start-0 mt-2 ms-0 px-3 "
+                      className="badge ms-2 btn position-absolute bg-white rounded-5 py-1  top-0 inset-s-0 mt-2  px-3 "
                       style={{ color: "#2A478D" }}
                     >
                       BUY

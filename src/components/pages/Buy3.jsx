@@ -121,13 +121,13 @@ function Buy3() {
       <div className="card border-0 overflow-hidden mx-5">
         <div className="position-relative">
           <span
-            className="badge btn position-absolute rounded-5 py-2 ms-3 top-0 mt-2 px-3 start-0"
+            className="badge btn position-absolute rounded-5 py-2 ms-3 top-0 mt-2 px-3 inset-s-0"
             style={{ color: "white", backgroundColor: "#c4622d", zIndex: "2" }}
           >
             FOR BUY
           </span>
           <svg
-            className="position-absolute top-50 start-0 translate-middle-y ms-3 jusify-content-center align-items-center"
+            className="position-absolute top-50 inset-s-0 translate-middle-y ms-3 jusify-content-center align-items-center"
             width="33"
             height="33"
             viewBox="0 0 33 33"
@@ -149,7 +149,7 @@ function Buy3() {
             />
           </svg>
           <svg
-            className="position-absolute top-50 end-0 translate-middle-y me-3"
+            className="position-absolute top-50 inset-e-0 translate-middle-y me-3"
             width="33"
             height="33"
             viewBox="0 0 33 33"
@@ -170,7 +170,7 @@ function Buy3() {
               style={{ zIndex: "2" }}
             />
           </svg>
-          <span className="badge bg-dark bg-opacity-75 position-absolute bottom-0 start-50 translate-middle-x mb-3">
+          <span className="badge bg-dark bg-opacity-75 position-absolute bottom-0 inset-s-50 translate-middle-x mb-3">
             1/4
           </span>
           <img

@@ -78,7 +78,7 @@ function Buy() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <div className="flex-grow-1 d-flex align-items-start justify-content-start">
+        <div className="grow d-flex align-items-start justify-content-start">
           <div className="container text-start text-white ps-5">
             <h1
               className="display-3 mt-5 fw-light"
@@ -102,7 +102,7 @@ function Buy() {
                 >
                   Filter
                   <label
-                    className="mt-1 fw-bold flex position-absolute end-0 pe-2"
+                    className="mt-1 fw-bold flex position-absolute inset-e-0 pe-2"
                     style={{
                       color: "#2A478D",
                       fontFamily: "Arial",
@@ -196,12 +196,12 @@ function Buy() {
           <div className="col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <div className="row mt-3">
               <div className="col-8">
-                <select className="bg-white text-dark d-flex p-2 pe-3 border-1 mt-3 rounded-2 fw-bold">
+                <select className="bg-white text-dark d-flex p-2 pe-3 border mt-3 rounded-2 fw-bold">
                   <option value="">New Listing</option>
                   <option>Oldest Listing</option>
                 </select>
               </div>
-              <div className="col-4 position-absolute end-0">
+              <div className="col-4 position-absolute inset-e-0">
                 <Link to="/buy" className="px-2 text-dark">
                   <svg
                     className="mt-3"
@@ -334,7 +334,7 @@ function Buy() {
                     >
                       BUY
                     </span>
-                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                       FEATURED
                     </span>
                     <p className="mb-1 text-wrap">
@@ -350,7 +350,7 @@ function Buy() {
                         ₦125.0M
                         <Link to="/buy1" className="text-dark">
                           <span
-                            className="end-0 position-absolute fw-bold py-2 px-3 rounded-3 "
+                            className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3 "
                             style={{
                               border: "1px solid #2A478D",
                               fontFamily: "Arial",
@@ -374,7 +374,7 @@ function Buy() {
                     >
                       BUY
                     </span>
-                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                       FEATURED
                     </span>
                     <p className="mb-1">
@@ -390,7 +390,7 @@ function Buy() {
                         ₦250.0M
                         <Link to="/buy2" className="text-dark">
                           <span
-                            className="end-0 position-absolute fw-bold py-2 px-3 rounded-3 "
+                            className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3 "
                             style={{
                               border: "1px solid #2A478D",
                               fontFamily: "Arial",
@@ -414,7 +414,7 @@ function Buy() {
                     >
                       BUY
                     </span>
-                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                       FEATURED
                     </span>
                     <p className="mb-1">
@@ -430,7 +430,7 @@ function Buy() {
                         ₦120.0M
                         <Link to="/buy3" className="text-dark">
                           <span
-                            className="end-0 position-absolute fw-bold py-2 px-3 rounded-3 "
+                            className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3 "
                             style={{
                               border: "1px solid #2A478D",
                               fontFamily: "Arial",
@@ -454,7 +454,7 @@ function Buy() {
                     >
                       BUY
                     </span>
-                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                       FEATURED
                     </span>
                     <p className="mb-1">
@@ -470,7 +470,7 @@ function Buy() {
                         ₦250.0M
                         <Link to="/buy2" className="text-dark">
                           <span
-                            className="end-0 position-absolute fw-bold py-2 px-3 rounded-3 "
+                            className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3 "
                             style={{
                               border: "1px solid #2A478D",
                               fontFamily: "Arial",
@@ -496,7 +496,7 @@ function Buy() {
                     >
                       BUY
                     </span>
-                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                       FEATURED
                     </span>
                     <p className="mb-1 text-wrap">
@@ -512,7 +512,7 @@ function Buy() {
                         ₦120.0M
                         <Link to="/buy3" className="text-dark">
                           <span
-                            className="end-0 position-absolute fw-bold py-2 px-3 rounded-3 "
+                            className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3 "
                             style={{
                               border: "1px solid #2A478D",
                               fontFamily: "Arial",
@@ -539,7 +539,7 @@ function Buy() {
                     >
                       BUY
                     </span>
-                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                       FEATURED
                     </span>
                     <p className="mb-1">
@@ -555,7 +555,7 @@ function Buy() {
                         ₦125.0M
                         <Link to="/buy1" className="text-dark">
                           <span
-                            className="end-0 position-absolute fw-bold py-2 px-3 rounded-3 "
+                            className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3 "
                             style={{
                               border: "1px solid #2A478D",
                               fontFamily: "Arial",
@@ -579,7 +579,7 @@ function Buy() {
                     >
                       BUY
                     </span>
-                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                       FEATURED
                     </span>
                     <p className="mb-1">
@@ -595,7 +595,7 @@ function Buy() {
                         ₦250.0M
                         <Link to="/buy2" className="text-dark">
                           <span
-                            className="end-0 position-absolute fw-bold py-2 px-3 rounded-3 "
+                            className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3 "
                             style={{
                               border: "1px solid #2A478D",
                               fontFamily: "Arial",
@@ -619,7 +619,7 @@ function Buy() {
                     >
                       BUY
                     </span>
-                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                    <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                       FEATURED
                     </span>
                     <p className="mb-1">
@@ -635,7 +635,7 @@ function Buy() {
                         ₦120.0M
                         <Link to="/buy3" className="text-dark">
                           <span
-                            className="end-0 position-absolute fw-bold py-2 px-3 rounded-3 "
+                            className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3 "
                             style={{
                               border: "1px solid #2A478D",
                               fontFamily: "Arial",

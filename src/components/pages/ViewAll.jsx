@@ -79,7 +79,7 @@ function ViewAll() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <div className="flex-grow-1 align-items-center justify-content-center">
+        <div className="grow align-items-center justify-content-center">
           <div className="text-center text-white">
             <h1
               className="display-1 mt-5 fw-light"
@@ -136,7 +136,7 @@ function ViewAll() {
                   >
                     BUY
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -149,7 +149,7 @@ function ViewAll() {
                       125.0M
                       <Link to="/buy1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -180,7 +180,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -197,7 +197,7 @@ function ViewAll() {
                       20.0M
                       <Link to="/rent1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -228,7 +228,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -241,7 +241,7 @@ function ViewAll() {
                       50.0M
                       <Link to="/rent2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -272,7 +272,7 @@ function ViewAll() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -285,7 +285,7 @@ function ViewAll() {
                       100.0M
                       <Link to="/lease1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -316,7 +316,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -333,7 +333,7 @@ function ViewAll() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -364,7 +364,7 @@ function ViewAll() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -377,7 +377,7 @@ function ViewAll() {
                       205.0M
                       <Link to="/lease2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -408,7 +408,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -421,7 +421,7 @@ function ViewAll() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -452,7 +452,7 @@ function ViewAll() {
                   >
                     BUY
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -465,7 +465,7 @@ function ViewAll() {
                       125.0M
                       <Link to="/buy1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -496,7 +496,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -513,7 +513,7 @@ function ViewAll() {
                       20.0M
                       <Link to="/rent1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -544,7 +544,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -557,7 +557,7 @@ function ViewAll() {
                       50.0M
                       <Link to="/rent2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -588,7 +588,7 @@ function ViewAll() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -601,7 +601,7 @@ function ViewAll() {
                       100.0M
                       <Link to="/lease1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -632,7 +632,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -649,7 +649,7 @@ function ViewAll() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -680,7 +680,7 @@ function ViewAll() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -693,7 +693,7 @@ function ViewAll() {
                       205.0M
                       <Link to="/lease2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -724,7 +724,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -737,7 +737,7 @@ function ViewAll() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -768,7 +768,7 @@ function ViewAll() {
                   >
                     BUY
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -781,7 +781,7 @@ function ViewAll() {
                       125.0M
                       <Link to="/buy1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -812,7 +812,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -829,7 +829,7 @@ function ViewAll() {
                       20.0M
                       <Link to="/rent1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-s-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -860,7 +860,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -873,7 +873,7 @@ function ViewAll() {
                       50.0M
                       <Link to="/rent2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -904,7 +904,7 @@ function ViewAll() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -917,7 +917,7 @@ function ViewAll() {
                       100.0M
                       <Link to="/lease1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -948,7 +948,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -965,7 +965,7 @@ function ViewAll() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -996,7 +996,7 @@ function ViewAll() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1009,7 +1009,7 @@ function ViewAll() {
                       205.0M
                       <Link to="/lease2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -1040,7 +1040,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1053,7 +1053,7 @@ function ViewAll() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -1084,7 +1084,7 @@ function ViewAll() {
                   >
                     BUY
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1097,7 +1097,7 @@ function ViewAll() {
                       125.0M
                       <Link to="/buy1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -1128,7 +1128,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1145,7 +1145,7 @@ function ViewAll() {
                       20.0M
                       <Link to="/rent1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -1176,7 +1176,7 @@ function ViewAll() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1189,7 +1189,7 @@ function ViewAll() {
                       50.0M
                       <Link to="/rent2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",

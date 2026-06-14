@@ -79,7 +79,7 @@ function Properties() {
             </Navbar.Collapse>
           </Container>
         </Navbar>
-        <div className="flex-grow-1 align-items-center justify-content-center">
+        <div className="grow align-items-center justify-content-center">
           <div className="text-center text-white">
             <h1
               className="display-1 mt-5 fw-light"
@@ -128,10 +128,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -139,7 +136,7 @@ function Properties() {
                   >
                     BUY
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -152,7 +149,7 @@ function Properties() {
                       125.0M
                       <Link to="/buy1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -175,10 +172,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -186,7 +180,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-s-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -203,7 +197,7 @@ function Properties() {
                       20.0M
                       <Link to="/rent1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -226,10 +220,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -237,7 +228,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -250,7 +241,7 @@ function Properties() {
                       50.0M
                       <Link to="/rent2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -273,10 +264,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -284,7 +272,7 @@ function Properties() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -297,7 +285,7 @@ function Properties() {
                       100.0M
                       <Link to="/lease1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -320,10 +308,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -331,7 +316,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -348,7 +333,7 @@ function Properties() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -371,10 +356,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -382,7 +364,7 @@ function Properties() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -395,7 +377,7 @@ function Properties() {
                       205.0M
                       <Link to="/lease2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -418,10 +400,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -429,7 +408,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -442,7 +421,7 @@ function Properties() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -465,10 +444,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -476,7 +452,7 @@ function Properties() {
                   >
                     BUY
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -489,7 +465,7 @@ function Properties() {
                       125.0M
                       <Link to="/buy1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -512,10 +488,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -523,7 +496,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -540,7 +513,7 @@ function Properties() {
                       20.0M
                       <Link to="/rent1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -563,10 +536,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -574,7 +544,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -587,7 +557,7 @@ function Properties() {
                       50.0M
                       <Link to="/rent2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -610,10 +580,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -621,7 +588,7 @@ function Properties() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -634,7 +601,7 @@ function Properties() {
                       100.0M
                       <Link to="/lease1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -657,10 +624,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -668,7 +632,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -685,7 +649,7 @@ function Properties() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -708,10 +672,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -719,7 +680,7 @@ function Properties() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -732,7 +693,7 @@ function Properties() {
                       205.0M
                       <Link to="/lease2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -755,10 +716,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -766,7 +724,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -779,7 +737,7 @@ function Properties() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -802,10 +760,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -813,7 +768,7 @@ function Properties() {
                   >
                     BUY
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -826,7 +781,7 @@ function Properties() {
                       125.0M
                       <Link to="/buy1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -849,10 +804,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -860,7 +812,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -877,7 +829,7 @@ function Properties() {
                       20.0M
                       <Link to="/rent1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -900,10 +852,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -911,7 +860,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -924,7 +873,7 @@ function Properties() {
                       50.0M
                       <Link to="/rent2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -947,10 +896,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -958,7 +904,7 @@ function Properties() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -971,7 +917,7 @@ function Properties() {
                       100.0M
                       <Link to="/lease1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -994,10 +940,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1005,7 +948,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1022,7 +965,7 @@ function Properties() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -1045,10 +988,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1056,7 +996,7 @@ function Properties() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1069,7 +1009,7 @@ function Properties() {
                       205.0M
                       <Link to="/lease2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -1092,10 +1032,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-3.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-3.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1103,7 +1040,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1116,7 +1053,7 @@ function Properties() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -1139,10 +1076,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1150,7 +1084,7 @@ function Properties() {
                   >
                     BUY
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1163,7 +1097,7 @@ function Properties() {
                       125.0M
                       <Link to="/buy1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -1186,10 +1120,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-one.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-one.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1197,7 +1128,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1214,7 +1145,7 @@ function Properties() {
                       20.0M
                       <Link to="/rent1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -1237,10 +1168,7 @@ function Properties() {
           >
             <div className="card shadow border-0">
               <div className="position-relative">
-                <img
-                  src="/images/Hotel-2.jpg"
-                  className="card-img-top"
-                ></img>
+                <img src="/images/Hotel-2.jpg" className="card-img-top"></img>
                 <div className="card-body text-start">
                   <span
                     className="badge btn position-absolute bg-white  rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
@@ -1248,7 +1176,7 @@ function Properties() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -1261,7 +1189,7 @@ function Properties() {
                       50.0M
                       <Link to="/rent2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
