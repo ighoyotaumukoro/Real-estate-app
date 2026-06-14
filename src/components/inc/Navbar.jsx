@@ -15,11 +15,10 @@ function MyNavbar() {
         <Navbar.Toggle
           aria-controls="navbarScroll"
           className="ms-auto justify-content-center align-content-center"
-          
         />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
+            className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 font-medium font-primary"
             navbarScroll
           >
             <Nav.Link
@@ -55,15 +54,14 @@ function MyNavbar() {
               Contact
             </Nav.Link>
           </Nav>
-          <Link to ="/properties" className="text-dark">
-          <Button
+          <Link to="/properties" className="text-dark">
+            <Button
               to="/properties"
-            variant="btn px-3"
-            style={{ background: "#2A478D", color: "white" }}
-            
-          >
-            Browse Properties
-          </Button>
+              variant="btn px-3"
+              style={{ background: "#2A478D", color: "white" }}
+            >
+              Browse Properties
+            </Button>
           </Link>
         </Navbar.Collapse>
       </Container>

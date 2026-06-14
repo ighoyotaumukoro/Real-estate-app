@@ -32,7 +32,7 @@ function Home() {
         ></img>
         <MyNavbar />
 
-        <div className="flex-grow-1 align-items-center justify-content-center">
+        <div className="grow align-items-center justify-content-center">
           <div className="text-center text-white">
             <h1
               className="display-1 mt-5 fw-light"
@@ -169,7 +169,7 @@ function Home() {
                   >
                     BUY
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -182,7 +182,7 @@ function Home() {
                       125.0M
                       <Link to="/buy1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -213,7 +213,7 @@ function Home() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -230,7 +230,7 @@ function Home() {
                       20.0M
                       <Link to="/rent1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -261,7 +261,7 @@ function Home() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -274,7 +274,7 @@ function Home() {
                       50.0M
                       <Link to="/rent2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -305,7 +305,7 @@ function Home() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -318,7 +318,7 @@ function Home() {
                       100.0M
                       <Link to="/lease1">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -349,7 +349,7 @@ function Home() {
                   >
                     RENT
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -366,7 +366,7 @@ function Home() {
                       15.0M
                       <Link to="/rent3">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -397,7 +397,7 @@ function Home() {
                   >
                     LEASE
                   </span>
-                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
+                  <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 inset-e-0 me-3 top-0 mt-2  px-3 align ">
                     FEATURED
                   </span>
                   <p className="mb-1">
@@ -410,7 +410,7 @@ function Home() {
                       205.0M
                       <Link to="/lease2" className="text-dark">
                         <span
-                          className="end-0 position-absolute fw-bold py-2 px-3 rounded-3"
+                          className="inset-e-0 position-absolute fw-bold py-2 px-3 rounded-3"
                           style={{
                             color: "#2A478D",
                             border: "1px solid #2A478D",
@@ -426,7 +426,7 @@ function Home() {
                 </div>
                 <Link to="/viewAll" className="text-dark">
                   <p
-                    className="position-absolute end-0 pt-2 text-decoration-underline"
+                    className="position-absolute inset-e-0 pt-2 text-decoration-underline"
                     style={{ color: "#2A478D" }}
                   >
                     View All Properties
@@ -618,7 +618,7 @@ function Home() {
             </p>
           </div>
           <div
-            className="row flex-nowrap overflow-auto overflow-auto  pb-3 ps-3 pe-3 pe-md-0"
+            className="row flex-nowrap overflow-auto  pb-3 ps-3 pe-3 pe-md-0"
             style={{ fontFamily: "Helvitica", scrollSnapType: "x-mandatory" }}
           >
             <div
@@ -1105,10 +1105,10 @@ function Home() {
             <div className="row align-content-between justify-content-center">
               <div className="col-12 col-lg-6 col-xl-6">
                 <Link to="/properties" className="text-dark">
-                <p className="btn btn-dark">Browse Properties</p>
+                  <p className="btn btn-dark">Browse Properties</p>
                 </Link>
                 <Link to="/contact" className="text-dark">
-                <p className="btn bg-white ms-3">Contact Us</p>
+                  <p className="btn bg-white ms-3">Contact Us</p>
                 </Link>
               </div>
             </div>

@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -183,87 +183,81 @@
   }
 }
 
-.buy-btn{
-  padding:10px 30px 10px 30px !important;
+.buy-btn {
+  padding: 10px 30px 10px 30px !important;
 }
 
-
-@media (min-width: 768px){
-.buy-btn{
-  padding:10px 100px !important; 
+@media (min-width: 768px) {
+  .buy-btn {
+    padding: 10px 100px !important;
+  }
 }
 
+@media (min-width: 768px) {
+  .whatsapp-btn {
+    padding: 12px 110px !important;
+  }
+  .message-btn {
+    padding: 12px 110px !important;
+  }
 }
 
-
-@media(min-width: 768px){
- .whatsapp-btn{
-padding:12px 110px !important;
-}
-.message-btn{
- padding:12px 110px !important; 
-} 
-}
-
-
-@media(max-width:767px){
-.contact-title{
-  text-align: center;
- }
-.whatsapp-btn{
-padding:12px 80px;
-}
-.message-btn{
- padding:12px 96px; 
+@media (max-width: 767px) {
+  .contact-title {
+    text-align: center;
+  }
+  .whatsapp-btn {
+    padding: 12px 80px;
+  }
+  .message-btn {
+    padding: 12px 96px;
+  }
 }
 
- }
-  
-
- .contact-subtitle{
-  text-align:center !important;
+.contact-subtitle {
+  text-align: center !important;
   font-size: 10px;
   text-wrap: nowrap;
   margin-left: 5px;
   margin-right: 5px;
- }
+}
 
- @media (min-width: 767px){
- .contact-subtitle{
-  text-align:start !important;
-  font-size: 20px !important;
-  text-wrap: nowrap;
-  margin-left: 5px;
-  margin-right: 5px;
- } 
- }
+@media (min-width: 767px) {
+  .contact-subtitle {
+    text-align: start !important;
+    font-size: 20px !important;
+    text-wrap: nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
 
- .whatsapp-card{
-  width:100%;
-  margin:auto;
- }
-
- .message-card{
-  width:100%;
+.whatsapp-card {
+  width: 100%;
   margin: auto;
- }
+}
 
- .btn:hover{
+.message-card {
+  width: 100%;
+  margin: auto;
+}
+
+.btn:hover {
   opacity: 0.9;
- }
+}
 
-@media(max-width: 768px){
- .search-btn{
-padding:10px 130px !important;
- }
+@media (max-width: 768px) {
+  .search-btn {
+    padding: 10px 130px !important;
+  }
 
- img.thumb{
-  height: 300px !important;
- }
- }
+  img.thumb {
+    height: 300px !important;
+  }
+}
 
- @media(min-width: 768px){
- .search-btn{
-padding:10px 38px !important;
- }
- }
+@media (min-width: 768px) {
+  .search-btn {
+    padding: 10px 38px !important;
+  }
+}

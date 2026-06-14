@@ -1,5 +1,5 @@
 import React from "react";
-function About() {
+const About = () => {
   return (
     <div className="container">
       <div className="card mt-4">
@@ -8,8 +8,7 @@ function About() {
         </div>
       </div>
     </div>
-    
   );
-}
+};
 
 export default About;
