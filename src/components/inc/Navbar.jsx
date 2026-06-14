@@ -18,7 +18,7 @@ function MyNavbar() {
         />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 font-medium font-primary"
+            className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
             navbarScroll
           >
             <Nav.Link
