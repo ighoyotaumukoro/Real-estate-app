@@ -61,7 +61,7 @@ function Contact() {
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/about"
+                  to=""
                   className="px-3 text-dark"
                   href="#action3"
                   style={{ color: "#2A478D" }}
@@ -324,12 +324,14 @@ function Contact() {
                     </div>
                   </div>
                   <div className="justify-content-center align-items-center d-flex">
+                    <a href="https://wa.me/2348144697306">
                     <Button
                       variant="btn whatsapp-btn btn-success text-nowrap  "
                       style={{ color: "white" }}
                     >
                       Chat on WhatsApp
                     </Button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -412,9 +414,9 @@ function Contact() {
         </div>
       </div>
 
-      <div className="mt-5 pt-5 border p-5 mb-4 mx-3 rounded-2">
+      <div className="mt-5 d-flex flex-column pt-5 border p-5 mb-4 mx-3 rounded-2  align-items-center">
         <svg
-          className="mt-5 mb-2"
+          className="client  active mt-5 mb-2  d-flex align-self-center mx-auto"
           width="48"
           height="48"
           viewBox="0 0 48 48"
@@ -436,7 +438,7 @@ function Contact() {
             stroke-linejoin="round"
           />
         </svg>
-        <p className="text-muted mb-5">Offline Location</p>
+        <p className="offline text-muted mb-5 d-flex align-self-center mx-auto ">Offline Location</p>
       </div>
     </>
   );

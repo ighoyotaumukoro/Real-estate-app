@@ -6,11 +6,11 @@ function Footer() {
   return (
     <>
       <div
-            className="container-fluid px-3 px-md-4  bg-dark"
+            className="container-fluid bg-dark"
             style={{ paddingTop: "70px " }}
           >
-            <div className="row flex-nowrap ms-0 me-5 pb-3">
-              <div className="col-lg-3 col-xl-3 col-md-3 text-start">
+            <div className="col-12 row flex-wrap flex-md-nowrap ms-0 me-5 pb-3">
+              <div className="col-12 col-lg-3 col-xl-3 col-md-3 text-start">
                 <p className="h5 text-white mb-3 text-nowrap ">
                   BOC Real Estate Limited
                 </p>
@@ -19,33 +19,44 @@ function Footer() {
                   discerning clients with exceptional properties since 2021.
                 </p>
               </div>
-              <div className="col-lg-3 col-xl-3 col-md-3 ms-5 text-start">
+              <div className="col-12 col-lg-3 col-xl-3 col-md-3 text-start">
                 <p
                   className=" text-white mb-3"
                   style={{ fontFamily: "Georgia" }}
                 >
                   Quick Links
                 </p>
+                <Link to ="/properties"className="text-dark">
                 <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
                   Buy
                 </p>
+                </Link>
+                <Link to ="/properties"className="text-dark">
                 <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
                   Rent
                 </p>
+                </Link>
+                <Link to ="/properties"className="text-dark">
                 <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
                   Lease
                 </p>
+                </Link>
                 <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
                   About
                 </p>
+                <a href="https://wa.me/2348100854095" className="text-decoration-none">
                 <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
                   Agents
                 </p>
+                </a>
+                
+                <Link to ="/contact"className="text-dark">
                 <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
                   Contact
                 </p>
+                </Link>
               </div>
-              <div className="col-lg-3 col-xl-3 col-md-3 text-start mx-0">
+              <div className="col-12 col-lg-3 col-xl-3 col-md-3 text-start mx-0">
                 <p
                   className=" text-white mb-3 "
                   style={{ fontFamily: "Georgia" }}
@@ -68,15 +79,16 @@ function Footer() {
                   Land
                 </p>
               </div>
-              <div className="col-lg-3 col-xl-3 col-md-3 text-start">
+              <div className="col-12 col-lg-3 col-xl-3 col-md-3 text-start">
                 <p
                   className=" text-white mb-3"
                   style={{ fontFamily: "Georgia" }}
                 >
                   Contact Us
                 </p>
-                <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
+                <p className="text-secondary mb-1 d-flex" style={{ fontSize: "16px" }}>
                   <svg
+                  className="mt-1 me-1"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -100,8 +112,10 @@ function Footer() {
                   </svg>{" "}
                   Plot 15, Admiralty Way, Lekki Phase 1, Lagos, Nigeria
                 </p>
-                <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
+                <a href="call:+2348100854095" className="text-decoration-none">
+                <p className="text-secondary mb-1 d-flex" style={{ fontSize: "16px" }}>
                   <svg
+                  className="mt-1 me-1"
                     width="19"
                     height="19"
                     viewBox="0 0 19 19"
@@ -116,10 +130,13 @@ function Footer() {
                       stroke-linejoin="round"
                     />
                   </svg>{" "}
-                  +2348012345678
+                  +2348100854095
                 </p>
-                <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
+                </a>
+                <a href="mailto:ighoyotau@gmail.com" className="text-decoration-none">
+                <p className="text-secondary mb-1 d-flex" style={{ fontSize: "16px" }}>
                   <svg
+                  className="mt-1 me-1"
                     width="20"
                     height="20"
                     viewBox="0 0 20 20"
@@ -141,15 +158,16 @@ function Footer() {
                       stroke-linejoin="round"
                     />
                   </svg>{" "}
-                  info@estateluxe.com
+                  ighoyotau@gmail.com
                 </p>
+                </a>
               </div>
             </div>
           </div>
-          <div className="d-none d-md-block container-fluid px-3 px-md-4  bg-dark text-white pt-5 border-top  border-secondary">
-            <p className="text-secondary mb-0" style={{ fontSize: "16px" }}>
+          <div className="d-none d-md-block container-fluid px-3 px-md-4  bg-dark text-white py-4 border-top  border-secondary">
+            <h5 className="text-secondary mb-0" style={{ fontSize: "16px" }}>
               © 2026 BOC Real Estate Limited. All rights reserved.
-            </p>
+            </h5>
           </div>
     
     </>

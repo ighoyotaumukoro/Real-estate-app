@@ -11,17 +11,17 @@ function WhyBoc() {
           >
             Why Choose BOC Real Estate Limited
           </h1>
-          <p className="text-muted mb-5">
+          <h5 className="text-muted mb-5">
             We are commited to make your property journey seamless and
             successful
-          </p>
+          </h5>
         </div>
         <div
           className="row pb-3 g-3 g-md-0 mx-5 justify-content-center"
           style={{ fontFamily: "Georgia" }}
         >
           <div
-            className="col-10 col-lg-4 col-xl-4 col-md-6 rounded-3 border-0 mb-4 h-100 pe-3"
+            className="col-12 col-lg-4 col-xl-4 col-md-6 rounded-3 border-0 mb-4 h-100 pe-3"
             style={{ objectFit: "cover" }}
           >
             <div
@@ -30,6 +30,7 @@ function WhyBoc() {
             >
               <div className="card-body text-start">
                 <svg
+                className="why"
                   width="64"
                   height="64"
                   viewBox="0 0 64 64"
@@ -70,7 +71,7 @@ function WhyBoc() {
             </div>
           </div>
           <div
-            className="col-10 col-lg-4 col-xl-4 col-md-6 rounded-3 border-0 mb-4 h-100 pe-3"
+            className="col-12 col-lg-4 col-xl-4 col-md-6 rounded-3 border-0 mb-4 h-100 pe-3"
             style={{ objectFit: "cover" }}
           >
             <div
@@ -79,6 +80,7 @@ function WhyBoc() {
             >
               <div className="card-body text-start">
                 <svg
+                className="why"
                   width="64"
                   height="64"
                   viewBox="0 0 64 64"
@@ -112,14 +114,14 @@ function WhyBoc() {
                 <div className="card-subtitle">
                   <p className="mt-4">
                     Join thousands of verified clients who have found their
-                    perfect property with us
+                    perfect property with us at BOC
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="col-10 col-lg-4 col-xl-4 col-md-6 rounded-3 border-0 mb-4 h-100 pe-3 "
+            className="col-12 col-lg-4 col-xl-4 col-md-6 rounded-3 border-0 mb-4 h-100 pe-3 "
             style={{ objectFit: "cover" }}
           >
             <div
@@ -128,6 +130,7 @@ function WhyBoc() {
             >
               <div className="card-body text-start">
                 <svg
+                className="why"
                   width="64"
                   height="64"
                   viewBox="0 0 64 64"

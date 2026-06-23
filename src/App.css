@@ -19,7 +19,7 @@
 
 .hero {
   position: relative;
-
+  overflow: hidden;
   .base,
   .framework,
   .vite {
@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -183,102 +183,220 @@
   }
 }
 
-.buy-btn{
-  padding:10px 30px 10px 30px !important;
+.buy-btn {
+  padding: 10px 30px 10px 30px !important;
 }
-
-
-@media (min-width: 768px){
-.buy-btn{
-  padding:10px 100px !important; 
-}
-
-}
-
-
-@media(min-width: 768px){
- .whatsapp-btn{
-padding:12px 110px !important;
-}
-.message-btn{
- padding:12px 110px !important; 
-} 
-}
-
-
-@media(max-width:767px){
-.contact-title{
-  text-align: center;
- }
-.whatsapp-btn{
-padding:12px 80px;
-}
-.message-btn{
- padding:12px 96px; 
-}
-
- }
+p , svg{
+  display: flex !important;
   
-
- .contact-subtitle{
-  text-align:center !important;
+}
+svg{
+  margin-top: 10px;
+}
+.contact-subtitle {
+  text-align: center !important;
   font-size: 10px;
   text-wrap: nowrap;
   margin-left: 5px;
   margin-right: 5px;
- }
+}
 
- @media (min-width: 767px){
- .contact-subtitle{
-  text-align:start !important;
-  font-size: 20px !important;
-  text-wrap: nowrap;
-  margin-left: 5px;
-  margin-right: 5px;
- } 
- }
 
- .whatsapp-card{
-  width:100%;
-  margin:auto;
- }
 
- .message-card{
-  width:100%;
+.whatsapp-card {
+  width: 100%;
   margin: auto;
- }
+}
 
- .btn:hover{
+.message-card {
+  width: 100%;
+  margin: auto;
+}
+
+.btn:hover {
   opacity: 0.9;
- }
+}
 
-@media(max-width: 768px){
- .search-btn{
-padding:10px 130px !important;
- }
+@media (min-width: 991px) {
+  .search-btn {
+    padding: 10px 38px !important;
+  }
+  .head-text{
+    font-size: 20px;
+  }
+  
+  svg.loc{
+    margin-top: 0;
+     width:25px;
+    height:25px;
+  }
 
- img.thumb{
-  height: 300px !important;
- }
- .buylist{
- padding: 12px !important;
- font-size: 14px;
- }
 
- .name{
-  font-size: 16px;
- }
- .details-btn{
-  font-size: 10px !important;
- }
- }
+  .toggle-btns label {
+  padding: 10px 120px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.toggle-btns label.active {
+  background: #2A478D;
+  color: white;
+  border-radius: 5px;
+}
+ .whatsapp-btn {
+    padding: 12px 110px !important;
+  }
+  .message-btn {
+    padding: 12px 110px !important;
+  }
+  .contact-subtitle {
+    text-align: start !important;
+    font-size: 20px !important;
+    text-wrap: nowrap;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .whatsapp-btn {
+    padding: 12px 220px !important;
+  }
+  .message-btn {
+    padding: 12px 250px !important;
+  }
+}
 
- @media(min-width: 768px){
- .search-btn{
-padding:10px 38px !important;
- }
- .buylist{
- padding: 10px !important;
+@media (max-width: 768px) {
+  .contact-title {
+    text-align: center;
+  }
+  .whatsapp-btn {
+    padding: 12px 80px;
+  }
+  .message-btn {
+    padding: 12px 96px;
+  }
+  .search-btn {
+    padding: 10px 120px !important;
+  }
+  .propertylink{
+    margin-top: 400px !important;
+  }
 
- }
- }
+  img.thumb {
+    height: 300px !important;
+  }
+  .head-text1{
+    font-size: 35px;
+  }
+
+  .list {
+    height: 150px;
+    font-size: 10px;
+  }
+
+  .name {
+    font-size: 12px;
+  }
+  .details-btn {
+    font-size: 10px !important;
+    padding: 3px;
+  }
+  .head-text{
+    font-size: 12px !important;
+    margin: 0 20px 0 5px !important;
+  
+  }
+
+  .head-card{
+   margin-top: -170px !important;
+  }
+  .heroWrapperStyle{
+    margin: 0 0 0 0 !important;
+    border-radius: 0px !important;
+  }
+
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  svg.icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  svg.why{
+     width:64px;
+    height:64px;
+  }
+
+  svg.loc{
+    margin-top: 2px;
+     width:20px;
+    height:20px;
+  }
+  svg.client{
+    width:30px;
+    height:30px;
+  }
+  svg.review{
+    width: 200px;
+    height: 20px;
+  }
+  .toggle-btns label {
+  padding: 10px 30px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.toggle-btns label.active {
+  background: #2A478D;
+  color: white;
+  border-radius: 5px;
+}
+.nav-link{
+  border-bottom: 1px solid gainsboro;
+  width: 350px;
+  
+}
+}
+@media (min-width: 768px) and (max-width:991px){
+.toggle-btns label {
+  padding: 10px 80px !important;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+
+.toggle-btns label.active {
+  background: #2A478D;
+  color: white;
+  border-radius: 5px;
+}
+.search-btn {
+    padding: 10px 28px !important;
+  }
+  .price{
+font-size: 18px !important;
+  }
+  .details{
+font-size: 14px !important;
+
+  }
+  .whatsapp-btn {
+    padding: 12px 136px !important;
+  }
+  .message-btn {
+    padding: 12px 150px !important;
+  }
+  
+}
+
+
+

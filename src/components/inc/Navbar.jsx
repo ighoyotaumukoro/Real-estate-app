@@ -15,7 +15,6 @@ function MyNavbar() {
         <Navbar.Toggle
           aria-controls="navbarScroll"
           className="ms-auto justify-content-center align-content-center"
-          
         />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -25,7 +24,7 @@ function MyNavbar() {
             <Nav.Link
               as={Link}
               to="/"
-              className="px-5"
+              className="nav-link px-5"
               style={{ color: "#2A478D" }}
             >
               Home
@@ -33,15 +32,15 @@ function MyNavbar() {
             <Nav.Link
               as={Link}
               to="/properties"
-              className="px-5 text-dark"
+              className="nav-link px-5 text-dark"
               href="#action2"
             >
               Properties
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/about"
-              className="px-5 text-dark"
+              to=""
+              className="nav-link px-5 text-dark"
               href="#action3"
             >
               About Us
@@ -49,21 +48,21 @@ function MyNavbar() {
             <Nav.Link
               as={Link}
               to="/contact"
-              className="px-5 text-dark"
+              className="nav-link px-5 text-dark"
               href="#action4"
             >
               Contact
             </Nav.Link>
           </Nav>
-          <Link to ="/properties" className="text-dark">
-          <Button
+          <Link to="/properties" className="text-dark text-decoration-none">
+            <Button
               to="/properties"
-            variant="btn px-5"
-            style={{ background: "#2A478D", color: "white" }}
-            
-          >
-            Browse Properties
-          </Button>
+              variant="btn px-3"
+              className="d-none d-md-flex"
+              style={{ background: "#2A478D", color: "white" }}
+            >
+              Browse Properties
+            </Button>
           </Link>
         </Navbar.Collapse>
       </Container>
