@@ -186,11 +186,11 @@
 .buy-btn {
   padding: 10px 30px 10px 30px !important;
 }
-p , svg{
+p,
+svg {
   display: flex !important;
-  
 }
-svg{
+svg {
   margin-top: 10px;
 }
 .contact-subtitle {
@@ -200,8 +200,6 @@ svg{
   margin-left: 5px;
   margin-right: 5px;
 }
-
-
 
 .whatsapp-card {
   width: 100%;
@@ -219,33 +217,37 @@ svg{
 
 @media (min-width: 991px) {
   .search-btn {
-    padding: 10px 38px !important;
+    padding: 10px 100px !important;
   }
-  .head-text{
+  .head-text {
     font-size: 20px;
   }
-  
-  svg.loc{
+
+  svg.loc {
     margin-top: 0;
-     width:25px;
-    height:25px;
+    width: 25px;
+    height: 25px;
+  }
+  svg.cont {
+    width: 54px;
+    height: 54px;
+    margin-top: 0;
   }
 
-
   .toggle-btns label {
-  padding: 10px 120px;
-  border: none;
-  background: #f0f0f0;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
-.toggle-btns label.active {
-  background: #2A478D;
-  color: white;
-  border-radius: 5px;
-}
- .whatsapp-btn {
+    padding: 10px 120px;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+  .toggle-btns label.active {
+    background: #2a478d;
+    color: white;
+    border-radius: 5px;
+  }
+  .whatsapp-btn {
     padding: 12px 110px !important;
   }
   .message-btn {
@@ -277,16 +279,17 @@ svg{
     padding: 12px 96px;
   }
   .search-btn {
-    padding: 10px 120px !important;
+    padding: 10px 130px !important;
   }
-  .propertylink{
-    margin-top: 400px !important;
+  .propertylink {
+    margin-top: 390px !important;
+    font-size: 14px;
   }
 
   img.thumb {
     height: 300px !important;
   }
-  .head-text1{
+  .head-text1 {
     font-size: 35px;
   }
 
@@ -302,92 +305,136 @@ svg{
     font-size: 10px !important;
     padding: 3px;
   }
-  .head-text{
+  .head-text {
     font-size: 12px !important;
     margin: 0 20px 0 5px !important;
-  
   }
 
-  .head-card{
-   margin-top: -170px !important;
+  .head-card {
+    margin-top: -170px !important;
   }
-  .heroWrapperStyle{
+  .heroWrapperStyle {
     margin: 0 0 0 0 !important;
     border-radius: 0px !important;
   }
-
+  div {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-name: card;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+  }
+  @keyframes card {
+    from {
+      bottom: 100px;
+    }
+    to {
+      top: 100%;
+    }
+  }
   svg {
     width: 12px;
     height: 12px;
   }
 
   svg.icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  svg.why {
+    width: 64px;
+    height: 64px;
+  }
+  #navbarScroll {
+    margin-top: 50px;
+  }
+
+  button.close {
+    background-color: white;
+  }
+  div.review {
+    font-size: 14px;
+  }
+  .rev-img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  svg.loc {
+    margin-top: 2px;
     width: 20px;
     height: 20px;
   }
-
-  svg.why{
-     width:64px;
-    height:64px;
+  svg.cont {
+    width: 40px;
+    height: 40px;
+    margin-top: 0;
   }
 
-  svg.loc{
-    margin-top: 2px;
-     width:20px;
-    height:20px;
+  .prop-card {
+    margin-top: -50px !important;
   }
-  svg.client{
-    width:30px;
-    height:30px;
+  .prope-card {
+    margin-top: -88px !important;
   }
-  svg.review{
+
+  .cont {
+    font-size: 12px;
+    text-align: center !important;
+  }
+  svg.client {
+    width: 30px;
+    height: 30px;
+  }
+  svg.review {
     width: 200px;
     height: 20px;
   }
   .toggle-btns label {
-  padding: 10px 30px;
-  border: none;
-  background: #f0f0f0;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
-.toggle-btns label.active {
-  background: #2A478D;
-  color: white;
-  border-radius: 5px;
-}
-.nav-link{
-  border-bottom: 1px solid gainsboro;
-  width: 350px;
-  
-}
-}
-@media (min-width: 768px) and (max-width:991px){
-.toggle-btns label {
-  padding: 10px 80px !important;
-  border: none;
-  background: #f0f0f0;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-}
-
-
-.toggle-btns label.active {
-  background: #2A478D;
-  color: white;
-  border-radius: 5px;
-}
-.search-btn {
-    padding: 10px 28px !important;
+    padding: 10px 30px;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
   }
-  .price{
-font-size: 18px !important;
+  .toggle-btns label.active {
+    background: #2a478d;
+    color: white;
+    border-radius: 5px;
   }
-  .details{
-font-size: 14px !important;
+  .nav-link {
+    border-bottom: 1px solid gainsboro;
+    width: 350px;
+  }
 
+  Nav {
+    margin-top: 2000px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .toggle-btns label {
+    padding: 10px 80px !important;
+    border: none;
+    background: #f0f0f0;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  .toggle-btns label.active {
+    background: #2a478d;
+    color: white;
+    border-radius: 5px;
+  }
+  .search-btn {
+    padding: 10px 50px !important;
+  }
+  .price {
+    font-size: 18px !important;
+  }
+  .details {
+    font-size: 14px !important;
   }
   .whatsapp-btn {
     padding: 12px 136px !important;
@@ -395,8 +442,4 @@ font-size: 14px !important;
   .message-btn {
     padding: 12px 150px !important;
   }
-  
 }
-
-
-

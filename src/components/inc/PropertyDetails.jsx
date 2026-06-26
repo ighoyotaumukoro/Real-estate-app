@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { property } from "../../data/Properties";
 import Footer from "../inc/Footer";
+import { similar } from "../../data/Similar";
 import {
   Navbar,
   Container,
@@ -13,8 +14,10 @@ import HeroBg from "../../assets/Hero-bg.jpg";
 import MyNavbar from "../inc/Navbar";
 import { useState } from "react";
 export default function PropertyDetail() {
+  const [isOpen, setIsOpen] = useState(false);
   const { slug } = useParams();
   const prop = property.find((p) => p.slug === slug);
+   const sim = similar.find((p) => p.slug === slug);
 
   const headWrapperStyle = {
     backgroundPosition: "center",
@@ -32,29 +35,51 @@ export default function PropertyDetail() {
           style={{ height: "60px", width: "80px" }}
         ></img>
         <Navbar expand="lg" variant="light" className="mt-4 py-1">
-          <Container fluid>
-            <Navbar.Toggle
-              aria-controls="navbarScroll"
-              className="ms-auto justify-content-center align-content-center"
-            />
-            <Navbar.Collapse id="navbarScroll">
-              <Nav
-                className="mx-auto g-3 bg-white  flex-column align-items-center flex-lg-row rounded-5"
-                navbarScroll
+              <Container fluid className="position-relative">
+                {!isOpen && (
+                  <Navbar.Toggle
+                    aria-controls="navbarScroll"
+                    className="ms-auto justify-content-center align-content-center"
+                    onClick={() => setIsOpen(true)}
+                  />
+                )}
+        
+                {isOpen && (
+                  <button
+                    className="close position-absolute d-md-none top-0 end-0 mt-2 me-2 btn-close btn-close-dark"
+                    onClick={() => setIsOpen(false)}
+                    style={{ fontSize: "1.2rem", color: "#000" }}
+                    aria-label="Close"
+                  ></button>
+                )}
+        
+                <Navbar.Collapse id="navbarScroll" in={isOpen}>
+                  <Nav
+                    className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
+                    navbarScroll
+                    style={{
+                      top: "80px",
+                      overflowY: "auto",
+                      backgroundColor: "white",
+                    
+                      zIndex: 1050,
+                      maxHeight: "calc(100vh -100px)",
+                    }}
               >
                 <Nav.Link
                   as={Link}
                   to="/"
-                  className="px-3"
-                  style={{ color: "#2A478D" }}
+                  className="px-3 text-dark"
+                 
                 >
                   Home
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/properties"
-                  className="px-3 text-dark"
+                  className="px-"
                   href="#action2"
+                   style={{ color: "#2A478D" }}
                 >
                   Properties
                 </Nav.Link>
@@ -91,7 +116,7 @@ export default function PropertyDetail() {
       </div>
 
       <div>
-        <Link to="/viewAll" className="text-dark">
+        <Link to="/properties" className="text-dark">
           <p
             className="text-start ms-5 mb-5"
             style={{ textDecoration: "underline", color: "#2A478D" }}
@@ -232,7 +257,7 @@ export default function PropertyDetail() {
               className="fw-bold mb-3"
               style={{ fontFamily: "Georgia", color: "#2A478D" }}
             >
-              ₦{prop.price}
+              {prop.price}
             </h3>
 
             <div className="row g-2 mb-4">
@@ -456,7 +481,7 @@ export default function PropertyDetail() {
               Property Description
             </h6>
             <p className="text-secondary">
-              This exquisite 4-bedroom duplex epitomizes modern luxury living.
+              This exquisite {prop.bedroom}-bedroom duplex epitomizes modern luxury living.
               Featuring floor-to-ceiling windows, a gourmet kitchen with premium
               appliances, and a stunning rooftop terrace with panoramic city
               views. The property sits in the heart of Lekki Phase 1, surrounded
@@ -496,10 +521,14 @@ export default function PropertyDetail() {
               <div className="d-flex align-items-center mb-3">
                 <img
                   src={prop.agent}
-                  className="rounded-circle me-2"
-                  width="45"
-                  height="45"
-                  alt="Agent"
+                  className="rounded-5 me-2"
+                  style={{
+                  width:"45px",
+                  height:"45px",
+                  alt:"Agent",
+                  objectFit: "cover",
+                        flexShrink: 0,
+                   } }
                 />
                 <span className="fw-semibold">BOC Agent - 0027</span>
               </div>
@@ -518,7 +547,7 @@ export default function PropertyDetail() {
                   href={prop.whatsapp}
                   className="btn btn-success w-100 text-decoration-none text-white bi bi-whatsapp"
                 >
-                  WhatsApp Agent
+                 <span className="ms-2">WhatsApp Agent</span>
                 </a>
               </button>
             </div>
@@ -561,85 +590,49 @@ export default function PropertyDetail() {
         >
           Similar Properties
         </p>
-        <div className="row mb-5 ">
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="card">
-              <img
-                src="/images/Hotel-2.jpg"
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              ></img>
-              <p
-                className="fw-semibold mt-3 mb-2 ps-3"
-                style={{ fontFamily: "Georgia", fontSize: "20px" }}
-              >
-                Executive 5-Bedroom Mansion with Pool
-              </p>
-              <p className="ps-3">Banana Island</p>
-              <p
-                className="ps-3 fw-semibold"
-                style={{
-                  fontFamily: "Georgia",
-                  fontSize: "20px",
-                  color: "#2a478d",
-                }}
-              >
-                ₦250.0M
-              </p>
+        <div className="row mb-5 justify-content-around d-flex g-4">
+          {similar.map((sim) => (
+            <div key={sim.id} className="col-12 col-md-4 col-lg-4 col-xl-4 g-4">
+              <div className="card">
+                <img
+                  src={sim.image}
+                  className="card-img-top"
+                  style={{ objectFit: "cover" }}
+                ></img>
+                <p
+                  className="fw-semibold mt-3 mb-2 ps-3"
+                  style={{ fontFamily: "Georgia", fontSize: "20px" }}
+                >
+                  Executive {sim.bedroom}-Bedroom Mansion with Pool
+                </p>
+                <p className="ps-3">Banana Island</p>
+                <div className="position-relative mt-3">
+                  <p
+                    style={{ color: "#2A478D", fontFamily: "Georgia" }}
+                    className="price ms-2 h4 fw-bold"
+                  >
+                    {sim.price}
+                    <Link
+                      to={`/similar/${sim.slug}`}
+                      className="text-dark"
+                    >
+                      <span
+                        className="details bottom-0 mb-2 end-0 me-2 position-absolute fw-bold py-2 px-2 rounded-3"
+                        style={{
+                          color: "#2A478D",
+                          border: "1px solid #2A478D",
+                          fontFamily: "Arial",
+                          fontSize: "14px",
+                        }}
+                      >
+                        View Details
+                      </span>
+                    </Link>
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="card">
-              <img
-                src="/images/Hotel-3.jpg"
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              ></img>
-              <p
-                className="fw-semibold mt-3 mb-2 ps-3"
-                style={{ fontFamily: "Georgia", fontSize: "20px" }}
-              >
-                Executive 3-Bedroom Mansion with Pool
-              </p>
-              <p className="ps-3">Banana Island</p>
-              <p
-                className="ps-3 fw-semibold"
-                style={{
-                  fontFamily: "Georgia",
-                  fontSize: "20px",
-                  color: "#2a478d",
-                }}
-              >
-                ₦120.0M
-              </p>
-            </div>
-          </div>
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="card">
-              <img
-                src="/images/Hotel-one.jpg"
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              ></img>
-              <p
-                className="fw-semibold mt-3 mb-2 ps-3"
-                style={{ fontFamily: "Georgia", fontSize: "20px" }}
-              >
-                Executive 5-Bedroom Mansion with Pool
-              </p>
-              <p className="ps-3">Banana Island</p>
-              <p
-                className="ps-3 fw-semibold"
-                style={{
-                  fontFamily: "Georgia",
-                  fontSize: "20px",
-                  color: "#2a478d",
-                }}
-              >
-                ₦125.0M
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <Footer />

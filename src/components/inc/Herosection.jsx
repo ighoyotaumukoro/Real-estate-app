@@ -6,7 +6,7 @@ function Herosection() {
   return (
     <>
       <div
-        className="container-fluid bg-white mx-2"
+        className=" hero container-fluid bg-white mx-2 "
         style={{ paddingTop: "100px " }}
       >
         <div className="container-fluid px-3 px-md-4 text-center">
@@ -35,7 +35,7 @@ function Herosection() {
               className="col-10 col-lg-4 col-xl-4 col-md-6 rounded-3 border-0 mb-4 h-100 pe-3"
               style={{ objectFit: "cover" }}
             >
-              <div className="card shadow border-0">
+              <div className=" card shadow border-0">
                 <div className="position-relative">
                   <img src={prop.image} className="card-img-top"></img>
                   <div className="card-body text-start">
@@ -73,17 +73,20 @@ function Herosection() {
                 </div>
               </div>
             </div>
+            
           ))}
           <Link to="/properties" className="text-dark">
             <p
-              className="propertylink position position-absolute end-0 me-4 text-decoration-underline fw-bold "
+              className="propertylink position-absolute end-0 me-4 text-decoration-underline fw-bold"
               style={{ color: "#2A478D", marginTop:"550px" }}
             >
               View all Properties
             </p>
           </Link>
         </div>
+        
       </div>
+      
     </>
   );
 }

@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { property2 } from "../../data/Properties2";
+import { similar } from "../../data/Similar";
 import {
+
   Navbar,
   Container,
   Nav,
@@ -9,10 +12,14 @@ import {
 } from "react-bootstrap";
 import HeroBg from "../../assets/Hero-bg.jpg";
 import MyNavbar from "../inc/Navbar";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Footer from "../inc/Footer";
 
 function Buy1() {
+  const { slug } = useParams();
+  const property = property2.find((p) => p.slug === slug);
+  const sim = similar.find((p) => p.slug === slug);
+  const [isOpen, setIsOpen] = useState(false);
   const headWrapperStyle = {
     backgroundPosition: "center",
     minHeight: "12vh", //
@@ -29,29 +36,46 @@ function Buy1() {
           style={{ height: "60px", width: "80px" }}
         ></img>
         <Navbar expand="lg" variant="light" className="mt-4 py-1">
-          <Container fluid>
-            <Navbar.Toggle
-              aria-controls="navbarScroll"
-              className="ms-auto justify-content-center align-content-center"
-            />
-            <Navbar.Collapse id="navbarScroll">
+          <Container fluid className="position-relative">
+            {!isOpen && (
+              <Navbar.Toggle
+                aria-controls="navbarScroll"
+                className="ms-auto justify-content-center align-content-center"
+                onClick={() => setIsOpen(true)}
+              />
+            )}
+
+            {isOpen && (
+              <button
+                className="position-absolute d-md-none top-0 end-0 mt-2 me-2 btn-close btn-close-dark"
+                onClick={() => setIsOpen(false)}
+                style={{ fontSize: "1.2rem", color: "#000" }}
+                aria-label="Close"
+              ></button>
+            )}
+
+            <Navbar.Collapse id="navbarScroll" in={isOpen}>
               <Nav
-                className="mx-auto g-3 bg-white  flex-column align-items-center flex-lg-row rounded-5"
+                className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
                 navbarScroll
+                style={{
+                  top: "80px",
+                  overflowY: "auto",
+                  backgroundColor: "white",
+
+                  zIndex: 1050,
+                  maxHeight: "calc(100vh -100px)",
+                }}
               >
-                <Nav.Link
-                  as={Link}
-                  to="/"
-                  className="px-3"
-                  style={{ color: "#2A478D" }}
-                >
+                <Nav.Link as={Link} to="/" className="px-3 text-dark">
                   Home
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/properties"
-                  className="px-3 text-dark"
+                  className="px-3 "
                   href="#action2"
+                  style={{ color: "#2A478D" }}
                 >
                   Properties
                 </Nav.Link>
@@ -73,7 +97,10 @@ function Buy1() {
                 </Nav.Link>
               </Nav>
 
-              <Link to="/properties" className="text-dark">
+              <Link
+                to="/properties"
+                className="d-none d-md-flex text-decoration-none text-dark"
+              >
                 <Button
                   to="/properties"
                   variant="btn px-3"
@@ -94,7 +121,7 @@ function Buy1() {
             style={{ textDecoration: "underline", color: "#2A478D" }}
           >
             <svg
-            className="mt-1"
+              className="mt-1"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -120,33 +147,33 @@ function Buy1() {
           </p>
         </Link>
       </div>
-      <div><a href="https://wa.me/2348144697306">
-        <span
-          className="btn position-fixed rounded-circle "
-          style={{
-            bottom: "20px",
-            right: "20px",
-            width: "60px",
-            height: "60px",
-            backgroundColor: "rgb(44, 212, 11)",
-            zIndex:"10",
-          }}
-        >
-        <span
-          
-          className="btn   position-fixed "
-          style={{
-            bottom: "20px",
-            right: "20px",
-            width: "30px",
-            height: "30px",
-            border: "3px solid white",
-            borderRadius: "30px 30px 30px 2px",
-            position:"fixed",
-            margin:"15px 15px 15px 15px"
-          }}
-        ></span>
-        </span>
+      <div>
+        <a href="https://wa.me/2348144697306">
+          <span
+            className="btn position-fixed rounded-circle "
+            style={{
+              bottom: "20px",
+              right: "20px",
+              width: "60px",
+              height: "60px",
+              backgroundColor: "rgb(44, 212, 11)",
+              zIndex: "10",
+            }}
+          >
+            <span
+              className="btn   position-fixed "
+              style={{
+                bottom: "20px",
+                right: "20px",
+                width: "30px",
+                height: "30px",
+                border: "3px solid white",
+                borderRadius: "30px 30px 30px 2px",
+                position: "fixed",
+                margin: "15px 15px 15px 15px",
+              }}
+            ></span>
+          </span>
         </a>
       </div>
       <div className="card border-0 overflow-hidden mx-5">
@@ -155,7 +182,7 @@ function Buy1() {
             className="badge btn position-absolute rounded-5 py-2 ms-3 top-0 mt-2 px-3 inset-s-0"
             style={{ color: "white", backgroundColor: "#c4622d", zIndex: "2" }}
           >
-            FOR BUY
+            FOR {property.badge1}
           </span>
           <svg
             className="position-absolute top-50 inset-s-0 translate-middle-y ms-3 jusify-content-center align-items-center"
@@ -205,7 +232,7 @@ function Buy1() {
             1/4
           </span>
           <img
-            src="/images/Hotel-one.jpg"
+            src={property.image}
             className="thumb w-100 rounded-4"
             style={{ objectFit: "cover", height: "600px", display: "block" }}
           ></img>
@@ -219,11 +246,11 @@ function Buy1() {
               className="fw-bold"
               style={{ fontFamily: "Georgia", color: "#2A478D" }}
             >
-              Luxury 4-Bedroom Duplex in Lekki Phase 1
+              {property.name}
             </h4>
             <p className="text-muted small d-flex ">
               <svg
-              className="loc"
+                className="loc"
                 width="17"
                 height="17"
                 viewBox="0 0 17 17"
@@ -252,13 +279,13 @@ function Buy1() {
                   </clipPath>
                 </defs>
               </svg>
-              15 Admiralty Way, Lekki Phase 1, Lagos
+              15 Admiralty Way, {property.location}
             </p>
             <h3
               className="fw-bold mb-3"
               style={{ fontFamily: "Georgia", color: "#2A478D" }}
             >
-              ₦125.00M
+              {property.price}
             </h3>
 
             <div className="row g-2 mb-4">
@@ -309,7 +336,7 @@ function Buy1() {
                       </defs>
                     </svg>
                   </div>
-                  <div className="fw-bold">4</div>
+                  <div className="fw-bold">{property.bedroom}</div>
                   <div style={{ fontSize: "12px", whiteSpace: "nowrap" }}>
                     Bedrooms
                   </div>
@@ -467,10 +494,10 @@ function Buy1() {
                 Overview
               </span>
 
-              <Link to="/featuresbuy1" className="text-dark">
+              <Link to={`/featuresbuy1/${property.slug}`} className="text-dark">
                 <span className="me-4 pb-2 d-inline-block">Features</span>
               </Link>
-              <Link to="/locationbuy1" className="text-dark">
+              <Link to={`/locationbuy1/${property.slug}`} className="text-dark">
                 <span className="me-4 pb-2 d-inline-block">Location</span>
               </Link>
             </div>
@@ -482,11 +509,11 @@ function Buy1() {
               Property Description
             </h6>
             <p className="text-secondary">
-              This exquisite 4-bedroom duplex epitomizes modern luxury living.
-              Featuring floor-to-ceiling windows, a gourmet kitchen with premium
-              appliances, and a stunning rooftop terrace with panoramic city
-              views. The property sits in the heart of Lekki Phase 1, surrounded
-              by fine dining, shopping, and entertainment.
+              This exquisite {property.bedroom}-bedroom duplex epitomizes modern
+              luxury living. Featuring floor-to-ceiling windows, a gourmet
+              kitchen with premium appliances, and a stunning rooftop terrace
+              with panoramic city views. The property sits in the heart of Lekki
+              Phase 1, surrounded by fine dining, shopping, and entertainment.
             </p>
 
             <div className="container-fluid border-bottom mb-2 col-12 ">
@@ -521,22 +548,33 @@ function Buy1() {
 
               <div className="d-flex align-items-center mb-3">
                 <img
-                  src="/images/myphoto.JPG"
-                  className="rounded-circle me-2"
-                  width="45"
-                  height="45"
-                  alt="Agent"
+                  src={property.agent}
+                  className="rounded-5 me-2"
+                  style={{
+                  width:"45px",
+                  height:"45px",
+                  alt:"Agent",
+                  objectFit: "cover",
+                        flexShrink: 0,
+                   } }
                 />
                 <span className="fw-semibold">BOC Agent - 0027</span>
               </div>
-
-              <button
-                className="btn  w-100 mb-2"
-                style={{ backgroundColor: "#2A478D", color: "white" }}
-              >
-                Send Enquiry
+              <button>
+                <a
+                  href={property.enquiry}
+                  className="btn  w-100 mb-2"
+                  style={{ backgroundColor: "#2A478D", color: "white" }}
+                >
+                  Send Enquiry
+                </a>
               </button>
-              <button><a href="https://wa.me/2348100854095" className="btn btn-success w-100 text-decoration-none text-white bi bi-whatsapp">WhatsApp Agent
+              <button className="d-flex justify-content-between align-content-between">
+                <a
+                  href={property.whatsapp}
+                  className=" bi bi-whatsapp btn btn-success w-100 text-decoration-none text-white"
+                >
+                  <span className="ms-2">WhatsApp Agent</span>
                 </a>
               </button>
             </div>
@@ -551,85 +589,46 @@ function Buy1() {
         >
           Similar Properties
         </p>
-        <div className="row mb-5">
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="card">
-              <img
-                src="/images/Hotel-2.jpg"
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              ></img>
-              <p
-                className="fw-semibold mt-3 mb-2 ps-3"
-                style={{ fontFamily: "Georgia", fontSize: "20px" }}
-              >
-                Executive 5-Bedroom Mansion with Pool
-              </p>
-              <p className="ps-3">Banana Island</p>
-              <p
-                className="ps-3 fw-semibold"
-                style={{
-                  fontFamily: "Georgia",
-                  fontSize: "20px",
-                  color: "#2a478d",
-                }}
-              >
-                ₦250.0M
-              </p>
+        <div className="row mb-5 justify-content-around d-flex g-4">
+          {similar.map((sim) => (
+            <div key={sim.id} className="col-12 col-md-4 col-lg-4 col-xl-4 g-4">
+              <div className="card">
+                <img
+                  src={sim.image}
+                  className="card-img-top"
+                  style={{ objectFit: "cover" }}
+                ></img>
+                <p
+                  className="fw-semibold mt-3 mb-2 ps-3"
+                  style={{ fontFamily: "Georgia", fontSize: "20px" }}
+                >
+                  Executive {sim.bedroom}-Bedroom Mansion with Pool
+                </p>
+                <p className="ps-3">Banana Island</p>
+                <div className="position-relative mt-3">
+                  <p
+                    style={{ color: "#2A478D", fontFamily: "Georgia" }}
+                    className="price ms-2 h4 fw-bold"
+                  >
+                    {sim.price}
+                    <Link to={`/similar/${sim.slug}`} className="text-dark">
+                      <span
+                        className="details bottom-0 mb-2 end-0 me-2 position-absolute fw-bold py-2 px-2 rounded-3"
+                        style={{
+                          color: "#2A478D",
+                          border: "1px solid #2A478D",
+                          fontFamily: "Arial",
+                          fontSize: "14px",
+                        }}
+                      >
+                        View Details
+                      </span>
+                    </Link>
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="card">
-              <img
-                src="/images/Hotel-3.jpg"
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              ></img>
-              <p
-                className="fw-semibold mt-3 mb-2 ps-3"
-                style={{ fontFamily: "Georgia", fontSize: "20px" }}
-              >
-                Executive 3-Bedroom Mansion with Pool
-              </p>
-              <p className="ps-3">Banana Island</p>
-              <p
-                className="ps-3 fw-semibold"
-                style={{
-                  fontFamily: "Georgia",
-                  fontSize: "20px",
-                  color: "#2a478d",
-                }}
-              >
-                ₦120.0M
-              </p>
-            </div>
-          </div>
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="card">
-              <img
-                src="/images/Hotel-one.jpg"
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              ></img>
-              <p
-                className="fw-semibold mt-3 mb-2 ps-3"
-                style={{ fontFamily: "Georgia", fontSize: "20px" }}
-              >
-                Executive 5-Bedroom Mansion with Pool
-              </p>
-              <p className="ps-3">Banana Island</p>
-              <p
-                className="ps-3 fw-semibold"
-                style={{
-                  fontFamily: "Georgia",
-                  fontSize: "20px",
-                  color: "#2a478d",
-                }}
-              >
-                ₦125.0M
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <Footer />

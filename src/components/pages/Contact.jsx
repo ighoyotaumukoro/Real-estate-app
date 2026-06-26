@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useRef, useState} from "react";
+import emailjs from "@emailjs/browser";
 import {
   Navbar,
   Container,
@@ -11,6 +12,24 @@ import HeroBg from "../../assets/Hero-bg.jpg";
 import { Link } from "react-router-dom";
 
 function Contact() {
+  const form = useRef();
+  const [sent, setSent] = useState(false);
+  const sendEmail=(e)=> {
+    e.preventDefault();
+    emailjs.sendForm(
+      'service_temapu',
+      'template_yve0uae',
+      form.current,
+      '6C2PgqEu5M-DqLVt_'
+    )
+    .then(()=>{
+      setSent(true)
+    },(error)=>{
+      console.log('FAILED...', error.text);
+      alert('Message Failed to send. Try again.');
+    });
+  };
+  const [isOpen, setIsOpen] = useState(false);
   const heroWrapperStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${HeroBg})`,
     backgroundSize: "cover",
@@ -31,21 +50,42 @@ function Contact() {
           className="img-fluid position-absolute top-0 ms-5 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
-        <Navbar expand="lg" variant="dark" className="mt-4 py-1">
-          <Container fluid>
-            <Navbar.Toggle
-              aria-controls="navbarScroll"
-              className="ms-auto justify-content-center align-content-center"
-            />
-            <Navbar.Collapse id="navbarScroll">
-              <Nav
-                className="mx-auto g-3 flex-column bg-white align-items-center flex-lg-row rounded-5"
-                navbarScroll
-              >
+        <Navbar expand="lg" variant="light" className="mt-4 py-1">
+              <Container fluid className="position-relative">
+                {!isOpen && (
+                  <Navbar.Toggle
+                    aria-controls="navbarScroll"
+                    className="ms-auto justify-content-center align-content-center"
+                    onClick={() => setIsOpen(true)}
+                  />
+                )}
+        
+                {isOpen && (
+                  <button
+                    className="position-absolute d-md-none top-0 end-0 mt-2 me-2 btn-close btn-close-dark"
+                    onClick={() => setIsOpen(false)}
+                    style={{ fontSize: "1.2rem", color: "#000" }}
+                    aria-label="Close"
+                  ></button>
+                )}
+        
+                <Navbar.Collapse id="navbarScroll" in={isOpen}>
+                  <Nav
+                    className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
+                    navbarScroll
+                    style={{
+                      top: "80px",
+                      overflowY: "auto",
+                      backgroundColor: "white",
+                    
+                      zIndex: 1050,
+                      maxHeight: "calc(100vh -100px)",
+                    }}
+                  >
                 <Nav.Link
                   as={Link}
                   to="/"
-                  className="px-3 text-dark"
+                  className="px-5 text-dark"
                   style={{ color: "#2A478D" }}
                 >
                   Home
@@ -53,7 +93,7 @@ function Contact() {
                 <Nav.Link
                   as={Link}
                   to="/properties"
-                  className="px-3 text-dark"
+                  className="px-5 text-dark"
                   href="#action2"
                   style={{ color: "#2A478D" }}
                 >
@@ -62,7 +102,7 @@ function Contact() {
                 <Nav.Link
                   as={Link}
                   to=""
-                  className="px-3 text-dark"
+                  className="px-5 text-dark"
                   href="#action3"
                   style={{ color: "#2A478D" }}
                 >
@@ -71,7 +111,7 @@ function Contact() {
                 <Nav.Link
                   as={Link}
                   to="/contact"
-                  className="px-3"
+                  className="px-5"
                   href="#action4"
                   style={{ color: "#2A478D" }}
                 >
@@ -89,7 +129,7 @@ function Contact() {
             >
               Contact Us
             </h1>
-            <p className="text-start h2 contact-subtitle col-12 col-lg-10 mb-5">
+            <p className="cont text-start h2 contact-subtitle col-12 col-lg-10 mb-5">
               You can reach out to us via the available channels below
             </p>
           </div>
@@ -111,7 +151,7 @@ function Contact() {
 
                   <div className="mt-3">
                     <svg
-                      className="position-absolute pe-2"
+                      className="cont position-absolute pe-2"
                       width="48"
                       height="48"
                       viewBox="0 0 48 48"
@@ -154,7 +194,7 @@ function Contact() {
 
                   <div className="mt-3">
                     <svg
-                      className="position-absolute pe-2"
+                      className="cont position-absolute pe-2"
                       width="48"
                       height="48"
                       viewBox="0 0 48 48"
@@ -190,7 +230,7 @@ function Contact() {
                   </div>
                   <div className="mt-3">
                     <svg
-                      className="position-absolute pe-2"
+                      className="cont position-absolute pe-2"
                       width="48"
                       height="48"
                       viewBox="0 0 48 48"
@@ -234,7 +274,7 @@ function Contact() {
 
                   <div className="mt-3">
                     <svg
-                      className="position-absolute pe-2"
+                      className="cont position-absolute pe-2"
                       width="48"
                       height="48"
                       viewBox="0 0 48 48"
@@ -271,7 +311,7 @@ function Contact() {
 
                   <div className="mt-3">
                     <svg
-                      className="position-absolute pe-2"
+                      className="cont position-absolute pe-2"
                       width="48"
                       height="48"
                       viewBox="0 0 48 48"
@@ -323,9 +363,10 @@ function Contact() {
                       </p>
                     </div>
                   </div>
-                  <div className="justify-content-center align-items-center d-flex">
+                  <div className="justify-content-center align-items-center d-flex ">
                     <a href="https://wa.me/2348144697306">
                     <Button
+                    className="mt-2"
                       variant="btn whatsapp-btn btn-success text-nowrap  "
                       style={{ color: "white" }}
                     >
@@ -340,14 +381,18 @@ function Contact() {
             <div className="col-sm-10 col-md-6 col-lg-6 col-xl-6">
               <div className="message-card card shadow rounded-4 border-0 text-start pt-3 pb-1">
                 <div className="card-body">
+
                   <p className="fw-bold h5" style={{ fontFamily: "Georgia" }}>
                     Send Us a Message
                   </p>
-                  <form className="pb-3">
+                  {sent? (<p>Message sent!</p>
+                  ):(
+                  <form ref= {form} onSubmit={sendEmail} className="pb-3">
                     <p className="mb-2" style={{ fontFamily: "Arial" }}>
                       Full Name
                     </p>
                     <input
+                    name="from_name"
                       type="text"
                       className="form-control mb-3"
                       required
@@ -359,6 +404,7 @@ function Contact() {
                           Email Address
                         </p>
                         <input
+                        name="from_email"
                           type="email"
                           className="form-control mb-3"
                           required
@@ -381,6 +427,7 @@ function Contact() {
                       Subject
                     </p>
                     <input
+                    name="message"
                       type="text"
                       className="form-control mb-3"
                       required
@@ -390,16 +437,17 @@ function Contact() {
                       Message
                     </p>
                     <input
+                    name = "message"
                       type="text"
                       className="form-control pb-5"
                       rows="5"
                       required
                       placeholder="Tell us how we can help you..."
                     />
-                  </form>
-                  <div className="justify-content-center align-items-center d-flex">
-                    <div className="">
+                    <div className="justify-content-center align-items-center d-flex">
+                    <div className="mt-2">
                       <Button
+                      type="submit"
                         variant="btn message-btn  text-nowrap"
                         style={{ backgroundColor: "#2A478D", color: "white" }}
                       >
@@ -407,6 +455,9 @@ function Contact() {
                       </Button>
                     </div>
                   </div>
+                  </form>
+                  )}
+                  
                 </div>
               </div>
             </div>

@@ -1,4 +1,7 @@
-import React from "react";
+import { useParams, Link } from "react-router-dom";
+import { property } from "../../data/Properties";
+import Footer from "../inc/Footer";
+import { similar } from "../../data/Similar";
 import {
   Navbar,
   Container,
@@ -9,10 +12,12 @@ import {
 } from "react-bootstrap";
 import HeroBg from "../../assets/Hero-bg.jpg";
 import MyNavbar from "../inc/Navbar";
-import { Link } from "react-router-dom";
-import Footer from "../inc/Footer";
+import { useState } from "react";
+export default function SimilarLocation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const { slug } = useParams();
+  const sim = similar.find((p) => p.slug === slug);
 
-function Rent1() {
   const headWrapperStyle = {
     backgroundPosition: "center",
     minHeight: "12vh", //
@@ -29,29 +34,46 @@ function Rent1() {
           style={{ height: "60px", width: "80px" }}
         ></img>
         <Navbar expand="lg" variant="light" className="mt-4 py-1">
-          <Container fluid>
-            <Navbar.Toggle
-              aria-controls="navbarScroll"
-              className="ms-auto justify-content-center align-content-center"
-            />
-            <Navbar.Collapse id="navbarScroll">
+          <Container fluid className="position-relative">
+            {!isOpen && (
+              <Navbar.Toggle
+                aria-controls="navbarScroll"
+                className="ms-auto justify-content-center align-content-center"
+                onClick={() => setIsOpen(true)}
+              />
+            )}
+
+            {isOpen && (
+              <button
+                className="close position-absolute d-md-none top-0 end-0 mt-2 me-2 btn-close btn-close-dark"
+                onClick={() => setIsOpen(false)}
+                style={{ fontSize: "1.2rem", color: "#000" }}
+                aria-label="Close"
+              ></button>
+            )}
+
+            <Navbar.Collapse id="navbarScroll" in={isOpen}>
               <Nav
-                className="mx-auto g-3 bg-white  flex-column align-items-center flex-lg-row rounded-5"
+                className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
                 navbarScroll
+                style={{
+                  top: "80px",
+                  overflowY: "auto",
+                  backgroundColor: "white",
+
+                  zIndex: 1050,
+                  maxHeight: "calc(100vh -100px)",
+                }}
               >
-                <Nav.Link
-                  as={Link}
-                  to="/"
-                  className="px-3"
-                  style={{ color: "#2A478D" }}
-                >
+                <Nav.Link as={Link} to="/" className="px-3 text-dark">
                   Home
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/properties"
-                  className="px-3 text-dark"
+                  className="px-"
                   href="#action2"
+                  style={{ color: "#2A478D" }}
                 >
                   Properties
                 </Nav.Link>
@@ -73,7 +95,10 @@ function Rent1() {
                 </Nav.Link>
               </Nav>
 
-              <Link to="/properties" className="text-dark">
+              <Link
+                to="/properties"
+                className="d-none d-md-flex text-dark text-decoration-none"
+              >
                 <Button
                   to="/properties"
                   variant="btn px-3"
@@ -94,7 +119,7 @@ function Rent1() {
             style={{ textDecoration: "underline", color: "#2A478D" }}
           >
             <svg
-            className="mt-1"
+              className="mt-1"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -123,13 +148,13 @@ function Rent1() {
       <div className="card border-0 overflow-hidden mx-5">
         <div className="position-relative">
           <span
-            className="badge btn position-absolute rounded-5 py-2 ms-3 top-0 mt-2 px-3 start-0"
+            className="badge btn position-absolute rounded-5 py-2 ms-3 top-0 mt-2 px-3 inset-s-0"
             style={{ color: "white", backgroundColor: "#c4622d", zIndex: "2" }}
           >
-            FOR RENT
+            FOR {sim.badge1}
           </span>
           <svg
-            className="position-absolute top-50 start-0 translate-middle-y ms-3 jusify-content-center align-items-center"
+            className="position-absolute top-50 inset-s-0 translate-middle-y ms-3 jusify-content-center align-items-center"
             width="33"
             height="33"
             viewBox="0 0 33 33"
@@ -151,7 +176,7 @@ function Rent1() {
             />
           </svg>
           <svg
-            className="position-absolute top-50 end-0 translate-middle-y me-3"
+            className="position-absolute top-50 inset-e-0 translate-middle-y me-3"
             width="33"
             height="33"
             viewBox="0 0 33 33"
@@ -176,7 +201,7 @@ function Rent1() {
             1/4
           </span>
           <img
-            src="/images/Hotel-one.jpg"
+            src={sim.image}
             className="thumb w-100 rounded-4"
             style={{ objectFit: "cover", height: "600px", display: "block" }}
           ></img>
@@ -190,11 +215,11 @@ function Rent1() {
               className="fw-bold"
               style={{ fontFamily: "Georgia", color: "#2A478D" }}
             >
-              Luxury 4-Bedroom Duplex in Lekki Phase 1
+              {sim.name}
             </h4>
-           <p className="text-muted small d-flex ">
+            <p className="text-muted small d-flex ">
               <svg
-              className="loc"
+                className="loc"
                 width="17"
                 height="17"
                 viewBox="0 0 17 17"
@@ -223,13 +248,13 @@ function Rent1() {
                   </clipPath>
                 </defs>
               </svg>
-              15 Admiralty Way, Lekki Phase 1, Lagos
+              15 Admiralty Way, {sim.location}
             </p>
             <h3
               className="fw-bold mb-3"
               style={{ fontFamily: "Georgia", color: "#2A478D" }}
             >
-              ₦20.00M
+              {sim.price}
             </h3>
 
             <div className="row g-2 mb-4">
@@ -280,7 +305,7 @@ function Rent1() {
                       </defs>
                     </svg>
                   </div>
-                  <div className="fw-bold">4</div>
+                  <div className="fw-bold">{sim.bedroom}</div>
                   <div style={{ fontSize: "12px", whiteSpace: "nowrap" }}>
                     Bedrooms
                   </div>
@@ -432,77 +457,37 @@ function Rent1() {
                 </div>
               </div>
             </div>
- <div><a href="https://wa.me/2348144697306" >
-        <span
-          className="btn position-fixed rounded-circle "
-          style={{
-            bottom: "20px",
-            right: "20px",
-            width: "60px",
-            height: "60px",
-            backgroundColor: "rgb(44, 212, 11)",
-            zIndex:"10",
-          }}
-        >
-        <span
-          className="btn   position-fixed "
-          style={{
-            bottom: "20px",
-            right: "20px",
-            width: "30px",
-            height: "30px",
-            border: "3px solid white",
-            borderRadius: "30px 30px 30px 1px",
-            position:"fixed",
-            margin:"15px 15px 15px 15px"
-          }}
-        ></span>
-        </span>
-        </a>
-      </div>
-            <div className="border-bottom mb-3">
-              <span className="me-4 fw-bold pb-2 d-inline-block border-bottom border-primary">
-                Overview
-              </span>
 
-              <Link to="/featuresrent1" className="text-dark">
+            <div className="border-bottom mb-3">
+              <Link to={`/similar/${sim.slug}`} className="text-dark">
+                <span className="me-4 pb-2 d-inline-block ">Overview</span>
+              </Link>
+
+              <Link to={`/similarfeatures/${sim.slug}`} className="text-dark">
                 <span className="me-4 pb-2 d-inline-block">Features</span>
               </Link>
-              <Link to="/locationrent1" className="text-dark">
-                <span className="me-4 pb-2 d-inline-block">Location</span>
-              </Link>
-            </div>
 
-            <h6
-              className="fw-bold mb-3"
-              style={{ fontFamily: "Georgia", color: "#2A478D" }}
-            >
-              Property Description
-            </h6>
-            <p className="text-secondary">
-              This exquisite 4-bedroom duplex epitomizes modern luxury living.
-              Featuring floor-to-ceiling windows, a gourmet kitchen with premium
-              appliances, and a stunning rooftop terrace with panoramic city
-              views. The property sits in the heart of Lekki Phase 1, surrounded
-              by fine dining, shopping, and entertainment.
-            </p>
+              <span className="me-4 pb-2 d-inline-block fw-bold border-bottom border-primary">
+                Location
+              </span>
+            </div>
 
             <div className="container-fluid border-bottom mb-2 col-12 ">
               <div className="row">
                 <div className="col-12 col-md-4">
-                  <p className="text-secondary mb-0">Property type</p>
-                  <p className="mb-5">Duplex</p>
+                  <p className="text-secondary mb-0">Neighborhood</p>
+                  <p className="mb-5">Lekki Phase 1</p>
 
-                  <p className="text-secondary mb-0">Status</p>
-                  <p className="">Active</p>
+                  <p className="text-secondary mb-0">State</p>
+                  <p className="">Lagos State</p>
                 </div>
 
                 <div className="col-4">
-                  <p className="text-secondary mb-0">Year Built</p>
-                  <p className="mb-5">2022</p>
+                  <p className="text-secondary mb-0">City</p>
+                  <p className="mb-5">Lagos</p>
 
-                  <p className="text-secondary mb-0">Toilets</p>
-                  <p className="">6</p>
+                  <p className="text-secondary mb-0">Country</p>
+                  <p className="">Nigeria</p>
                 </div>
               </div>
             </div>
@@ -519,29 +504,69 @@ function Rent1() {
 
               <div className="d-flex align-items-center mb-3">
                 <img
-                  src="/images/myphoto.JPG"
-                  className="rounded-circle me-2"
-                  width="45"
-                  height="45"
-                  alt="Agent"
+                  src={sim.agent}
+                  className="rounded-5 me-2"
+                  style={{
+                    width: "45px",
+                    height: "45px",
+                    alt: "Agent",
+                    objectFit: "cover",
+                    flexShrink: 0,
+                  }}
                 />
                 <span className="fw-semibold">BOC Agent - 0027</span>
               </div>
 
-              <button
-                className="btn  w-100 mb-2"
-                style={{ backgroundColor: "#2A478D", color: "white" }}
-              >
-                Send Enquiry
+              <button>
+                <a
+                  href={sim.enquiry}
+                  className="btn  w-100 mb-2"
+                  style={{ backgroundColor: "#2A478D", color: "white" }}
+                >
+                  Send Enquiry
+                </a>
               </button>
-              <button><a href="https://wa.me/2348100854095" className="btn btn-success w-100 text-decoration-none text-white bi bi-whatsapp">WhatsApp Agent
+              <button>
+                <a
+                  href={sim.whatsapp}
+                  className="btn btn-success w-100 text-decoration-none text-white bi bi-whatsapp"
+                >
+                  <span className="ms-2">WhatsApp Agent</span>
                 </a>
               </button>
             </div>
           </div>
         </div>
       </div>
-
+      <div>
+        <a href="https://wa.me/2348144697306">
+          <span
+            className="btn position-fixed rounded-circle "
+            style={{
+              bottom: "20px",
+              right: "20px",
+              width: "60px",
+              height: "60px",
+              backgroundColor: "rgb(44, 212, 11)",
+              zIndex: "10",
+            }}
+          >
+            <span
+              className="btn   position-fixed "
+              style={{
+                bottom: "20px",
+                right: "20px",
+                width: "30px",
+                height: "30px",
+                border: "3px solid white",
+                borderRadius: "30px 30px 30px 2px",
+                position: "fixed",
+                margin: "15px 15px 15px 15px",
+              }}
+            ></span>
+          </span>
+        </a>
+      </div>
       <div className="container-fluid text-start">
         <p
           className="mt-5 fw-bold mb-4"
@@ -549,90 +574,49 @@ function Rent1() {
         >
           Similar Properties
         </p>
-        <div className="row mb-5">
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="card">
-              <img
-                src="/images/Hotel-2.jpg"
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              ></img>
-              <p
-                className="fw-semibold mt-3 mb-2 ps-3"
-                style={{ fontFamily: "Georgia", fontSize: "20px" }}
-              >
-                Executive 5-Bedroom Mansion with Pool
-              </p>
-              <p className="ps-3">Banana Island</p>
-              <p
-                className="ps-3 fw-semibold"
-                style={{
-                  fontFamily: "Georgia",
-                  fontSize: "20px",
-                  color: "#2a478d",
-                }}
-              >
-                ₦50.0M
-              </p>
+        <div className="row mb-5 justify-content-around d-flex g-4">
+          {similar.map((sim) => (
+            <div key={sim.id} className="col-12 col-md-4 col-lg-4 col-xl-4 g-4">
+              <div className="card">
+                <img
+                  src={sim.image}
+                  className="card-img-top"
+                  style={{ objectFit: "cover" }}
+                ></img>
+                <p
+                  className="fw-semibold mt-3 mb-2 ps-3"
+                  style={{ fontFamily: "Georgia", fontSize: "20px" }}
+                >
+                  Executive {sim.bedroom}-Bedroom Mansion with Pool
+                </p>
+                <p className="ps-3">Banana Island</p>
+                <div className="position-relative mt-3">
+                  <p
+                    style={{ color: "#2A478D", fontFamily: "Georgia" }}
+                    className="price ms-2 h4 fw-bold"
+                  >
+                    {sim.price}
+                    <Link to={`/similar/${sim.slug}`} className="text-dark">
+                      <span
+                        className="details bottom-0 mb-2 end-0 me-2 position-absolute fw-bold py-2 px-2 rounded-3"
+                        style={{
+                          color: "#2A478D",
+                          border: "1px solid #2A478D",
+                          fontFamily: "Arial",
+                          fontSize: "14px",
+                        }}
+                      >
+                        View Details
+                      </span>
+                    </Link>
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="card">
-              <img
-                src="/images/Hotel-3.jpg"
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              ></img>
-              <p
-                className="fw-semibold mt-3 mb-2 ps-3"
-                style={{ fontFamily: "Georgia", fontSize: "20px" }}
-              >
-                Executive 3-Bedroom Mansion with Pool
-              </p>
-              <p className="ps-3">Banana Island</p>
-              <p
-                className="ps-3 fw-semibold"
-                style={{
-                  fontFamily: "Georgia",
-                  fontSize: "20px",
-                  color: "#2a478d",
-                }}
-              >
-                ₦15.0M
-              </p>
-            </div>
-          </div>
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="card">
-              <img
-                src="/images/Hotel-one.jpg"
-                className="card-img-top"
-                style={{ objectFit: "cover" }}
-              ></img>
-              <p
-                className="fw-semibold mt-3 mb-2 ps-3"
-                style={{ fontFamily: "Georgia", fontSize: "20px" }}
-              >
-                Executive 4-Bedroom Mansion with Pool
-              </p>
-              <p className="ps-3">Banana Island</p>
-              <p
-                className="ps-3 fw-semibold"
-                style={{
-                  fontFamily: "Georgia",
-                  fontSize: "20px",
-                  color: "#2a478d",
-                }}
-              >
-                ₦20.0M
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <Footer />
     </>
   );
 }
-
-export default Rent1;
