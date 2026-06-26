@@ -670,10 +670,12 @@ const {filteredProperty, sort, handleSortChange} = usePropertyFilter(property2)
             ) : (
               <div>
                 <div className="col-12">
-                  <div className="empty-state">
-                    <p>No properties match your filters</p>
+                    <div className="card  border-0  shadow-sm align-items-center align-self-center py-5 mt-5">
+                      <div className="card-body empty-state">
+                        <p>No properties match your filters</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
               </div>
             )}
           </div>
