@@ -324,14 +324,7 @@ svg {
     animation-timing-function: ease-in-out;
     animation-delay: 0.2s;
   }
-  @keyframes card {
-    from {
-      bottom: 100px;
-    }
-    to {
-      top: 100%;
-    }
-  }
+  
   svg {
     width: 12px;
     height: 12px;

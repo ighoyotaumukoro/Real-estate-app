@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import {
   Navbar,
@@ -14,20 +14,24 @@ import { Link } from "react-router-dom";
 function Contact() {
   const form = useRef();
   const [sent, setSent] = useState(false);
-  const sendEmail=(e)=> {
+  const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm(
-      'service_temapu',
-      'template_yve0uae',
-      form.current,
-      '6C2PgqEu5M-DqLVt_'
-    )
-    .then(()=>{
-      setSent(true)
-    },(error)=>{
-      console.log('FAILED...', error.text);
-      alert('Message Failed to send. Try again.');
-    });
+    emailjs
+      .sendForm(
+        "service_temapu",
+        "template_yve0uae",
+        form.current,
+        "6C2PgqEu5M-DqLVt_",
+      )
+      .then(
+        () => {
+          setSent(true);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          alert("Message Failed to send. Try again.");
+        },
+      );
   };
   const [isOpen, setIsOpen] = useState(false);
   const heroWrapperStyle = {
@@ -51,37 +55,37 @@ function Contact() {
           style={{ height: "60px", width: "80px" }}
         ></img>
         <Navbar expand="lg" variant="light" className="mt-4 py-1">
-              <Container fluid className="position-relative">
-                {!isOpen && (
-                  <Navbar.Toggle
-                    aria-controls="navbarScroll"
-                    className="ms-auto justify-content-center align-content-center"
-                    onClick={() => setIsOpen(true)}
-                  />
-                )}
-        
-                {isOpen && (
-                  <button
-                    className="position-absolute d-md-none top-0 end-0 mt-2 me-2 btn-close btn-close-dark"
-                    onClick={() => setIsOpen(false)}
-                    style={{ fontSize: "1.2rem", color: "#000" }}
-                    aria-label="Close"
-                  ></button>
-                )}
-        
-                <Navbar.Collapse id="navbarScroll" in={isOpen}>
-                  <Nav
-                    className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
-                    navbarScroll
-                    style={{
-                      top: "80px",
-                      overflowY: "auto",
-                      backgroundColor: "white",
-                    
-                      zIndex: 1050,
-                      maxHeight: "calc(100vh -100px)",
-                    }}
-                  >
+          <Container fluid className="position-relative">
+            {!isOpen && (
+              <Navbar.Toggle
+                aria-controls="navbarScroll"
+                className="ms-auto justify-content-center align-content-center"
+                onClick={() => setIsOpen(true)}
+              />
+            )}
+
+            {isOpen && (
+              <button
+                className="position-absolute d-md-none top-0 end-0 mt-2 me-2 btn-close btn-close-dark"
+                onClick={() => setIsOpen(false)}
+                style={{ fontSize: "1.2rem", color: "#000" }}
+                aria-label="Close"
+              ></button>
+            )}
+
+            <Navbar.Collapse id="navbarScroll" in={isOpen}>
+              <Nav
+                className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
+                navbarScroll
+                style={{
+                  top: "80px",
+                  overflowY: "auto",
+                  backgroundColor: "white",
+
+                  zIndex: 1050,
+                  maxHeight: "calc(100vh -100px)",
+                }}
+              >
                 <Nav.Link
                   as={Link}
                   to="/"
@@ -365,13 +369,13 @@ function Contact() {
                   </div>
                   <div className="justify-content-center align-items-center d-flex ">
                     <a href="https://wa.me/2348144697306">
-                    <Button
-                    className="mt-2"
-                      variant="btn whatsapp-btn btn-success text-nowrap  "
-                      style={{ color: "white" }}
-                    >
-                      Chat on WhatsApp
-                    </Button>
+                      <Button
+                        className="mt-2"
+                        variant="btn whatsapp-btn btn-success text-nowrap  "
+                        style={{ color: "white" }}
+                      >
+                        Chat on WhatsApp
+                      </Button>
                     </a>
                   </div>
                 </div>
@@ -381,83 +385,85 @@ function Contact() {
             <div className="col-sm-10 col-md-6 col-lg-6 col-xl-6">
               <div className="message-card card shadow rounded-4 border-0 text-start pt-3 pb-1">
                 <div className="card-body">
-
                   <p className="fw-bold h5" style={{ fontFamily: "Georgia" }}>
                     Send Us a Message
                   </p>
-                  {sent? (<p>Message sent!</p>
-                  ):(
-                  <form ref= {form} onSubmit={sendEmail} className="pb-3">
-                    <p className="mb-2" style={{ fontFamily: "Arial" }}>
-                      Full Name
-                    </p>
-                    <input
-                    name="from_name"
-                      type="text"
-                      className="form-control mb-3"
-                      required
-                      placeholder="John Doe"
-                    />
-                    <div className="row">
-                      <div className="col-sm-8 col-md-6 col-lg-6 col-xl-6">
-                        <p className="mb-2" style={{ fontFamily: "Arial" }}>
-                          Email Address
-                        </p>
-                        <input
-                        name="from_email"
-                          type="email"
-                          className="form-control mb-3"
-                          required
-                          placeholder="John@example.com"
-                        />
+                  {sent ? (
+                    <p>Message sent!</p>
+                  ) : (
+                    <form ref={form} onSubmit={sendEmail} className="pb-3">
+                      <p className="mb-2" style={{ fontFamily: "Arial" }}>
+                        Full Name
+                      </p>
+                      <input
+                        name="from_name"
+                        type="text"
+                        className="form-control mb-3"
+                        required
+                        placeholder="John Doe"
+                      />
+                      <div className="row">
+                        <div className="col-sm-8 col-md-6 col-lg-6 col-xl-6">
+                          <p className="mb-2" style={{ fontFamily: "Arial" }}>
+                            Email Address
+                          </p>
+                          <input
+                            name="from_email"
+                            type="email"
+                            className="form-control mb-3"
+                            required
+                            placeholder="John@example.com"
+                          />
+                        </div>
+                        <div className="col-sm-8 col-md-6 col-lg-6 col-xl-6">
+                          <p className=" mb-2" style={{ fontFamily: "Arial" }}>
+                            Phone Number
+                          </p>
+                          <input
+                            type="text"
+                            className="form-control mb-3"
+                            required
+                            placeholder="+234 800 000 0000"
+                          />
+                        </div>
                       </div>
-                      <div className="col-sm-8 col-md-6 col-lg-6 col-xl-6">
-                        <p className=" mb-2" style={{ fontFamily: "Arial" }}>
-                          Phone Number
-                        </p>
-                        <input
-                          type="text"
-                          className="form-control mb-3"
-                          required
-                          placeholder="+234 800 000 0000"
-                        />
+                      <p className="mb-2" style={{ fontFamily: "Arial" }}>
+                        Subject
+                      </p>
+                      <input
+                        name="message"
+                        type="text"
+                        className="form-control mb-3"
+                        required
+                        placeholder="Property Inquiry"
+                      />
+                      <p className="mb-2" style={{ fontFamily: "Arial" }}>
+                        Message
+                      </p>
+                      <input
+                        name="message"
+                        type="text"
+                        className="form-control pb-5"
+                        rows="5"
+                        required
+                        placeholder="Tell us how we can help you..."
+                      />
+                      <div className="justify-content-center align-items-center d-flex">
+                        <div className="mt-2">
+                          <Button
+                            type="submit"
+                            variant="btn message-btn  text-nowrap"
+                            style={{
+                              backgroundColor: "#2A478D",
+                              color: "white",
+                            }}
+                          >
+                            Send Message
+                          </Button>
+                        </div>
                       </div>
-                    </div>
-                    <p className="mb-2" style={{ fontFamily: "Arial" }}>
-                      Subject
-                    </p>
-                    <input
-                    name="message"
-                      type="text"
-                      className="form-control mb-3"
-                      required
-                      placeholder="Property Inquiry"
-                    />
-                    <p className="mb-2" style={{ fontFamily: "Arial" }}>
-                      Message
-                    </p>
-                    <input
-                    name = "message"
-                      type="text"
-                      className="form-control pb-5"
-                      rows="5"
-                      required
-                      placeholder="Tell us how we can help you..."
-                    />
-                    <div className="justify-content-center align-items-center d-flex">
-                    <div className="mt-2">
-                      <Button
-                      type="submit"
-                        variant="btn message-btn  text-nowrap"
-                        style={{ backgroundColor: "#2A478D", color: "white" }}
-                      >
-                        Send Message
-                      </Button>
-                    </div>
-                  </div>
-                  </form>
+                    </form>
                   )}
-                  
                 </div>
               </div>
             </div>
@@ -489,7 +495,9 @@ function Contact() {
             stroke-linejoin="round"
           />
         </svg>
-        <p className="offline text-muted mb-5 d-flex align-self-center mx-auto ">Offline Location</p>
+        <p className="offline text-muted mb-5 d-flex align-self-center mx-auto ">
+          Offline Location
+        </p>
       </div>
     </>
   );
