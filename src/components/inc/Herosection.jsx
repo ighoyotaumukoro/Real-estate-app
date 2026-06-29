@@ -32,13 +32,13 @@ function Herosection() {
           {property.map((prop) => (
             <div
               key={prop.id}
-              className="col-10 col-lg-4 col-xl-4 col-md-6 rounded-3 border-0 mb-4 h-100 pe-3"
+              className="col-10 col-lg-4 col-xl-4 col-md-6 border-0 mb-4 h-100 pe-3"
               style={{ objectFit: "cover" }}
             >
               <div className=" hero-card shadow border-0 prop">
                 <div className="position-relative">
                   <img src={prop.image} className="card-img-top"></img>
-                  <div className="card-body text-start">
+                  <div className="card-body text-start p-3">
                     <span
                       className="badge btn position-absolute bg-white rounded-5 py-2 top-0 mt-2 ms-0 px-3 "
                       style={{ color: "#2A478D" }}
