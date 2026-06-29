@@ -53,7 +53,7 @@ function Headsection() {
       <div id="progress" className="heroWrapperStyle" style={heroWrapperStyle}>
         <img
           src="/images/BOC logo.png"
-          className="img-fluid position-absolute top-0 ms-3 mt-3"
+          className="img-fluid position-absolute top-0 ms-2 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
         <MyNavbar />

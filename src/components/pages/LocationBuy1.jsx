@@ -31,7 +31,7 @@ function LocationBuy1() {
       <div className="container-fluid mx-auto" style={headWrapperStyle}>
         <img
           src="/images/BOC logo.png"
-          className="img-fluid position-absolute ms-5 top-0 mt-3"
+          className="img-fluid position-absolute ms-2 top-0 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
         <Navbar expand="lg" variant="light" className="mt-4 py-1">

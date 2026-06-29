@@ -51,7 +51,7 @@ function Contact() {
       <div className="rounded-4" style={heroWrapperStyle}>
         <img
           src="/images/BOC logo.png"
-          className="img-fluid position-absolute top-0 ms-5 mt-3"
+          className="img-fluid position-absolute top-0 ms-2 mt-3"
           style={{ height: "60px", width: "80px" }}
         ></img>
         <Navbar expand="lg" variant="light" className="mt-4 py-1">
