@@ -425,7 +425,11 @@ svg {
   height: 150px;
   padding-top: 0vh;
   margin: auto;
-  margin-left: 4%;
+  margin-left: 5%;
+
+ }
+ .desktop-fixed-top{
+  position: relative !important;
  }
   Nav{
     z-index: 1050 !important;

@@ -11,7 +11,7 @@ import {
 function MyNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <Navbar expand="lg" variant="light" className="mt-4 py-1">
+    <Navbar expand="lg" variant="light" fixed="top"  className="desktop-fixed-top mt-4 py-1">
       <Container fluid className="position-relative">
         {!isOpen && (
           <Navbar.Toggle

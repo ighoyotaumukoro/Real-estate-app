@@ -61,7 +61,7 @@ function Headsection() {
         <div className="flex-grow-1 align-items-center justify-content-center">
           <div className=" text-center text-white">
             <h1
-              className="head-text1 display-1 mt-5 fw-light"
+              className="head-text1 display-1 mt-5 pt-5 fw-light"
               style={{ color: "#2A478D", fontFamily: "Georgia" }}
             >
               Claim Your Space.
