@@ -341,8 +341,17 @@ svg {
   }
 
   svg.why {
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
+    margin-top: 0% !important;
+  }
+  .why-text{
+    font-size: 14px;
+    margin-top: 2px !important;
+  }
+  .why-subtext{
+    font-size: 12px;
+    
   }
   #navbarScroll {
     margin-top: 50px;
@@ -410,6 +419,13 @@ svg {
   position: absolute;
   margin-left:10px;
   margin-right: 10px;
+ }
+ .why-card{
+  width: 300px;
+  height: 150px;
+  padding-top: 0vh;
+  margin: auto;
+  margin-left: 4%;
  }
   Nav{
     z-index: 1050 !important;

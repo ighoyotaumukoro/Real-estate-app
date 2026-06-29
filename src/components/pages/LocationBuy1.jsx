@@ -154,7 +154,7 @@ function LocationBuy1() {
           </span>
           
           <img
-            src="/images/Hotel-one.jpg"
+            src={property.image}
             className="thumb w-100 rounded-4"
             style={{ objectFit: "cover", height: "600px", display: "block" }}
           ></img>

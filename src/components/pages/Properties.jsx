@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Footer from "../inc/Footer";
-import usePropertyFilter from "../../usePropertyFilter";
+import {usePropertyFilter} from "../../usePropertyFilter";
 import {
   Navbar,
   Container,
@@ -17,101 +17,32 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import { property2 } from "../../data/Properties2";
-const parsePrice = (val) => {
-  if (!val) return null;
-  let str = String(val)
-    .toUpperCase()
-    .replace(/,/g, "");
-    let num = parseFloat(str.replace(/[^0-9.]/g, ""));
- if (Number.isNaN(num)) return null;
-  if (str.includes("M")) return num * 1000000;
-  if (str.includes("K")) return num * 1000;
-  return num;
-};
-function Properties({ properties }) {
+
+const Properties = () => {
+  
   const navigate = useNavigate();
   const { slug } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
   const property = property2.find((p) => p.slug === slug);
 
   const [displayCount, setDisplayCount] = useState(0);
-  const [name, setName] = useState(searchParams.get("name") || "");
-  const [location, setLocation] = useState(searchParams.get("location") || "");
-  const [minPrice, setMinPrice] = useState(searchParams.get("minPrice") || "");
-  const [maxPrice, setMaxPrice] = useState(searchParams.get("maxPrice") || "");
-  const [bedroom, setBedroom] = useState(searchParams.get("bedroom") || "");
-  const [bathroom, setBathroom] = useState(searchParams.get("bathroom") || "");
-  const sort = searchParams.get("sort") || "";
-
-  const filteredProperty = useMemo(() => {
-    let min = minPrice ? Number(minPrice) * 1000000 : null;
-    let max = maxPrice ? Number(maxPrice) * 1000000 : null;
-    if (min !== null && max !== null && min > max) [min, max] = [max, min];
-    let list = property2.filter((p) => {
-      const itemPrice = parsePrice(p.price);
-
-      console.log(
-        p.name,
-        p.location,
-        "Price:",
-        itemPrice,
-        "Range:",
-        min,
-        "-",
-        max,
-      );
-
-      const nameStr = String(p.name || "").toLowerCase();
-      const locationStr = String(p.location || "").toLowerCase();
-      const inputName = String(name || "").toLowerCase();
-      const inputLocation = String(location || "").toLowerCase();
-      const matchName = !inputName || nameStr.includes(inputName);
-      const matchLocation =
-        !inputLocation ||
-        locationStr
-          .split(",")
-          .some((part) => part.trim().includes(inputLocation));
-      const matchMin = min === null || (itemPrice !== null && itemPrice >= min);
-      const matchMax = max === null || (itemPrice !== null && itemPrice <= max);
-      const matchBedroom = !bedroom || Number(p.bedroom) >= Number(bedroom);
-      const matchBathroom = !bathroom || Number(p.bathroom) <= Number(bathroom);
-      return (
-        matchName &&
-        matchLocation &&
-        matchMin &&
-        matchMax &&
-        matchBedroom &&
-        matchBathroom
-      );
-    });
-    if (sort === "low") {
-      list.sort(
-        (a, b) => (parsePrice(a.price) || 0) - (parsePrice(b.price) || 0),
-      );
-    }
-    if (sort === "high") {
-      return list.sort(
-        (a, b) => (parsePrice(b.price) || 0) - (parsePrice(a.price) || 0),
-      );
-    }
-
-    return list;
-  }, [name, location, minPrice, maxPrice, bedroom, bathroom, sort]);
-
-  const updateParams = (key, value) => {
-    const next = new URLSearchParams(searchParams);
-    value ? next.set(key, value) : next.delete(key);
-    setSearchParams(next, { replace: true });
-  };
+console.log("property2:", property2)
+  const { filteredProperty, filters, handlers } = usePropertyFilter(property2);
+  const { name, location, minPrice, maxPrice, bedroom, bathroom, sort } =
+    filters;
+  const {
+    setName,
+    setLocation,
+    setMinPrice,
+    setMaxPrice,
+    setBedroom,
+    setBathroom,
+    setSort,
+    resetAll
+  } = handlers;
 
   const handleReset = () => {
-    setName("");
-    setLocation("");
-    setMinPrice("");
-    setMaxPrice("");
-    setBedroom("");
-    setBathroom("");
-    setSearchParams({});
+    resetAll();
   };
 
   const goToList = () => {
@@ -131,6 +62,8 @@ function Properties({ properties }) {
     position: "relative",
     marginBottom: "15px",
   };
+
+  console.log("I AM MAPPING:", filteredProperty.length, filteredProperty)
   return (
     <>
       <div className="rounded-4" style={heroWrapperStyle}>
@@ -243,7 +176,7 @@ function Properties({ properties }) {
                     type="text"
                     value={name}
                     className="form-control mb-3"
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={handlers.setName}
                   />
                   <p className="mb-2" style={{ fontFamily: "Arial" }}>
                     Location
@@ -254,7 +187,7 @@ function Properties({ properties }) {
                     className="form-control mb-3"
                     required
                     placeholder="City or Neighborhood"
-                    onChange={(e) => setLocation(e.target.value)}
+                    onChange={handlers.setLocation}
                   />
 
                   <p className="mb-2" style={{ fontFamily: "Arial" }}>
@@ -268,7 +201,7 @@ function Properties({ properties }) {
                         className="form-control mb-3"
                         required
                         placeholder="Min."
-                        onChange={(e) => setMinPrice(e.target.value)}
+                        onChange={handlers.setMinPrice}
                       />
                     </div>
                     <div className="col-12 col-md-6 col-lg-6 col-xl-6">
@@ -278,7 +211,7 @@ function Properties({ properties }) {
                         className="form-control mb-3"
                         required
                         placeholder="Max."
-                        onChange={(e) => setMaxPrice(e.target.value)}
+                        onChange={handlers.setMaxPrice}
                       />
                     </div>
                   </div>
@@ -289,7 +222,7 @@ function Properties({ properties }) {
                     value={bedroom}
                     type="text"
                     className="form-control mb-3"
-                    onChange={(e) => setBedroom(e.target.value)}
+                    onChange={handlers.setBedroom}
                   />
                   <p className="mb-2" style={{ fontFamily: "Arial" }}>
                     Bathrooms
@@ -298,7 +231,7 @@ function Properties({ properties }) {
                     value={bathroom}
                     type="text"
                     className="form-control mb-3"
-                    onChange={(e) => setBathroom(e.target.value)}
+                    onChange={handlers.setBathroom}
                   />
                 </form>
 
@@ -343,7 +276,7 @@ function Properties({ properties }) {
               <div className="col-8">
                 <select
                   value={sort}
-                  onChange={(e) => updateParam("sort", e.target.value)}
+                  onChange={setSort}
                   className="bg-white text-dark d-flex p-1 pe-3 border mb-3  mt-3 rounded-2 fw-bold"
                 >
                   <option value="">Default</option>
@@ -505,6 +438,7 @@ function Properties({ properties }) {
                   </span>
                 </a>
               </div>
+              {console.log("First property:", filteredProperty[0])}
               {filteredProperty.length > 0 ? (
                 filteredProperty.map((property) => (
                   <div
@@ -576,6 +510,6 @@ function Properties({ properties }) {
       </div>
     </>
   );
-}
+};
 
 export default Properties;

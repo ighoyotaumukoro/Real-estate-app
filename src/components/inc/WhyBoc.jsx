@@ -3,7 +3,7 @@ import React from "react";
 function WhyBoc() {
   return (
     <>
-      <div className="bg-white" style={{ paddingTop: "100px " }}>
+      <div className="bg-white" style={{ paddingTop: "100px" }}>
         <div className="container-fluid px-3 px-md-4 text-center">
           <h1
             className="text display-5 fw-light"
@@ -17,7 +17,7 @@ function WhyBoc() {
           </h5>
         </div>
         <div
-          className="row pb-3 g-3 g-md-0 mx-5 justify-content-center"
+          className="row pb-3 g-3 g-md-0 ms-4 justify-content-center"
           style={{ fontFamily: "Georgia" }}
         >
           <div
@@ -25,7 +25,7 @@ function WhyBoc() {
             style={{ objectFit: "cover" }}
           >
             <div
-              className="card"
+              className="card why-card"
               style={{ boxShadow: "-8px 8px #2A478D", borderRadius: "12px" }}
             >
               <div className="card-body text-start">
@@ -59,10 +59,10 @@ function WhyBoc() {
                 </svg>
 
                 <div className="card-title">
-                  <p className="fw-bolder h5">Expert Guidance</p>
+                  <p className="why-text fw-bolder h5">Expert Guidance</p>
                 </div>
                 <div className="card-subtitle">
-                  <p className="mt-4">
+                  <p className="why-subtext mt-4">
                     Our experienced agents provide personalized advice tailored
                     to your unique reach
                   </p>
@@ -75,7 +75,7 @@ function WhyBoc() {
             style={{ objectFit: "cover" }}
           >
             <div
-              className="card"
+              className="card why-card"
               style={{ boxShadow: "-8px 8px #2A478D", borderRadius: "12px" }}
             >
               <div className="card-body text-start">
@@ -109,10 +109,10 @@ function WhyBoc() {
                 </svg>
 
                 <div className="card-title">
-                  <p className="fw-bolder h5">Trusted Network</p>
+                  <p className="why-text fw-bolder h5">Trusted Network</p>
                 </div>
                 <div className="card-subtitle">
-                  <p className="mt-4">
+                  <p className="why-subtext mt-4">
                     Join thousands of verified clients who have found their
                     perfect property with us at BOC
                   </p>
@@ -125,7 +125,7 @@ function WhyBoc() {
             style={{ objectFit: "cover" }}
           >
             <div
-              className="card"
+              className="card why-card"
               style={{ boxShadow: "-8px 8px #2A478D", borderRadius: "12px" }}
             >
               <div className="card-body text-start">
@@ -159,10 +159,10 @@ function WhyBoc() {
                 </svg>
 
                 <div className="card-title">
-                  <p className="fw-bolder h5">Best Market Value</p>
+                  <p className="why-text fw-bolder h5">Best Market Value</p>
                 </div>
                 <div className="card-subtitle">
-                  <p className="mt-4">
+                  <p className="why-subtext mt-4">
                     We ensure you get the best value for your money with
                     transparent pricing and market insight
                   </p>
