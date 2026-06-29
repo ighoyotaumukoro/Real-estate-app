@@ -389,6 +389,12 @@ svg {
     font-size: 12px;
     text-align: center !important;
   }
+
+
+  svg.whatsapp{
+    width: 45px;
+    height: 45px;
+  }
   svg.client {
     width: 30px;
     height: 30px;
