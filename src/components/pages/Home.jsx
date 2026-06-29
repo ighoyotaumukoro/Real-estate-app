@@ -47,11 +47,12 @@ function Home() {
         </span>
         </a>
       </div>
-
+      <div className="main-container">
       <Headsection />
       <Herosection />
       <WhyBoc />
       <Reviews />
+      </div>
       <div className="d-none d-md-block">
         <Footer />
       </div>

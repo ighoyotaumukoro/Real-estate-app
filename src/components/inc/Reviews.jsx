@@ -18,7 +18,7 @@ function Reviews() {
           </h5>
         </div>
         <div
-          className="review row flex-nowrap overflow-auto overflow-auto  pb-3 ps-3 pe-3 pe-md-0"
+          className="review row  flex-nowrap overflow-auto overflow-auto  pb-5  ps-3 pe-3 pe-md-0"
           style={{
             fontFamily: "16px",
             scrollbarWidth: "none",

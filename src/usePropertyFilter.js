@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { property2 } from "./data/Properties2";
 
-export default function usePropertyFilter() {
+export default function usePropertyFilter(properties) {
   const [searchParams, setSearchParams] = useSearchParams();
   const sort = searchParams.get("sort") || "";
   const [bedroom, setBedroom] = useState("");

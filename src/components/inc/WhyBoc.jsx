@@ -6,12 +6,12 @@ function WhyBoc() {
       <div className="bg-white" style={{ paddingTop: "100px " }}>
         <div className="container-fluid px-3 px-md-4 text-center">
           <h1
-            className="display-5 fw-light"
+            className="text display-5 fw-light"
             style={{ color: "#2A478D", fontFamily: "Georgia" }}
           >
             Why Choose BOC Real Estate Limited
           </h1>
-          <h5 className="text-muted mb-5">
+          <h5 className="text text-muted mb-5">
             We are commited to make your property journey seamless and
             successful
           </h5>

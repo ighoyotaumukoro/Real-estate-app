@@ -13,6 +13,7 @@ export const property2 = [
       whatsapp:"https://wa.me/2348100854095",
       agent:"/images/myphoto.JPG",
       bedroom: "4",
+       bathroom: "5",
       enquiry:"https://wa.me/2348144697306",
     },
     {
@@ -29,6 +30,7 @@ export const property2 = [
       whatsapp:"https://wa.me/2348100854095",
       agent:"/images/myphoto.JPG",
        bedroom: "4",
+        bathroom: "5",
        enquiry:"https://wa.me/2348144697306",
     },
 
@@ -46,6 +48,7 @@ export const property2 = [
       whatsapp:"https://wa.me/2348145855441",
       agent:"/images/IMG_E1863.JPG",
        bedroom: "5",
+        bathroom: "5",
        enquiry:"https://wa.me/2348144697306",
     },
 
@@ -63,6 +66,7 @@ export const property2 = [
       whatsapp:"https://wa.me/2348100854095",
       agent:"/images/myphoto.JPG",
        bedroom: "4",
+        bathroom: "5",
        enquiry:"https://wa.me/2348144697306",
     },
 
@@ -80,6 +84,7 @@ export const property2 = [
       whatsapp:"https://wa.me/2348100854095",
       agent:"/images/myphoto.JPG",
        bedroom: "3",
+       bathroom: "5",
        enquiry:"https://wa.me/2348144697306",
     },
 
@@ -87,7 +92,7 @@ export const property2 = [
       id: "6",
       slug: "lease2",
       image: "/images/Hotel-2.jpg",
-      name: "Luxury 5-Bedroom Duplex in  Lekki, Lagos",
+      name: "Luxury 5-Bedroom Duplex in Lekki, Lagos",
       location: "Spar Lekki,Lagos",
       description: "5 Beds 5 Baths 450SQM",
       price: "₦150.0M",
@@ -97,6 +102,7 @@ export const property2 = [
       whatsapp:"https://wa.me/2348145855441",
       agent:"/images/IMG_E1863.JPG",
        bedroom: "5",
+        bathroom: "5",
        enquiry:"https://wa.me/2348144697306",
     },
     {
@@ -113,6 +119,7 @@ export const property2 = [
       whatsapp:"https://wa.me/2348145855441",
       agent:"/images/IMG_E1863.JPG",
        bedroom: "5",
+        bathroom: "5",
        enquiry:"https://wa.me/2348144697306",
     },
     {
@@ -129,6 +136,7 @@ export const property2 = [
       whatsapp:"https://wa.me/2348100854095",
       agent:"/images/myphoto.JPG",
        bedroom: "3",
+        bathroom: "5",
        enquiry:"https://wa.me/2348144697306",
     },
   ];

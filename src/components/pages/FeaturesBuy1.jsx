@@ -52,7 +52,7 @@ function FeaturesBuy1() {
                   ></button>
                 )}
         
-                <Navbar.Collapse id="navbarScroll" in={isOpen}>
+                <Navbar.Collapse id="navbarScroll" className="eba" in={isOpen}>
                   <Nav
                     className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
                     navbarScroll
@@ -82,14 +82,7 @@ function FeaturesBuy1() {
                 >
                   Properties
                 </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  to="/about"
-                  className="px-3 text-dark"
-                  href="#action3"
-                >
-                  About Us
-                </Nav.Link>
+                
                 <Nav.Link
                   as={Link}
                   to="/contact"
@@ -100,15 +93,18 @@ function FeaturesBuy1() {
                 </Nav.Link>
               </Nav>
 
-              <Link to="/properties" className="text-dark">
-                <Button
-                  to="/properties"
-                  variant="btn px-3"
-                  style={{ background: "#2A478D", color: "white" }}
-                >
-                  Browse Properties
-                </Button>
-              </Link>
+              <Link
+                              to="/properties"
+                              className="d-none d-md-flex text-decoration-none text-dark"
+                            >
+                              <Button
+                                to="/properties"
+                                variant="btn px-3"
+                                style={{ background: "#2A478D", color: "white" }}
+                              >
+                                Browse Properties
+                              </Button>
+                            </Link>
             </Navbar.Collapse>
           </Container>
         </Navbar>
@@ -155,53 +151,8 @@ function FeaturesBuy1() {
           >
             FOR {property.badge1}
           </span>
-          <svg
-            className="position-absolute top-50 inset-s-0 translate-middle-y ms-3 jusify-content-center align-items-center"
-            width="33"
-            height="33"
-            viewBox="0 0 33 33"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 16.2304C0 7.26658 7.26658 0 16.2304 0C25.1942 0 32.4607 7.26658 32.4607 16.2304C32.4607 25.1942 25.1942 32.4607 16.2304 32.4607C7.26658 32.4607 0 25.1942 0 16.2304Z"
-              fill="white"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M18.6645 21.0995L13.7954 16.2303L18.6645 11.3612"
-              stroke="#1A1A1A"
-              stroke-width="1.62304"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              style={{ zIndex: "2" }}
-            />
-          </svg>
-          <svg
-            className="position-absolute top-50 inset-e-0 translate-middle-y me-3"
-            width="33"
-            height="33"
-            viewBox="0 0 33 33"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 16.2304C0 7.26658 7.26658 0 16.2304 0C25.1942 0 32.4607 7.26658 32.4607 16.2304C32.4607 25.1942 25.1942 32.4607 16.2304 32.4607C7.26658 32.4607 0 25.1942 0 16.2304Z"
-              fill="white"
-              fill-opacity="0.9"
-            />
-            <path
-              d="M13.7949 21.0995L18.664 16.2303L13.7949 11.3612"
-              stroke="#1A1A1A"
-              stroke-width="1.62304"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              style={{ zIndex: "2" }}
-            />
-          </svg>
-          <span className="badge bg-dark bg-opacity-75 position-absolute bottom-0 start-50 translate-middle-x mb-3">
-            1/4
-          </span>
+          
+          
           <img
             src="/images/Hotel-one.jpg"
             className="thumb w-100 rounded-4"
@@ -217,7 +168,7 @@ function FeaturesBuy1() {
               className="fw-bold"
               style={{ fontFamily: "Georgia", color: "#2A478D" }}
             >
-              Luxury{property.bedroom}-Bedroom Duplex in Lekki Phase 1
+             {property.name}
             </h4>
             <p className="text-muted small d-flex ">
               <svg
@@ -250,7 +201,7 @@ function FeaturesBuy1() {
                   </clipPath>
                 </defs>
               </svg>
-              15 Admiralty Way, {property.location}
+              {property.location}
             </p>
             <h3
               className="fw-bold mb-3"

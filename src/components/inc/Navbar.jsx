@@ -30,7 +30,7 @@ function MyNavbar() {
           ></button>
         )}
 
-        <Navbar.Collapse id="navbarScroll" in={isOpen}>
+        <Navbar.Collapse id="navbarScroll" className="eba start-0 end-0 mx-0" in={isOpen}>
           <Nav
             className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
             navbarScroll
@@ -38,7 +38,7 @@ function MyNavbar() {
               top: "80px",
               overflowY: "auto",
               backgroundColor: "white",
-            
+
               zIndex: 1050,
               maxHeight: "calc(100vh -100px)",
             }}
@@ -61,15 +61,7 @@ function MyNavbar() {
             >
               Properties
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to=""
-              className="nav-link px-5 text-dark"
-              href="#action3"
-              onClick={() => setIsOpen(false)}
-            >
-              About Us
-            </Nav.Link>
+
             <Nav.Link
               as={Link}
               to="/contact"

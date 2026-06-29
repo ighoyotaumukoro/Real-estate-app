@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Footer from "../inc/Footer";
 import usePropertyFilter from "../../usePropertyFilter";
 import {
@@ -17,20 +17,93 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import { property2 } from "../../data/Properties2";
-function Properties() {
+const parsePrice = (val) => {
+  if (!val) return null;
+  let str = String(val)
+    .toUpperCase()
+    .replace(/,/g, "");
+    let num = parseFloat(str.replace(/[^0-9.]/g, ""));
+ if (Number.isNaN(num)) return null;
+  if (str.includes("M")) return num * 1000000;
+  if (str.includes("K")) return num * 1000;
+  return num;
+};
+function Properties({ properties }) {
   const navigate = useNavigate();
   const { slug } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
   const property = property2.find((p) => p.slug === slug);
-  const { filteredProperty, sort, handleSortChange } =
-    usePropertyFilter(property2);
+
   const [displayCount, setDisplayCount] = useState(0);
   const [name, setName] = useState(searchParams.get("name") || "");
   const [location, setLocation] = useState(searchParams.get("location") || "");
   const [minPrice, setMinPrice] = useState(searchParams.get("minPrice") || "");
   const [maxPrice, setMaxPrice] = useState(searchParams.get("maxPrice") || "");
-  const [bedroom, setBedroom] = useState("");
-  const [bathroom, setBathroom] = useState("");
+  const [bedroom, setBedroom] = useState(searchParams.get("bedroom") || "");
+  const [bathroom, setBathroom] = useState(searchParams.get("bathroom") || "");
+  const sort = searchParams.get("sort") || "";
+
+  const filteredProperty = useMemo(() => {
+    let min = minPrice ? Number(minPrice) * 1000000 : null;
+    let max = maxPrice ? Number(maxPrice) * 1000000 : null;
+    if (min !== null && max !== null && min > max) [min, max] = [max, min];
+    let list = property2.filter((p) => {
+      const itemPrice = parsePrice(p.price);
+
+      console.log(
+        p.name,
+        p.location,
+        "Price:",
+        itemPrice,
+        "Range:",
+        min,
+        "-",
+        max,
+      );
+
+      const nameStr = String(p.name || "").toLowerCase();
+      const locationStr = String(p.location || "").toLowerCase();
+      const inputName = String(name || "").toLowerCase();
+      const inputLocation = String(location || "").toLowerCase();
+      const matchName = !inputName || nameStr.includes(inputName);
+      const matchLocation =
+        !inputLocation ||
+        locationStr
+          .split(",")
+          .some((part) => part.trim().includes(inputLocation));
+      const matchMin = min === null || (itemPrice !== null && itemPrice >= min);
+      const matchMax = max === null || (itemPrice !== null && itemPrice <= max);
+      const matchBedroom = !bedroom || Number(p.bedroom) >= Number(bedroom);
+      const matchBathroom = !bathroom || Number(p.bathroom) <= Number(bathroom);
+      return (
+        matchName &&
+        matchLocation &&
+        matchMin &&
+        matchMax &&
+        matchBedroom &&
+        matchBathroom
+      );
+    });
+    if (sort === "low") {
+      list.sort(
+        (a, b) => (parsePrice(a.price) || 0) - (parsePrice(b.price) || 0),
+      );
+    }
+    if (sort === "high") {
+      return list.sort(
+        (a, b) => (parsePrice(b.price) || 0) - (parsePrice(a.price) || 0),
+      );
+    }
+
+    return list;
+  }, [name, location, minPrice, maxPrice, bedroom, bathroom, sort]);
+
+  const updateParams = (key, value) => {
+    const next = new URLSearchParams(searchParams);
+    value ? next.set(key, value) : next.delete(key);
+    setSearchParams(next, { replace: true });
+  };
+
   const handleReset = () => {
     setName("");
     setLocation("");
@@ -44,6 +117,7 @@ function Properties() {
   const goToList = () => {
     navigate(`/propertyList?${searchParams.toString()}`);
   };
+
   const [isOpen, setIsOpen] = useState(false);
   const heroWrapperStyle = {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${HeroBg})`,
@@ -57,7 +131,6 @@ function Properties() {
     position: "relative",
     marginBottom: "15px",
   };
-
   return (
     <>
       <div className="rounded-4" style={heroWrapperStyle}>
@@ -85,7 +158,11 @@ function Properties() {
               ></button>
             )}
 
-            <Navbar.Collapse id="navbarScroll" in={isOpen}>
+            <Navbar.Collapse
+              id="navbarScroll"
+              className="eba start-0 end-0 mx-0"
+              in={isOpen}
+            >
               <Nav
                 className=" mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
                 navbarScroll
@@ -97,7 +174,7 @@ function Properties() {
                   maxHeight: "calc(100vh -100px)",
                 }}
               >
-                <Nav.Link as={Link} to="/" className="text-dark px-3">
+                <Nav.Link as={Link} to="/" className="text-dark px-5">
                   Home
                 </Nav.Link>
                 <Nav.Link
@@ -109,14 +186,7 @@ function Properties() {
                 >
                   Properties
                 </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  to=""
-                  className="px-5 text-dark"
-                  href="#action3"
-                >
-                  About Us
-                </Nav.Link>
+
                 <Nav.Link
                   as={Link}
                   to="/contact"
@@ -165,7 +235,7 @@ function Properties() {
                   </button>
                 </p>
 
-                <form className="pb-3">
+                <form className="pb-3" onSubmit={(e) => e.preventDefault()}>
                   <p className="mb-2" style={{ fontFamily: "Arial" }}>
                     Property Type
                   </p>
@@ -273,7 +343,7 @@ function Properties() {
               <div className="col-8">
                 <select
                   value={sort}
-                  onChange={handleSortChange}
+                  onChange={(e) => updateParam("sort", e.target.value)}
                   className="bg-white text-dark d-flex p-1 pe-3 border mb-3  mt-3 rounded-2 fw-bold"
                 >
                   <option value="">Default</option>

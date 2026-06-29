@@ -35,7 +35,7 @@ function Herosection() {
               className="col-10 col-lg-4 col-xl-4 col-md-6 rounded-3 border-0 mb-4 h-100 pe-3"
               style={{ objectFit: "cover" }}
             >
-              <div className=" card shadow border-0">
+              <div className=" hero-card shadow border-0 prop">
                 <div className="position-relative">
                   <img src={prop.image} className="card-img-top"></img>
                   <div className="card-body text-start">

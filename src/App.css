@@ -282,7 +282,7 @@ svg {
     padding: 10px 130px !important;
   }
   .propertylink {
-    margin-top: 390px !important;
+    margin-top: 398px !important;
     font-size: 14px;
   }
 
@@ -311,7 +311,7 @@ svg {
   }
 
   .head-card {
-    margin-top: -170px !important;
+    margin-top: -140px !important;
   }
   .heroWrapperStyle {
     margin: 0 0 0 0 !important;
@@ -324,7 +324,12 @@ svg {
     animation-timing-function: ease-in-out;
     animation-delay: 0.2s;
   }
-  
+  h4{
+    font-size: 14px;
+  }
+  h1{
+    font-size: 12px;
+  }
   svg {
     width: 12px;
     height: 12px;
@@ -365,7 +370,7 @@ svg {
   }
 
   .prop-card {
-    margin-top: -50px !important;
+    margin-top: -20px !important;
   }
   .prope-card {
     margin-top: -88px !important;
@@ -400,9 +405,14 @@ svg {
     border-bottom: 1px solid gainsboro;
     width: 350px;
   }
-
-  Nav {
-    margin-top: 2000px !important;
+ .eba{
+  margin-top: 200px !important;
+  position: absolute;
+  margin-left:10px;
+  margin-right: 10px;
+ }
+  Nav{
+    z-index: 1050 !important;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {

@@ -50,7 +50,7 @@ function Headsection() {
 
   return (
     <>
-      <div className="heroWrapperStyle" style={heroWrapperStyle}>
+      <div id="progress" className="heroWrapperStyle" style={heroWrapperStyle}>
         <img
           src="/images/BOC logo.png"
           className="img-fluid position-absolute top-0 ms-3 mt-3"

@@ -73,7 +73,7 @@ function Contact() {
               ></button>
             )}
 
-            <Navbar.Collapse id="navbarScroll" in={isOpen}>
+            <Navbar.Collapse id="navbarScroll" className="eba start-0 end-0 mx-0" in={isOpen}>
               <Nav
                 className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
                 navbarScroll
@@ -103,15 +103,7 @@ function Contact() {
                 >
                   Properties
                 </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  to=""
-                  className="px-5 text-dark"
-                  href="#action3"
-                  style={{ color: "#2A478D" }}
-                >
-                  About Us
-                </Nav.Link>
+                
                 <Nav.Link
                   as={Link}
                   to="/contact"

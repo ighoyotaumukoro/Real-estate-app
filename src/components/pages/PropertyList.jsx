@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Footer from "../inc/Footer";
 import usePropertyFilter from "../../usePropertyFilter";
 import {
@@ -17,20 +17,91 @@ import {
   useSearchParams,
 } from "react-router-dom";
 import { property2 } from "../../data/Properties2";
-function PropertyList() {
+const parsePrice = (val) => {
+  if (!val) return null;
+  let str = String(val).toUpperCase().replace(/,/g, "");
+  let num = parseFloat(str.replace(/[^0-9.]/g, ""));
+  if (Number.isNaN(num)) return null;
+  if (str.includes("M")) return num * 1000000;
+  if (str.includes("K")) return num * 1000;
+  return num;
+};
+function PropertyList({ properties }) {
   const navigate = useNavigate();
   const { slug } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
   const property = property2.find((p) => p.slug === slug);
-const {filteredProperty, sort, handleSortChange} = usePropertyFilter(property2)
 
   const [displayCount, setDisplayCount] = useState(0);
   const [name, setName] = useState(searchParams.get("name") || "");
   const [location, setLocation] = useState(searchParams.get("location") || "");
   const [minPrice, setMinPrice] = useState(searchParams.get("minPrice") || "");
   const [maxPrice, setMaxPrice] = useState(searchParams.get("maxPrice") || "");
-  const [bedroom, setBedroom] = useState("");
-  const [bathroom, setBathroom] = useState("");
+  const [bedroom, setBedroom] = useState(searchParams.get("bedroom") || "");
+  const [bathroom, setBathroom] = useState(searchParams.get("bathroom") || "");
+  const sort = searchParams.get("sort") || "";
+
+  const filteredProperty = useMemo(() => {
+    let min = minPrice ? Number(minPrice) * 1000000 : null;
+    let max = maxPrice ? Number(maxPrice) * 1000000 : null;
+    if (min !== null && max !== null && min > max) [min, max] = [max, min];
+    let list = property2.filter((p) => {
+      const itemPrice = parsePrice(p.price);
+
+      console.log(
+        p.name,
+        p.location,
+        "Price:",
+        itemPrice,
+        "Range:",
+        min,
+        "-",
+        max,
+      );
+
+      const nameStr = String(p.name || "").toLowerCase();
+      const locationStr = String(p.location || "").toLowerCase();
+      const inputName = String(name || "").toLowerCase();
+      const inputLocation = String(location || "").toLowerCase();
+      const matchName = !inputName || nameStr.includes(inputName);
+      const matchLocation =
+        !inputLocation ||
+        locationStr
+          .split(",")
+          .some((part) => part.trim().includes(inputLocation));
+      const matchMin = min === null || (itemPrice !== null && itemPrice >= min);
+      const matchMax = max === null || (itemPrice !== null && itemPrice <= max);
+      const matchBedroom = !bedroom || Number(p.bedroom) >= Number(bedroom);
+      const matchBathroom = !bathroom || Number(p.bathroom) <= Number(bathroom);
+      return (
+        matchName &&
+        matchLocation &&
+        matchMin &&
+        matchMax &&
+        matchBedroom &&
+        matchBathroom
+      );
+    });
+    if (sort === "low") {
+      list.sort(
+        (a, b) => (parsePrice(a.price) || 0) - (parsePrice(b.price) || 0),
+      );
+    }
+    if (sort === "high") {
+      return list.sort(
+        (a, b) => (parsePrice(b.price) || 0) - (parsePrice(a.price) || 0),
+      );
+    }
+
+    return list;
+  }, [name, location, minPrice, maxPrice, bedroom, bathroom, sort]);
+
+  const updateParams = (key, value) => {
+    const next = new URLSearchParams(searchParams);
+    value ? next.set(key, value) : next.delete(key);
+    setSearchParams(next, { replace: true });
+  };
+
   const handleReset = () => {
     setName("");
     setLocation("");
@@ -39,12 +110,11 @@ const {filteredProperty, sort, handleSortChange} = usePropertyFilter(property2)
     setBedroom("");
     setBathroom("");
     setSearchParams({});
-  
   };
 
-  const goToList=()=>{
-    navigate(`/properties?${searchParams.toString()}`)
-  }
+  const goToList = () => {
+    navigate(`/properties?${searchParams.toString()}`);
+  };
 
   const [isOpen, setIsOpen] = useState(false);
   const heroWrapperStyle = {
@@ -87,7 +157,11 @@ const {filteredProperty, sort, handleSortChange} = usePropertyFilter(property2)
               ></button>
             )}
 
-            <Navbar.Collapse id="navbarScroll" in={isOpen}>
+            <Navbar.Collapse
+              id="navbarScroll"
+              className="eba start-0 end-0 mx-0"
+              in={isOpen}
+            >
               <Nav
                 className=" mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
                 navbarScroll
@@ -111,14 +185,7 @@ const {filteredProperty, sort, handleSortChange} = usePropertyFilter(property2)
                 >
                   Properties
                 </Nav.Link>
-                <Nav.Link
-                  as={Link}
-                  to=""
-                  className="px-5 text-dark"
-                  href="#action3"
-                >
-                  About Us
-                </Nav.Link>
+
                 <Nav.Link
                   as={Link}
                   to="/contact"
@@ -271,7 +338,11 @@ const {filteredProperty, sort, handleSortChange} = usePropertyFilter(property2)
           <div className="col-sm-12 col-md-8 col-lg-8 col-xl-8">
             <div className="row">
               <div className="col-8">
-                <select value={sort} onChange={handleSortChange} className="bg-white text-dark d-flex p-1 pe-3 border mb-3  mt-3 rounded-2 fw-bold">
+                <select
+                  value={sort}
+                  onChange={(e) => updateParam("sort", e.target.value)}
+                  className="bg-white text-dark d-flex p-1 pe-3 border mb-3  mt-3 rounded-2 fw-bold"
+                >
                   <option value="">Default</option>
                   <option value="low">low-to-high</option>
                   <option value="high">high-to-low</option>
@@ -404,7 +475,7 @@ const {filteredProperty, sort, handleSortChange} = usePropertyFilter(property2)
                 </div>
               </div>
             </div>
-             <p>{filteredProperty.length} property found</p>
+            <p>{filteredProperty.length} property found</p>
             <div>
               <a href="https://wa.me/2348144697306">
                 <span
@@ -670,12 +741,12 @@ const {filteredProperty, sort, handleSortChange} = usePropertyFilter(property2)
             ) : (
               <div>
                 <div className="col-12">
-                    <div className="card  border-0  shadow-sm align-items-center align-self-center py-5 mt-5">
-                      <div className="card-body empty-state">
-                        <p>No properties match your filters</p>
-                      </div>
+                  <div className="card  border-0  shadow-sm align-items-center align-self-center py-5 mt-5">
+                    <div className="card-body empty-state">
+                      <p>No properties match your filters</p>
                     </div>
                   </div>
+                </div>
               </div>
             )}
           </div>
