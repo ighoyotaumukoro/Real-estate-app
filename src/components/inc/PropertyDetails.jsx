@@ -484,7 +484,7 @@ export default function PropertyDetail() {
                  <a>
                 <button
                  
-                    href={prop.enquiry}
+          
                     className="btn mb-2 w-100 bi bi-envelope"
                     style={{ backgroundColor: "#2A478D", color: "white" }}
                   >
