@@ -514,15 +514,16 @@ function Buy1() {
                 />
                 <span className="fw-semibold">BOC Agent - 0027</span>
               </div>
-              <button>
-                <a
-                  href={property.enquiry}
-                  className="btn  w-100 mb-2"
-                  style={{ backgroundColor: "#2A478D", color: "white" }}
-                >
-                  Send Enquiry
-                </a>
-              </button>
+              <Link to="/contact" className="text-dark">
+                <button>
+                  <a
+                    className="btn  w-100 mb-2"
+                    style={{ backgroundColor: "#2A478D", color: "white" }}
+                  >
+                    Send Enquiry
+                  </a>
+                </button>
+              </Link>
               <button className="d-flex justify-content-between align-content-between">
                 <a
                   href={property.whatsapp}

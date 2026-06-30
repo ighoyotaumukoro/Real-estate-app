@@ -32,9 +32,7 @@ function Footer() {
               </p>
             </Link>
 
-            <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>
-              About Us
-            </p>
+            
 
             <Link to="/contact" className="text-dark">
               <p className="text-secondary mb-1" style={{ fontSize: "16px" }}>

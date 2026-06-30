@@ -470,15 +470,16 @@ export default function LocationDetails() {
                 <span className="fw-semibold">BOC Agent - 0027</span>
               </div>
 
-              <button>
-                <a
-                  href={prop.enquiry}
-                  className="btn  w-100 mb-2"
-                  style={{ backgroundColor: "#2A478D", color: "white" }}
-                >
-                  Send Enquiry
-                </a>
-              </button>
+              <Link to="/contact" className="text-dark">
+                <button>
+                  <a
+                    className="btn  w-100 mb-2"
+                    style={{ backgroundColor: "#2A478D", color: "white" }}
+                  >
+                    Send Enquiry
+                  </a>
+                </button>
+              </Link>
               <button>
                 <a
                   href={prop.whatsapp}

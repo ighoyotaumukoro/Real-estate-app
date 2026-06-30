@@ -276,9 +276,9 @@ const PropertyList = () => {
                   onChange={setSort}
                   className="bg-white text-dark d-flex p-1 pe-3 border mb-3  mt-3 rounded-2 fw-bold"
                 >
-                  <option value="">Default</option>
-                  <option value="low">low-to-high</option>
-                  <option value="high">high-to-low</option>
+                  <option value="" className="fw-light">Default</option>
+                  <option value="low" className="fw-light"> low-to-high</option>
+                  <option value="high" className="">high-to-low</option>
                 </select>
               </div>
 
