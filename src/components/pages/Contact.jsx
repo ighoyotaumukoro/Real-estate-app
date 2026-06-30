@@ -138,7 +138,7 @@ function Contact() {
           style={{ marginLeft: "auto", marginRight: "auto" }}
         >
           <div className="row mt-3 mb-0 justify-content-center">
-            <div className="col-12 col-md-6 col-lg-6 col-xl-6">
+            <div className="whatsapp col-12 col-md-6 col-lg-6 col-xl-6">
               <div className="whatsapp-card card shadow rounded-4 border-0 text-start pb-3 mb-4">
                 <div className="card-body">
                   <p className="fw-bold h5" style={{ fontFamily: "Georgia" }}>
@@ -374,7 +374,7 @@ function Contact() {
               </div>
             </div>
 
-            <div className="col-sm-10 col-md-6 col-lg-6 col-xl-6">
+            <div className="message col-sm-10 col-md-6 col-lg-6 col-xl-6">
               <div className="message-card card shadow rounded-4 border-0 text-start pt-3 pb-1">
                 <div className="card-body">
                   <p className="fw-bold h5" style={{ fontFamily: "Georgia" }}>

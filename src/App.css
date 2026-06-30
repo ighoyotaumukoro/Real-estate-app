@@ -359,6 +359,18 @@ svg {
     font-size: 12px;
     
   }
+  div.whatsapp{
+    order:2;
+    margin-top: 20px;
+  }
+  div.message{
+    order:1;
+    margin-top: -60px;
+  }
+  .prop{
+    text-align: center !important;
+    margin-left: 80px;
+  }
   #navbarScroll {
     margin-top: 50px;
   }

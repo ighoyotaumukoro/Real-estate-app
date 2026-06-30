@@ -132,14 +132,14 @@ const PropertyList = () => {
           </Container>
         </Navbar>
         <div className="grow d-flex align-items-start justify-content-start">
-          <div className="container text-start text-white ps-5">
+          <div className="container  text-center text-md-start text-white ps-5">
             <h1
               className="display-3 mt-5 fw-light"
               style={{ color: "#2A478D", fontFamily: "Helvitica" }}
             >
               Properties for Sale
             </h1>
-            <p className="col-lg-8 mb-5">{displayCount} property found</p>
+            <p className="prop col-lg-8 mb-5">{displayCount} property found</p>
           </div>
         </div>
       </div>
