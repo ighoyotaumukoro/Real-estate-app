@@ -108,11 +108,11 @@ export default function SimilarLocation() {
       <div>
         <Link to="/properties" className="text-dark">
           <p
-            className="text-start ms-5 mb-5 d-flex"
+            className="text-start ms-md-5 mb-5 d-flex"
             style={{ textDecoration: "underline", color: "#2A478D" }}
           >
             <svg
-              className="mt-1"
+              className="mt-2 mt-md-1"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -138,7 +138,7 @@ export default function SimilarLocation() {
           </p>
         </Link>
       </div>
-      <div className="card border-0 overflow-hidden mx-5">
+      <div className="card border-0 overflow-hidden mx-md-5">
         <div className="position-relative">
           <span
             className="badge btn position-absolute rounded-5 py-2 ms-3 top-0 mt-2 px-3 inset-s-0"
@@ -156,7 +156,7 @@ export default function SimilarLocation() {
       </div>
 
       <div className="container-fluid mt-4 ">
-        <div className="row g-4 ms-4 me-4">
+        <div className="row g-4 mx-md4">
           <div className="col-lg-8 text-start">
             <h4
               className="fw-bold"
@@ -518,6 +518,7 @@ export default function SimilarLocation() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
+         className="whatsapp-background"
         style={{
           position: "fixed",
           bottom: "20px",

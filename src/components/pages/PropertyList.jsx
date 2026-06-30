@@ -414,6 +414,7 @@ const PropertyList = () => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
+         className="whatsapp-background"
         style={{
           position: "fixed",
           bottom: "20px",

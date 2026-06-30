@@ -219,6 +219,7 @@ svg {
   .search-btn {
     padding: 10px 100px !important;
   }
+
   .head-text {
     font-size: 20px;
   }
@@ -288,6 +289,7 @@ svg {
 
   img.thumb {
     height: 300px !important;
+    border-radius: 0% !important;
   }
   .head-text1 {
     font-size: 35px;
@@ -392,8 +394,13 @@ svg {
 
 
   svg.whatsapp{
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .whatsapp-background{
+width: 50px !important;
+    height: 50px !important;
   }
   svg.client {
     width: 30px;

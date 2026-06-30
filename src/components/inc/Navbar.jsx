@@ -76,7 +76,7 @@ function MyNavbar() {
             <Button
               to="/properties"
               variant="btn px-3"
-              className="d-none d-md-flex"
+              className="me-3 d-none d-md-flex"
               style={{ background: "#2A478D", color: "white" }}
             >
               Browse Properties

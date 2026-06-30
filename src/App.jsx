@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/pages/ScrollToTop";
 import Herosection from "./components/inc/Herosection";
 import PropertyDetail from "./components/inc/PropertyDetails";
 import FeaturesDetail from "./components/inc/FeaturesDetails";
@@ -7,11 +8,13 @@ import LocationDetail from "./components/inc/LocationDetails";
 import SimilarDetail from "./components/inc/SimilarDetails";
 import SimilarFeatures from "./components/inc/SimilarFeatures";
 import SimilarLocation from "./components/inc/SimilarLocation";
+
 import {
   Home,
   Contact,
   PropertyList,
   Buy1,
+  
   Properties,
   FeaturesBuy1,
   LocationBuy1,
@@ -36,6 +39,7 @@ function App() {
 
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         {routes.map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
