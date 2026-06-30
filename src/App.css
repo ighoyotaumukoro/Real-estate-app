@@ -95,6 +95,10 @@
   }
 }
 
+.custom-select-light{
+  font-weight: 400 !important;
+}
+
 #docs {
   border-right: 1px solid var(--border);
 

@@ -277,7 +277,8 @@ console.log("property2:", property2)
                 <select
                   value={sort}
                   onChange={setSort}
-                  className="bg-white text-dark d-flex p-1 pe-3 border mb-3  mt-3 rounded-2 fw-bold"
+
+                  className="bg-white fw-light custom-select-light text-dark d-flex p-1 pe-3 border mb-3  mt-3 rounded-2 fw-bold"
                 >
                   <option value="" className="fw-light">Default</option>
                   <option value="low" className="fw-light"> low-to-high</option>

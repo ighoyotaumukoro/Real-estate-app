@@ -515,14 +515,17 @@ function Buy1() {
                 <span className="fw-semibold">BOC Agent - 0027</span>
               </div>
               <Link to="/contact" className="text-dark">
-                <button>
-                  <a
-                    className="btn  w-100 mb-2"
+                 <a>
+                <button
+                 
+                    href={prop.enquiry}
+                    className="btn mb-2 w-100 bi bi-envelope"
                     style={{ backgroundColor: "#2A478D", color: "white" }}
                   >
-                    Send Enquiry
-                  </a>
+                   <span className="ms-2">Send Enquiry</span> 
+                  
                 </button>
+                </a>
               </Link>
               <button className="d-flex justify-content-between align-content-between">
                 <a
