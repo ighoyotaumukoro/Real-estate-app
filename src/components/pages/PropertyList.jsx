@@ -254,7 +254,7 @@ const PropertyList = () => {
                   </select>
                   <button
                     type="button"
-                    className="form-control mt-5 text-start d-flex justify-content-between align-items-center"
+                    className="form-control mt-3 text-start d-flex justify-content-between align-items-center"
                     onClick={() => setShowAmenities(!showAmenities)}
                   >
                     <span>
