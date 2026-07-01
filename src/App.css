@@ -238,6 +238,9 @@ svg {
     height: 54px;
     margin-top: 0;
   }
+  h5,h4,p, h2,h1,h3{
+  font-weight: 400 !important;
+}
 
   .toggle-btns label {
     padding: 10px 120px;
@@ -271,6 +274,9 @@ svg {
   .message-btn {
     padding: 12px 250px !important;
   }
+  .prop-name{
+    font-size: 18px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -281,13 +287,13 @@ svg {
     padding: 12px 80px;
   }
   .message-btn {
-    padding: 12px 114px;
+    padding: 12px 130px;
   }
   .search-btn {
     padding: 10px 130px !important;
   }
   .propertylink {
-    margin-top: 398px !important;
+    margin-top: 350px !important;
     font-size: 14px;
   }
 
@@ -374,9 +380,9 @@ svg {
     max-width: 320px !important;
   }
     
-  .prop{
+  .pack{
     text-align: center !important;
-    
+    margin-left: 100px !important;
   }
   #navbarScroll {
     margin-top: 50px;
@@ -388,7 +394,11 @@ font-size: 14px;
     max-height: 20vh;
 
   }
-
+ .hero-card .prop{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  }
+ 
   button.close {
     background-color: white;
   }
@@ -458,6 +468,8 @@ width: 50px !important;
     border-bottom: 1px solid gainsboro;
     width: 350px;
   }
+
+  
  .eba{
   margin-top: 200px !important;
   position: absolute;

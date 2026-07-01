@@ -153,7 +153,7 @@ const Properties = () => {
             >
               Properties for Sale
             </h1>
-            <p className="prop text-center text-center text-md-start col-lg-8 mb-5">
+            <p className="pack text-center text-center text-md-start col-lg-8  mb-5">
               {displayCount} property found
             </p>
           </div>

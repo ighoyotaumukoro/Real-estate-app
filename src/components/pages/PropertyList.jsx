@@ -151,7 +151,7 @@ const PropertyList = () => {
             >
               Properties for Sale
             </h1>
-            <p className="prop col-lg-8 mb-5">{displayCount} property found</p>
+            <p className="pack col-lg-8 mb-5">{displayCount} property found</p>
           </div>
         </div>
       </div>
