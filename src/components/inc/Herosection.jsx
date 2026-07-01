@@ -48,9 +48,9 @@ function Herosection() {
                     <span className="badge btn position-absolute bg-dark text-white rounded-4 py-2 end-0 me-3 top-0 mt-2  px-3 align ">
                       {prop.badge2}
                     </span>
-                    <p className="mb-1">{prop.name}</p>
-                    <p className="text-muted my-1">{prop.location}</p>
-                    <p className="text-muted my-1"> {prop.description}</p>
+                    <p className="mb-1 prop-name">{prop.name}</p>
+                    <p className="text-muted my-1 prop-loc">{prop.location}</p>
+                    <p className="text-muted my-1 prop-des"> {prop.description}</p>
                     <div className="position-relative mt-3">
                       <p style={{ color: "#2A478D" }} className=" h4 fw-bold">
                         {prop.price}

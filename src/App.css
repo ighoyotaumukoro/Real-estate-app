@@ -281,7 +281,7 @@ svg {
     padding: 12px 80px;
   }
   .message-btn {
-    padding: 12px 96px;
+    padding: 12px 114px;
   }
   .search-btn {
     padding: 10px 130px !important;
@@ -373,10 +373,17 @@ svg {
     
   .prop{
     text-align: center !important;
-    margin-left: 80px;
+    
   }
   #navbarScroll {
     margin-top: 50px;
+  }
+  .prop-name, .prop-loc, .prop-des{
+font-size: 14px;
+  }
+ .hero-card img{
+    max-height: 20vh;
+
   }
 
   button.close {
@@ -389,6 +396,7 @@ svg {
     width: 35px !important;
     height: 35px !important;
   }
+
   svg.loc {
     margin-top: 2px;
     width: 20px;
@@ -501,4 +509,7 @@ width: 50px !important;
   .message-btn {
     padding: 12px 150px !important;
   }
+}
+h5,h4,p, h2,h1,h3{
+  font-weight: 400 !important;
 }
