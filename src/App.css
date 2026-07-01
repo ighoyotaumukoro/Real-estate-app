@@ -467,6 +467,9 @@ width: 50px !important;
   Nav{
     z-index: 1050 !important;
   }
+  .head-card{
+    max-width: 100% !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .toggle-btns label {
