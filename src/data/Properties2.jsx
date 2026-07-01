@@ -15,7 +15,20 @@ export const property2 = [
     bedroom: "4",
     bathroom: "5",
     enquiry: "https://wa.me/2348144697306",
+    amenities: [
+      "Parking",
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "CCTV",
+      "swimming pool",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Ibuje-Lekki"
   },
+  
   {
     id: "2",
     slug: "rent1",
@@ -32,6 +45,18 @@ export const property2 = [
     bedroom: "4",
     bathroom: "5",
     enquiry: "https://wa.me/2348144697306",
+    amenities: [
+      "Parking",
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "CCTV",
+      "swimming pool",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Ibuje-Lekki"
   },
 
   {
@@ -50,6 +75,19 @@ export const property2 = [
     bedroom: "5",
     bathroom: "5",
     enquiry: "https://wa.me/2348144697306",
+    amenities: [
+      "Parking",
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "Gym",
+      "CCTV",
+      "swimming pool",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Spar Lekki"
   },
 
   {
@@ -68,6 +106,18 @@ export const property2 = [
     bedroom: "4",
     bathroom: "5",
     enquiry: "https://wa.me/2348144697306",
+    amenities: [
+      "Parking",
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "CCTV",
+      "swimming pool",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Ibuje-Lekki"
   },
 
   {
@@ -86,6 +136,16 @@ export const property2 = [
     bedroom: "3",
     bathroom: "5",
     enquiry: "https://wa.me/2348144697306",
+    amenities: [
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "CCTV",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Jankande Lekki"
   },
 
   {
@@ -104,6 +164,19 @@ export const property2 = [
     bedroom: "5",
     bathroom: "5",
     enquiry: "https://wa.me/2348144697306",
+    amenities: [
+      "Parking",
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "Gym",
+      "CCTV",
+      "swimming pool",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Spar Lekki"
   },
   {
     id: "7",
@@ -121,6 +194,19 @@ export const property2 = [
     bedroom: "5",
     bathroom: "5",
     enquiry: "https://wa.me/2348144697306",
+    amenities: [
+      "Parking",
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "Gym",
+      "CCTV",
+      "swimming pool",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Spar Lekki"
   },
   {
     id: "8",
@@ -138,5 +224,15 @@ export const property2 = [
     bedroom: "3",
     bathroom: "5",
     enquiry: "https://wa.me/2348144697306",
+    amenities: [
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "CCTV",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Jankande, Lekki"
   },
 ];

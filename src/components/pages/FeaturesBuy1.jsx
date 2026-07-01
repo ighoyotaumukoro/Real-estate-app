@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { property2 } from "../../data/Properties2";
 import { similar } from "../../data/Similar";
 import {
@@ -14,7 +14,7 @@ import MyNavbar from "../inc/Navbar";
 import { useParams, Link } from "react-router-dom";
 import Footer from "../inc/Footer";
 function FeaturesBuy1() {
-   const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const { slug } = useParams();
   const property = property2.find((p) => p.slug === slug);
   const sim = similar.find((p) => p.slug === slug);
@@ -34,43 +34,38 @@ function FeaturesBuy1() {
           style={{ height: "60px", width: "80px" }}
         ></img>
         <Navbar expand="lg" variant="light" className="mt-4 py-1">
-              <Container fluid className="position-relative">
-                {!isOpen && (
-                  <Navbar.Toggle
-                    aria-controls="navbarScroll"
-                    className="ms-auto justify-content-center align-content-center"
-                    onClick={() => setIsOpen(true)}
-                  />
-                )}
-        
-                {isOpen && (
-                  <button
-                    className="close position-absolute d-md-none top-0 end-0 mt-2 me-2 btn-close btn-close-dark"
-                    onClick={() => setIsOpen(false)}
-                    style={{ fontSize: "1.2rem", color: "#000" }}
-                    aria-label="Close"
-                  ></button>
-                )}
-        
-                <Navbar.Collapse id="navbarScroll" className="eba" in={isOpen}>
-                  <Nav
-                    className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
-                    navbarScroll
-                    style={{
-                      top: "80px",
-                      overflowY: "auto",
-                      backgroundColor: "white",
-                    
-                      zIndex: 1050,
-                      maxHeight: "calc(100vh -100px)",
-                    }}
+          <Container fluid className="position-relative">
+            {!isOpen && (
+              <Navbar.Toggle
+                aria-controls="navbarScroll"
+                className="ms-auto justify-content-center align-content-center"
+                onClick={() => setIsOpen(true)}
+              />
+            )}
+
+            {isOpen && (
+              <button
+                className="close position-absolute d-md-none top-0 end-0 mt-2 me-2 btn-close btn-close-dark"
+                onClick={() => setIsOpen(false)}
+                style={{ fontSize: "1.2rem", color: "#000" }}
+                aria-label="Close"
+              ></button>
+            )}
+
+            <Navbar.Collapse id="navbarScroll" className="eba" in={isOpen}>
+              <Nav
+                className="mx-auto g-3 bg-white flex-column align-items-center flex-lg-row rounded-5 "
+                navbarScroll
+                style={{
+                  top: "80px",
+                  overflowY: "auto",
+                  backgroundColor: "white",
+
+                  zIndex: 1050,
+                  maxHeight: "calc(100vh -100px)",
+                }}
               >
-               <Nav.Link
-                  as={Link}
-                  to="/"
-                  className="px-3 text-dark"
-                 
-                >
+                <Nav.Link as={Link} to="/" className="px-3 text-dark">
                   Home
                 </Nav.Link>
                 <Nav.Link
@@ -78,11 +73,11 @@ function FeaturesBuy1() {
                   to="/properties"
                   className="px-"
                   href="#action2"
-                   style={{ color: "#2A478D" }}
+                  style={{ color: "#2A478D" }}
                 >
                   Properties
                 </Nav.Link>
-                
+
                 <Nav.Link
                   as={Link}
                   to="/contact"
@@ -94,17 +89,17 @@ function FeaturesBuy1() {
               </Nav>
 
               <Link
-                              to="/properties"
-                              className="d-none d-md-flex text-decoration-none text-dark"
-                            >
-                              <Button
-                                to="/properties"
-                                variant="btn px-3"
-                                style={{ background: "#2A478D", color: "white" }}
-                              >
-                                Browse Properties
-                              </Button>
-                            </Link>
+                to="/properties"
+                className="d-none d-md-flex text-decoration-none text-dark"
+              >
+                <Button
+                  to="/properties"
+                  variant="btn px-3"
+                  style={{ background: "#2A478D", color: "white" }}
+                >
+                  Browse Properties
+                </Button>
+              </Link>
             </Navbar.Collapse>
           </Container>
         </Navbar>
@@ -117,7 +112,7 @@ function FeaturesBuy1() {
             style={{ textDecoration: "underline", color: "#2A478D" }}
           >
             <svg
-            className="mt-2 mt-md-1"
+              className="mt-2 mt-md-1"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -151,8 +146,7 @@ function FeaturesBuy1() {
           >
             FOR {property.badge1}
           </span>
-          
-          
+
           <img
             src={property.image}
             className="thumb w-100 rounded-4"
@@ -168,11 +162,11 @@ function FeaturesBuy1() {
               className="fw-bold"
               style={{ fontFamily: "Georgia", color: "#2A478D" }}
             >
-             {property.name}
+              {property.name}
             </h4>
             <p className="text-muted small d-flex ">
               <svg
-              className="loc"
+                className="loc"
                 width="17"
                 height="17"
                 viewBox="0 0 17 17"
@@ -207,7 +201,7 @@ function FeaturesBuy1() {
               className="fw-bold mb-3"
               style={{ fontFamily: "Georgia", color: "#2A478D" }}
             >
-             {property.price}
+              {property.price}
             </h3>
 
             <div className="row g-2 mb-4">
@@ -412,7 +406,7 @@ function FeaturesBuy1() {
             </div>
 
             <div className="border-bottom mb-3">
-               <Link to={`/buy1/${property.slug}`} className="text-dark">
+              <Link to={`/buy1/${property.slug}`} className="text-dark">
                 <span className="me-4 pb-2 d-inline-block  ">Overview</span>
               </Link>
 
@@ -433,177 +427,14 @@ function FeaturesBuy1() {
             </h6>
 
             <div className="container-fluid border-bottom mb-2 col-12 ">
-              <div className="row">
-                <div className="col-12 col-md-4">
-                  <p className="text-secondary mb-2 ">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    Swimming Pool
-                  </p>
-                  <p className="text-secondary mb-2 ">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    Backup Generator
-                  </p>
-                  <p className="text-secondary mb-2 ">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    Air Conditioning
-                  </p>
-                  <p className="text-secondary mb-3 ">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    Garden
-                  </p>
+            
+                  {property.amenities.map((item, index) => (
+                    <li key={index} className="" style={{color:"#2A478D"}}>
+                      {item}
+                    </li>
+                  ))}
                 </div>
-
-                <div className="col-12 col-md-4">
-                  <p className="text-secondary mb-2">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    Gym
-                  </p>
-                  <p className="text-secondary mb-2">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    CCTV
-                  </p>
-                  <p className="text-secondary mb-2">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    Borehole
-                  </p>
-                </div>
-
-                <div className="col-12 col-md-4">
-                  <p className="text-secondary mb-2">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    24/7 Security
-                  </p>
-                  <p className="text-secondary mb-2">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    Fitted Kitchen
-                  </p>
-                  <p className="text-secondary mb-2">
-                    <svg
-                      className="me-2"
-                      width="8"
-                      height="8"
-                      viewBox="0 0 8 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0 4C0 1.79086 1.79086 0 4 0C6.20914 0 8 1.79086 8 4C8 6.20914 6.20914 8 4 8C1.79086 8 0 6.20914 0 4Z"
-                        fill="#2A478D"
-                      />
-                    </svg>
-                    Parking
-                  </p>
-                </div>
-              </div>
-            </div>
+          
           </div>
 
           <div className="col-lg-4">
@@ -620,27 +451,24 @@ function FeaturesBuy1() {
                   src={property.agent}
                   className="rounded-5 me-2"
                   style={{
-                  width:"45px",
-                  height:"45px",
-                  alt:"Agent",
-                  objectFit: "cover",
-                        flexShrink: 0,
-                   } }
+                    width: "45px",
+                    height: "45px",
+                    alt: "Agent",
+                    objectFit: "cover",
+                    flexShrink: 0,
+                  }}
                 />
                 <span className="fw-semibold">BOC Agent - 0027</span>
               </div>
 
               <Link to="/contact" className="text-dark">
-                 <a>
-                <button
-                 
-                  
+                <a>
+                  <button
                     className="btn mb-2 w-100 bi bi-envelope"
                     style={{ backgroundColor: "#2A478D", color: "white" }}
                   >
-                   <span className="ms-2">Send Enquiry</span> 
-                  
-                </button>
+                    <span className="ms-2">Send Enquiry</span>
+                  </button>
                 </a>
               </Link>
               <button>
@@ -648,7 +476,7 @@ function FeaturesBuy1() {
                   href={property.whatsapp}
                   className="btn btn-success w-100 text-decoration-none text-white bi bi-whatsapp"
                 >
-                 <span className="ms-2">WhatsApp Agent</span>
+                  <span className="ms-2">WhatsApp Agent</span>
                 </a>
               </button>
             </div>
@@ -665,57 +493,56 @@ function FeaturesBuy1() {
         </p>
         <div className="row mb-5 justify-content-around d-flex g-4">
           {similar.map((sim) => (
-                      <div key={sim.id} className="col-12 col-md-4 col-lg-4 col-xl-4 g-4">
-                        <div className="card">
-                          <img
-                            src={sim.image}
-                            className="card-img-top"
-                            style={{ objectFit: "cover" }}
-                          ></img>
-                          <p
-                            className="fw-semibold mt-3 mb-2 ps-3"
-                            style={{ fontFamily: "Georgia", fontSize: "20px" }}
-                          >
-                            Executive {sim.bedroom}-Bedroom Mansion with Pool
-                          </p>
-                          <p className="ps-3">Banana Island</p>
-                          <div className="position-relative mt-3">
-                            <p
-                              style={{ color: "#2A478D", fontFamily: "Georgia" }}
-                              className="price ms-2 h4 fw-bold"
-                            >
-                              {sim.price}
-                              <Link
-                                to={`/featuresbuy1/${sim.slug}`}
-                                className="text-dark"
-                              >
-                                <span
-                                  className="details bottom-0 mb-2 end-0 me-2 position-absolute fw-bold py-2 px-2 rounded-3"
-                                  style={{
-                                    color: "#2A478D",
-                                    border: "1px solid #2A478D",
-                                    fontFamily: "Arial",
-                                    fontSize: "14px",
-                                  }}
-                                >
-                                  View Details
-                                </span>
-                              </Link>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+            <div key={sim.id} className="col-12 col-md-4 col-lg-4 col-xl-4 g-4">
+              <div className="card">
+                <img
+                  src={sim.image}
+                  className="card-img-top"
+                  style={{ objectFit: "cover" }}
+                ></img>
+                <p
+                  className="fw-semibold mt-3 mb-2 ps-3"
+                  style={{ fontFamily: "Georgia", fontSize: "20px" }}
+                >
+                  Executive {sim.bedroom}-Bedroom Mansion with Pool
+                </p>
+                <p className="ps-3">Banana Island</p>
+                <div className="position-relative mt-3">
+                  <p
+                    style={{ color: "#2A478D", fontFamily: "Georgia" }}
+                    className="price ms-2 h4 fw-bold"
+                  >
+                    {sim.price}
+                    <Link
+                      to={`/featuresbuy1/${sim.slug}`}
+                      className="text-dark"
+                    >
+                      <span
+                        className="details bottom-0 mb-2 end-0 me-2 position-absolute fw-bold py-2 px-2 rounded-3"
+                        style={{
+                          color: "#2A478D",
+                          border: "1px solid #2A478D",
+                          fontFamily: "Arial",
+                          fontSize: "14px",
+                        }}
+                      >
+                        View Details
+                      </span>
+                    </Link>
+                  </p>
                 </div>
-                <div>
-                  </div>
-       <a
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div></div>
+      <a
         href="https://wa.me/2348144697306"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-         className="whatsapp-background"
+        className="whatsapp-background"
         style={{
           position: "fixed",
           bottom: "20px",
@@ -727,20 +554,18 @@ function FeaturesBuy1() {
           backgroundColor: "rgb(44, 212, 11)",
           display: "flex",
           alignItems: "center",
-          paddingTop:"0px",
+          paddingTop: "0px",
           justifyContent: "center",
           boxShadow: "0 4px 12px rgba(0,0,0,0.25)",
           textDecoration: "none",
         }}
       >
-        
         <svg
-        className="whatsapp m-1"
+          className="whatsapp m-1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 32 32"
           width="45"
           height="45"
-
           fill="white"
         >
           <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.466 2.027 7.76L0 32l8.455-2.008A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.756-1.842l-.485-.29-5.02 1.193 1.224-4.888-.317-.502A13.267 13.267 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.878c-.398-.199-2.355-1.162-2.72-1.295-.366-.133-.632-.199-.899.2-.266.398-1.031 1.294-1.264 1.56-.233.266-.466.3-.864.1-.398-.2-1.681-.62-3.203-1.977-1.184-1.056-1.983-2.36-2.216-2.758-.233-.399-.025-.614.175-.812.18-.178.399-.466.598-.699.2-.233.266-.399.4-.665.132-.266.066-.499-.034-.698-.1-.2-.899-2.167-1.232-2.967-.324-.78-.654-.674-.899-.686l-.765-.013c-.266 0-.698.1-.1065.499-.366.4-1.397 1.363-1.397 3.325 0 1.963 1.43 3.86 1.63 4.126.199.266 2.815 4.3 6.822 6.03.954.412 1.698.658 2.278.842.957.305 1.828.262 2.516.159.767-.114 2.355-.963 2.688-1.893.332-.93.332-1.727.232-1.893-.1-.166-.366-.266-.765-.465z" />

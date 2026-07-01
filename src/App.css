@@ -367,6 +367,10 @@ svg {
     order:1;
     margin-top: -60px;
   }
+  .dropdown-menu{
+    max-width: 320px !important;
+  }
+    
   .prop{
     text-align: center !important;
     margin-left: 80px;

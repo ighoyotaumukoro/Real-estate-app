@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Footer from "../inc/Footer";
-import {usePropertyFilter} from "../../usePropertyFilter";
+import { usePropertyFilter } from "../../usePropertyFilter";
 import {
   Navbar,
   Container,
@@ -19,17 +19,28 @@ import {
 import { property2 } from "../../data/Properties2";
 
 const Properties = () => {
-  
   const navigate = useNavigate();
   const { slug } = useParams();
   const [searchParams, setSearchParams] = useSearchParams();
   const property = property2.find((p) => p.slug === slug);
 
   const [displayCount, setDisplayCount] = useState(0);
-console.log("property2:", property2)
-  const { filteredProperty, filters, handlers } = usePropertyFilter(property2);
-  const { name, location, minPrice, maxPrice, bedroom, bathroom, sort } =
-    filters;
+  console.log("property2:", property2);
+  const { filteredProperty, filters, handlers, updateParam } =
+    usePropertyFilter(property2);
+  const {
+    name,
+    selectedAmenities,
+    showAmenities,
+    allAmenities,
+    location,
+    minPrice,
+    bathroomOptions,
+    maxPrice,
+    bedroom,
+    bathroom,
+    sort,
+  } = filters;
   const {
     setName,
     setLocation,
@@ -38,7 +49,9 @@ console.log("property2:", property2)
     setBedroom,
     setBathroom,
     setSort,
-    resetAll
+    toggleAmenity,
+    setShowAmenities,
+    resetAll,
   } = handlers;
 
   const handleReset = () => {
@@ -63,7 +76,7 @@ console.log("property2:", property2)
     marginBottom: "15px",
   };
 
-  console.log("I AM MAPPING:", filteredProperty.length, filteredProperty)
+  console.log("I AM MAPPING:", filteredProperty.length, filteredProperty);
   return (
     <>
       <div className="rounded-4" style={heroWrapperStyle}>
@@ -140,15 +153,20 @@ console.log("property2:", property2)
             >
               Properties for Sale
             </h1>
-            <p className="prop text-center text-center text-md-start col-lg-8 mb-5">{displayCount} property found</p>
+            <p className="prop text-center text-center text-md-start col-lg-8 mb-5">
+              {displayCount} property found
+            </p>
           </div>
         </div>
       </div>
 
       <div className="container-fluid px-3 px-md-4">
         <div className="row">
-          <div className="col-12 col-md-4 col-lg-4 col-xl-4">
-            <div className="prop-card card shadow mt-3 border-0">
+          <div
+            className="col-12 col-md-4 col-lg-4 col-xl-4 position-relative"
+            style={{ zIndex: showAmenities ? 1060 : 2 }}
+          >
+            <div className="prop-card card shadow mt-3 border-0 position-relative">
               <div className="prop-body card-body text-start">
                 <p
                   className="fw-bold mt-0"
@@ -176,7 +194,7 @@ console.log("property2:", property2)
                     type="text"
                     value={name}
                     className="form-control mb-3"
-                    onChange={handlers.setName}
+                    onChange={(e) => setName(e.target.value)}
                   />
                   <p className="mb-2" style={{ fontFamily: "Arial" }}>
                     Location
@@ -187,7 +205,7 @@ console.log("property2:", property2)
                     className="form-control mb-3"
                     required
                     placeholder="City or Neighborhood"
-                    onChange={handlers.setLocation}
+                    onChange={(e) => setLocation(e.target.value)}
                   />
 
                   <p className="mb-2" style={{ fontFamily: "Arial" }}>
@@ -200,8 +218,8 @@ console.log("property2:", property2)
                         type="text"
                         className="form-control mb-3"
                         required
-                        placeholder="Min."
-                        onChange={handlers.setMinPrice}
+                        placeholder="Min. e.g 10M"
+                        onChange={(e) => setMinPrice(e.target.value)}
                       />
                     </div>
                     <div className="col-12 col-md-6 col-lg-6 col-xl-6">
@@ -210,8 +228,8 @@ console.log("property2:", property2)
                         type="text"
                         className="form-control mb-3"
                         required
-                        placeholder="Max."
-                        onChange={handlers.setMaxPrice}
+                        placeholder="Max. e.g 12M"
+                        onChange={(e) => setMaxPrice(e.target.value)}
                       />
                     </div>
                   </div>
@@ -222,67 +240,92 @@ console.log("property2:", property2)
                     value={bedroom}
                     type="text"
                     className="form-control mb-3"
-                    onChange={handlers.setBedroom}
+                    onChange={(e) => setBedroom(e.target.value)}
                   />
                   <p className="mb-2" style={{ fontFamily: "Arial" }}>
                     Bathrooms
                   </p>
-                  <input
+                  <select
                     value={bathroom}
-                    type="text"
-                    className="form-control mb-3"
-                    onChange={handlers.setBathroom}
-                  />
+                    onChange={(e) => setBathroom(e.target.value)}
+                    className="form-select"
+                  >
+                    {bathroomOptions.map((opt) => (
+                      <option key={opt.value} value={opt.value}>
+                        {opt.label}
+                      </option>
+                    ))}
+                  </select>
+                  <button
+                    type="button"
+                    className="form-control mt-5 text-start d-flex justify-content-between align-items-center"
+                    onClick={() => setShowAmenities(!showAmenities)}
+                  >
+                    <span>
+                      {selectedAmenities.length > 0
+                        ? `${selectedAmenities.length} Selected`
+                        : "All Amenities"}
+                    </span>
+                    <i
+                      className={`bi bi-chevron-${showAmenities ? "up" : "down"}`}
+                    ></i>
+                  </button>
+                  {showAmenities && (
+                    <div
+                      className="dropdown-menu show w-100 p-2 shadow"
+                      style={{
+                        maxHeight: "min(600px, 60vh)",
+                        maxWidth: "480px",
+                        overflowY: "auto",
+                        zIndex: 1050,
+                      }}
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {allAmenities.map((amenity) => (
+                        <div key={amenity} className="form-check">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id={amenity}
+                            checked={selectedAmenities.includes(amenity)}
+                            onChange={() => toggleAmenity(amenity)}
+                          />
+                          <label
+                            className="form-check-label w-100"
+                            htmlFor={amenity}
+                          >
+                            {amenity}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </form>
-
-                <div className="d-none d-md-block">
-                  <p className="mb-2 fw-bold" style={{ fontFamily: "Arial" }}>
-                    Amenities
-                  </p>
-                  <p className="mb-2 ps-3" style={{ fontFamily: "Arial" }}>
-                    Swimming Pool
-                  </p>
-                  <p className="mb-2 ps-3" style={{ fontFamily: "Arial" }}>
-                    Gym
-                  </p>
-                  <p className="mb-2 ps-3" style={{ fontFamily: "Arial" }}>
-                    24/7 Security
-                  </p>
-                  <p className="mb-2 ps-3" style={{ fontFamily: "Arial" }}>
-                    Backup Generator
-                  </p>
-                  <p className="mb-2 ps-3" style={{ fontFamily: "Arial" }}>
-                    CCTV
-                  </p>
-                  <p className="mb-2 ps-3" style={{ fontFamily: "Arial" }}>
-                    Fitted Kitchen
-                  </p>
-                  <p className="mb-2 ps-3" style={{ fontFamily: "Arial" }}>
-                    Air Conditioning
-                  </p>
-                  <p className="mb-2 ps-3" style={{ fontFamily: "Arial" }}>
-                    Borehole
-                  </p>
-                  <p className="mb-2 ps-3" style={{ fontFamily: "Arial" }}>
-                    Parking
-                  </p>
-                </div>
               </div>
             </div>
           </div>
 
-          <div className="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+          <div
+            className="col-sm-12 col-md-8 col-lg-8 col-xl-8 position-relative"
+            style={{ zIndex: 1 }}
+          >
             <div className="row mt-3">
               <div className="col-8">
                 <select
                   value={sort}
                   onChange={setSort}
-
                   className="bg-white fw-light custom-select-light text-dark d-flex p-1 pe-3 border mb-3  mt-3 rounded-2 fw-bold"
                 >
-                  <option value="" className="fw-light">Default</option>
-                  <option value="low" className="fw-light"> low-to-high</option>
-                  <option value="high" className="">high-to-low</option>
+                  <option value="" className="fw-light">
+                    Default
+                  </option>
+                  <option value="low" className="fw-light">
+                    {" "}
+                    low-to-high
+                  </option>
+                  <option value="high" className="">
+                    high-to-low
+                  </option>
                 </select>
               </div>
               <div className="row col-4 d-flex justify-content-evenly px-auto">
@@ -341,7 +384,7 @@ console.log("property2:", property2)
                 <div className="col-2">
                   <button onClick={goToList} className="text-dark">
                     <svg
-                      className="icon mt-3 position-relative"
+                      className="icon mt-3"
                       width="38"
                       height="38"
                       viewBox="0 0 38 38"
@@ -410,7 +453,6 @@ console.log("property2:", property2)
             </div>
             <p>{filteredProperty.length} property found</p>
             <div className="row">
-              
               {console.log("First property:", filteredProperty[0])}
               {filteredProperty.length > 0 ? (
                 filteredProperty.map((property) => (
@@ -486,7 +528,7 @@ console.log("property2:", property2)
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-         className="whatsapp-background"
+        className="whatsapp-background"
         style={{
           position: "fixed",
           bottom: "20px",
@@ -498,20 +540,18 @@ console.log("property2:", property2)
           backgroundColor: "rgb(44, 212, 11)",
           display: "flex",
           alignItems: "center",
-          paddingTop:"0px",
+          paddingTop: "0px",
           justifyContent: "center",
           boxShadow: "0 4px 12px rgba(0,0,0,0.25)",
           textDecoration: "none",
         }}
       >
-        
         <svg
-        className="whatsapp m-1"
+          className="whatsapp m-1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 32 32"
           width="45"
           height="45"
-
           fill="white"
         >
           <path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.736 5.466 2.027 7.76L0 32l8.455-2.008A15.93 15.93 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.756-1.842l-.485-.29-5.02 1.193 1.224-4.888-.317-.502A13.267 13.267 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.27-9.878c-.398-.199-2.355-1.162-2.72-1.295-.366-.133-.632-.199-.899.2-.266.398-1.031 1.294-1.264 1.56-.233.266-.466.3-.864.1-.398-.2-1.681-.62-3.203-1.977-1.184-1.056-1.983-2.36-2.216-2.758-.233-.399-.025-.614.175-.812.18-.178.399-.466.598-.699.2-.233.266-.399.4-.665.132-.266.066-.499-.034-.698-.1-.2-.899-2.167-1.232-2.967-.324-.78-.654-.674-.899-.686l-.765-.013c-.266 0-.698.1-.1065.499-.366.4-1.397 1.363-1.397 3.325 0 1.963 1.43 3.86 1.63 4.126.199.266 2.815 4.3 6.822 6.03.954.412 1.698.658 2.278.842.957.305 1.828.262 2.516.159.767-.114 2.355-.963 2.688-1.893.332-.93.332-1.727.232-1.893-.1-.166-.366-.266-.765-.465z" />

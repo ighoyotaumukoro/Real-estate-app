@@ -3,8 +3,8 @@ export const similar =[
       id: "1",
       slug: "buy2",
       image: "/images/Hotel-2.jpg",
-      name: "Luxury 5-Bedroom Duplex in  Lekki Phase 1",
-      location: "Lekki Phase 1,Lagos",
+      name: "Luxury 5-Bedroom Duplex in Lekki, Lagos",
+    location: "Spar Lekki,Lagos",
       description: "5 Beds 5 Baths 450SQM",
       price: "₦250.0M",
       details: "View Details",
@@ -14,14 +14,27 @@ export const similar =[
       agent:"/images/IMG_E1863.JPG",
        bedroom: "5",
        enquiry:"https://wa.me/2348144697306",
+        amenities: [
+      "Parking",
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "Gym",
+      "CCTV",
+      "swimming pool",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Spar Lekki"
     },
 
     {
       id: "2",
       slug: "buy1",
       image: "/images/Hotel-one.jpg",
-      name: "Luxury 4-Bedroom Duplex in  Lekki Phase 1",
-      location: "Lekki Phase 1,Lagos",
+      name: "Luxury 4-Bedroom Duplex in  Ibuje-Lekki, Lagos",
+    location: "Ibuje-Lekki,Lagos",
       description: "4 Beds 5 Baths 450SQM",
       price: "₦125.0M",
       details: "View Details",
@@ -31,14 +44,28 @@ export const similar =[
       agent:"/images/myphoto.JPG",
        bedroom: "4",
        enquiry:"https://wa.me/2348144697306",
+       amenities: [
+      "Parking",
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "CCTV",
+      "swimming pool",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+
+    ],
+
+    neighborhood:"Ibuje-Lekki"
     },
 
     {
       id: "3",
       slug: "buy3",
       image: "/images/Hotel-3.jpg",
-      name: "Luxury 3-Bedroom Duplex in  Lekki Phase 1",
-      location: "Lekki Phase 1,Lagos",
+      name: "Luxury 3-Bedroom Duplex in Jankande Lekki, Lagos",
+    location: "Jankande, Lekki Lagos",
       description: "3 Beds 5 Baths 450SQM",
       price: "₦120.0M",
       details: "View Details",
@@ -48,5 +75,15 @@ export const similar =[
       agent:"/images/myphoto.JPG",
        bedroom: "3",
        enquiry:"https://wa.me/2348144697306",
+       amenities: [
+      "Backup generator",
+      "Air Conditioning",
+      "Garden",
+      "CCTV",
+      "Borehole",
+      "24/7 Security",
+      "Fitted Kitchen",
+    ],
+    neighborhood:"Jankande, Lekki"
     },
   ]

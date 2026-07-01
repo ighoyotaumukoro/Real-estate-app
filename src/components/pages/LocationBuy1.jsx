@@ -429,7 +429,7 @@ function LocationBuy1() {
               <div className="row">
                 <div className="col-12 col-md-4">
                   <p className="text-secondary mb-0">Neighborhood</p>
-                  <p className="mb-5">Lekki Phase 1</p>
+                  <p className="mb-5">{property.neighborhood}</p>
 
                   <p className="text-secondary mb-0">State</p>
                   <p className="">Lagos State</p>
