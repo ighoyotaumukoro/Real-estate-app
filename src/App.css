@@ -307,6 +307,9 @@ svg {
   .name {
     font-size: 12px;
   }
+  h5,h4,p, h2,h1,h3{
+  font-weight: 400 !important;
+}
   .details-btn {
     font-size: 10px !important;
     padding: 3px;
