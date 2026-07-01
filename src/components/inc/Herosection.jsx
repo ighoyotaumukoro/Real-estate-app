@@ -78,7 +78,7 @@ function Herosection() {
           <Link to="/properties" className="text-dark">
             <p
               className="propertylink position-absolute end-0 me-4 text-decoration-underline fw-bold"
-              style={{ color: "#2A478D", marginTop:"550px" }}
+              style={{ color: "#2A478D"}}
             >
               View all Properties
             </p>

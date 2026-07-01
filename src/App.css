@@ -223,7 +223,10 @@ svg {
   .search-btn {
     padding: 10px 100px !important;
   }
-
+ .propertylink {
+    margin-top: 550px !important;
+    font-size: 18px;
+  }
   .head-text {
     font-size: 20px;
   }
@@ -287,13 +290,13 @@ svg {
     padding: 12px 80px;
   }
   .message-btn {
-    padding: 12px 130px;
+    padding: 12px 120px;
   }
   .search-btn {
     padding: 10px 130px !important;
   }
   .propertylink {
-    margin-top: 350px !important;
+    margin-top: 330px !important;
     font-size: 14px;
   }
 
